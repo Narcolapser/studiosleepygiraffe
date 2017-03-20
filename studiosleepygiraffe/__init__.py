@@ -1,8 +1,14 @@
 from flask import Flask
-from main import *
-#import main
 
-#app = Flask(__name__)
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+	return "Studio Sleepy Giraffe. Website coming soon."
+
+@app.route("/version")
+def version():
+	return "0.0.6"
 
 if __name__ == "__main__":
-    app.run()
+	app.run()
