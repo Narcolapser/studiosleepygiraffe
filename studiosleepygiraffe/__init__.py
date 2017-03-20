@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 
 app = Flask(__name__)
 
@@ -8,7 +8,11 @@ def index():
 
 @app.route("/version")
 def version():
-	return "0.0.7"
+	return "0.0.8"
+
+@app.route("/static/<fname>")
+def get_resource(fname):
+	return send_file("/static/" + fname, mimetype='image/jpeg')
 
 if __name__ == "__main__":
 	app.run()
