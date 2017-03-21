@@ -8,7 +8,7 @@ def index():
 
 @app.route("/version")
 def version():
-	return "0.0.8"
+	return "0.1.0"
 
 @app.route("/static/<fname>")
 def get_resource(fname):
