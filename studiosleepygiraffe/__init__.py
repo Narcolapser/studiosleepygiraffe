@@ -28,7 +28,12 @@ def home():
 
 @app.route("/apps")
 def apps():
-        return render_template('home.html')
+        return render_template('apps.html')
+
+@app.route("/app/<app_name>")
+def disp_app(app_name):
+        content = {'name':app_name}
+        return render_template('app.html',content=content)
 
 @app.route("/devlog")
 def devlog():

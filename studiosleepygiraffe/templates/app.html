@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Studio Sleepy Giraffe{% endblock %}
+{% block styles %}
+	<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
+
+{% block navbar %}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+{% block content %}
+	<p>{{content['name']}}</p>
+{% endblock %}
