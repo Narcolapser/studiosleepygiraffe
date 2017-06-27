@@ -1,6 +1,6 @@
 import git
 def getMessages(repo,branch):
-	ret = [com.message for com in r.iter_commits('master')]
+	ret = [com.message for com in repo.iter_commits('master')]
 	return ret
 
 def getPostFromMessage(message):
@@ -12,15 +12,34 @@ def getPostFromMessage(message):
 		body = title
 	return (title,body)
 
-#for com in r.iter_commits('master'): print com.message
+def getPosts(repo,branch,project):
+	return [Post(com,branch,project) for com in repo.iter_commits(branch)]
+
+class Post:
+	def __init__(self,commit,branch=None,project=None):
+		self.commit = commit
+		self.title, self.message = getPostFromMessage(commit.message)
+		self.date = commit.committed_datetime
+		self.branch = branch
+		self.author = commit.author
+		self.project = project
+
+	def __str__(self):
+		ret = self.title
+		ret += "\n" + self.message
+		ret += "\n" + str(self.date)
+		ret += "\ntags: branch:" + self.branch + " author:" + self.author + " project:" + self.project + "\n\n"
+		return ret
+
+	
+
 
 if __name__ == "__main__":
-	repo = "~/Code/warehouse/"
-	branch = "master"
-	r = git.Repo(repo)
-	messages = getMessages(r,branch)
-	for m in messages:
-		title,body = getPostFromMessage(m)
-		print(title)
-		print(body)
+	repos = open("repos",'r').readlines()
+	for repo in repos:
+		branch = "master"
+		r = git.Repo("~/Eurus/ssg\ projects/" + repo + "/")
+		posts = getPosts(r,branch,repo)
+		for p in posts:
+			print(p)
 
