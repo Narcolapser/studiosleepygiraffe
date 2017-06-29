@@ -2,6 +2,7 @@ from flask import Flask, render_template, send_file
 from flask_bootstrap import Bootstrap
 from flask_nav import Nav
 from flask_nav.elements import Navbar, View
+import json
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -33,19 +34,21 @@ def apps():
 @app.route("/app/<app_name>")
 def disp_app(app_name):
         content = {'name':app_name}
-        return render_template('app.html',content=content)
+        apps = json.load(open("resources/projects.json"))
+        print(apps[app_name])
+        return render_template('app.html',content=content,posts=apps[app_name])
 
 @app.route("/devlog")
 def devlog():
-        return render_template('home.html')
+        return render_template('devlog.html')
 
 @app.route("/about")
 def about():
-        return render_template('home.html')
+        return render_template('about.html')
 
 @app.route("/contact")
 def contact():
-        return render_template('home.html')
+        return render_template('contact.html')
 
 @app.route("/version")
 def version():
