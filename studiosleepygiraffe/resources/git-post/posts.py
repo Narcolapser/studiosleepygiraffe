@@ -55,8 +55,8 @@ class Post:
 
 
 if __name__ == "__main__":
-	repos = json.load(open("repos",'r'))
-	projects = []
+	repos = json.load(open("repos.json",'r'))
+	projects = {}
 	for repo in repos:
 		project = repo
 		project['posts'] = []
@@ -69,5 +69,5 @@ if __name__ == "__main__":
 			project['posts'].append(p.dict())
 #		except Exception as e:
 #			print("Skipping '{0}' because: {1}".format(repo,e))
-		projects.append(project)
-	json.dump(projects,open("projects.json",'w'))
+		projects[repo['url']] = project
+	json.dump(projects,open("projects.json",'w'),indent=4, sort_keys=True)
