@@ -3,8 +3,10 @@ from flask_bootstrap import Bootstrap
 from flask_nav import Nav
 from flask_nav.elements import Navbar, View
 import json
+import os
 
 app = Flask(__name__)
+APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 Bootstrap(app)
 
 nav = Nav()
@@ -39,13 +41,13 @@ def disp_app(app_name):
 
 @app.route("/devlogs")
 def devlogs():
-	apps = json.load(open("resources/git-post/repos.json"))
+	apps = json.load(open(APP_ROOT + "resources/git-post/repos.json"))
 	return render_template('devlogs.html',apps=apps)
 
 @app.route("/devlogs/<app_name>")
 def disp_logs(app_name):
 	content = {'name':app_name}
-	apps = json.load(open("resources/projects.json"))
+	apps = json.load(open(APP_ROOT + "resources/projects.json"))
 	return render_template('devlog.html',content=content,posts=apps[app_name]['posts'])
 
 @app.route("/about")
