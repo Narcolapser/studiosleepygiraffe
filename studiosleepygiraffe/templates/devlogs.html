@@ -1,0 +1,14 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Studio Sleepy Giraffe: Development Log{% endblock %}
+
+{% block navbar %}
+{{nav.mynavbar.render()}}
+{% endblock %}
+
+{% block content %}
+	<h1>===== Development logs (commit messages) =====</h1>
+	
+	{% for app in apps %}
+		<a href="/devlogs/{{app['url']}}"><h2>{{app['name']}}</h2></a>
+	{% endfor %}
+{% endblock %}
