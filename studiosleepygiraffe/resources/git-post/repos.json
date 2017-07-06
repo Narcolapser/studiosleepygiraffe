@@ -9,29 +9,29 @@
 		"name":"Pallet Packer",
 		"url":"pallet_packer"
 	},
-        {
-                "path":"/home/toben/Eurus/ssg projects/Flight Night",
-                "name":"Flight Night",
-                "url":"flight_night"
-        },
-        {
-                "path":"/home/toben/Eurus/ssg projects/duel",
-                "name":"Gravity Duel",
-                "url":"gduel"
-        },
-        {
-                "path":"/home/toben/Eurus/ssg projects/kivy joystick",
-                "name":"Kivy Garden: Joystick",
-                "url":"kivy_joystick"
-        },
-        {
-                "path":"/home/toben/Eurus/ssg projects/Kivy-Kazam",
-                "name":"Kivy-Kazam",
-                "url":"kivy-kazam"
-        },
-        {
-                "path":"/home/toben/Eurus/ssg projects/MinecraftCommandCraft",
-                "name":"Command Craft",
-                "url":"mccc"
-        }
+	{
+		"path":"/home/toben/Eurus/ssg projects/Flight Night",
+		"name":"Flight Night",
+		"url":"flight_night"
+	},
+	{
+		"path":"/home/toben/Eurus/ssg projects/duel",
+		"name":"Gravity Duel",
+		"url":"gduel"
+	},
+	{
+		"path":"/home/toben/Eurus/ssg projects/kivy joystick",
+		"name":"Kivy Garden: Joystick",
+		"url":"kivy_joystick"
+	},
+	{
+		"path":"/home/toben/Eurus/ssg projects/Kivy-Kazam",
+		"name":"Kivy-Kazam",
+		"url":"kivy-kazam"
+	},
+	{
+		"path":"/home/toben/Eurus/ssg projects/MinecraftCommandCraft",
+		"name":"Command Craft",
+		"url":"mccc"
+	}
 ]

@@ -1,0 +1,475 @@
+{
+    "flight_night": {
+        "name": "Flight Night", 
+        "path": "/home/toben/Eurus/ssg projects/Flight Night", 
+        "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-20 21:01:16-05:00", 
+                "message": "Fixed number alignment and session scrunch.", 
+                "project": "Flight Night", 
+                "title": "Fixed number alignment and session scrunch."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-20 20:12:45-05:00", 
+                "message": "Issue #14\n", 
+                "project": "Flight Night", 
+                "title": "Fixed keyboard viewing area issue."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-15 20:20:12-05:00", 
+                "message": "Forgot I needed to change the .kv file so that it could be found. Fixed that\nand now the app shows up again. I believe this is 0.4 officially done.\n", 
+                "project": "Flight Night", 
+                "title": "There is a UI again."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-13 21:24:05-05:00", 
+                "message": "Changed name to FlightNight", 
+                "project": "Flight Night", 
+                "title": "Changed name to FlightNight"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-13 21:19:03-05:00", 
+                "message": "When I tried it on my phone, it showed multiple options in the selector at\nonce. I think I've fixed that by having it adjust the label's height based off\nof the current layout height. Actually haven't tried it on my phone yet. So\nwe'll see!\n", 
+                "project": "Flight Night", 
+                "title": "Now selector selects one at a time."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-13 20:37:02-05:00", 
+                "message": "I've made a scroll view based selector. It's not perfect, but it does have the\ninertia that will make the user experience just that much nicer.\n", 
+                "project": "Flight Night", 
+                "title": "Inertia! I mastered it!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-06 20:52:25-06:00", 
+                "message": "Turns out I forgot a requirement in the buildozer spec. It works now.\nAs does the new saving feature. I'm pleased with tonight's progress.\n", 
+                "project": "Flight Night", 
+                "title": "Got it working on android again."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-06 20:33:26-06:00", 
+                "message": "Should be able to save and load sessions now.\n", 
+                "project": "Flight Night", 
+                "title": "I think I've fixed the saving!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-02-20 19:07:00-06:00", 
+                "message": "I also fixed the wrapping issue and started work on saving. But now it crashes.\n", 
+                "project": "Flight Night", 
+                "title": "You can now edit drinks."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-02-13 21:45:11-06:00", 
+                "message": "I fixed the negative BAC. Not only was that being kinda silly, that app could tell you that you had a BAC of zero or less immediately after drinking your n>1 drink. So it screwed with the accuracy. I just had it bottom out. So if a drink says it's going to give you < 0 BAC, it gives you 0.\n\nI moved the BAC total to the bottom and added a naming field on the main screen. I'll look into the momentum on the ABV and OZ selectors. I think it can be done, but just didn't get to it tonight. The other thought I had was to give a dial to each digit. Which I'll do if I can't give it momentum.\n\nThe drink list now comes down with an animation. It's a bit dramatic and silly, but I so I can tone it down. I just felt like doing something fun. I believe I have fixed the squishing issue. And if I haven't fixed it sufficiently I can easily up the size of the drinks listed. I darkened the drink list background. Drinks now have an edit button and a delete button. Delete works, edit doesn't. I got stuck on some formatting issues or I might have been able to get edit to work.\n", 
+                "project": "Flight Night", 
+                "title": "UI updates mostly."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-01-16 08:30:17-06:00", 
+                "message": "I'll have Kennan look over the app and tell me what he thinks. I\nthink it will hit a fair bit of his initial requirements. But there\nis much to be improved. Firstly, and most obviously to him, will be\nthe fact that it is designed for a tablet not a phone. So I'll need\nto reconfigure the layout to get it to work better on a smaller\ndisplay. The ability to remove drinks would also be valuable, and\nedit them. In case you enter some wrong info or remembered another\ndrink and want to add it later.\n", 
+                "project": "Flight Night", 
+                "title": "Got a alpha version out!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-01-16 07:50:23-06:00", 
+                "message": "Actually with this commit I'm basically in alpha. The app as a whole\nis a relatively simple thing so it didn't take much to get basic\nfunctionality up and running. It will take a little yet to get it\npolished, but I should have something for Kennan later today.\n", 
+                "project": "Flight Night", 
+                "title": "Initial commit and start of program."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-01-16 07:28:58-06:00", 
+                "message": "Initial commit", 
+                "project": "Flight Night", 
+                "title": "Initial commit"
+            }
+        ], 
+        "url": "flight_night"
+    }, 
+    "gduel": {
+        "name": "Gravity Duel", 
+        "path": "/home/toben/Eurus/ssg projects/duel", 
+        "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-04 11:23:37-05:00", 
+                "message": "I am nearing on a minimum viable product. Things done today:\n\n1. Joystick multi touch\nI'll have to back port these to the original joystick repo. I have\nfixed the problem where the joysticks would all respond to the same\ntouch as soon as that touch moved. Now the joysticks keep track of\nwhat touch touched them and only respond to it.\n\n2. Joystick mahts:\nI've added into the joystick class the maths for all that you could\nwant from the joystick. Now, not only can you get the pad_x and\npad_y as percent of total range, you can also get the angle,\nradians, and magnitude of the joystick. This allows you to work\nwith it in what ever form you desire.\n\n3. Ship rotation.\n4. Ship thursters.\n5. sun collision.\n6. started on torpedos.\nNot finished yet, but I've started working on torpedoes. They are\ncurrently having issues of being fired from not your ship. But I\nhave an idea on what could be causing that problem. The layout.\n\nLots done today! but now I need to research dancing for my friend's\nwedding. Busy life right now. busy life.\n", 
+                "project": "Gravity Duel", 
+                "title": "A dramatic step forward."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-02 08:32:01-05:00", 
+                "message": "Name is probably taken, but it will be fine for a working title.\nGame play is basic: Two ships in orbit around a sun. You try to\nlob torpedos at each other around the sun. You have thrusters to\nget into a better position, but you might just run yourself into\nthe sun. so be careful with thruster use!\n\nI'm using the kivy Joystick I made the other day. I've already\nfound a problem with it. Two joysticks at the same time doesn't\nwork very well. I need them to track which touch they started from.\nMostly the issue is that on_touch_move doesn't check the touch it\nrecieved to see if it is the same touch as previous.\n", 
+                "project": "Gravity Duel", 
+                "title": "Initial commit of Duel game."
+            }
+        ], 
+        "url": "gduel"
+    }, 
+    "kivy-kazam": {
+        "name": "Kivy-Kazam", 
+        "path": "/home/toben/Eurus/ssg projects/Kivy-Kazam", 
+        "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2016-12-23 11:36:12-06:00", 
+                "message": "Fixed file entry error.", 
+                "project": "Kivy-Kazam", 
+                "title": "Fixed file entry error."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2016-12-23 11:04:34-06:00", 
+                "message": "File reading and writing now work.", 
+                "project": "Kivy-Kazam", 
+                "title": "File reading and writing now work."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2016-12-22 16:58:36-06:00", 
+                "message": "some quick work getting the file chooser working.", 
+                "project": "Kivy-Kazam", 
+                "title": "some quick work getting the file chooser working."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2016-12-22 16:42:12-06:00", 
+                "message": "If I'm going to use it as an android app it needs to not crash all\nthe bloody time. So now it will rotate as needed and the screen pans\nup when the keyboard is opened.\n", 
+                "project": "Kivy-Kazam", 
+                "title": "I made it a little more android friendly."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2016-12-22 13:39:01-06:00", 
+                "message": "And kinda cool. I mean, I'll be able to toy around with interfaces\nover chirstmas break when I'm away from my machine. w00t!\n", 
+                "project": "Kivy-Kazam", 
+                "title": "So... It works with android. That's funny."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2016-12-21 15:27:13-06:00", 
+                "message": "Update README.md", 
+                "project": "Kivy-Kazam", 
+                "title": "Update README.md"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2016-12-20 16:23:27-06:00", 
+                "message": "There are a number of features I would like to add to it yet, but the main\nchunk of it is there. You can fiddle with the interface, building things\nand modifying them and seeing them update live infront of you. It's quite\nnice!\n", 
+                "project": "Kivy-Kazam", 
+                "title": "And I got the basic program up and running."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2016-12-20 13:31:35-06:00", 
+                "message": "Initial commit", 
+                "project": "Kivy-Kazam", 
+                "title": "Initial commit"
+            }
+        ], 
+        "url": "kivy-kazam"
+    }, 
+    "kivy_joystick": {
+        "name": "Kivy Garden: Joystick", 
+        "path": "/home/toben/Eurus/ssg projects/kivy joystick", 
+        "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-02 07:46:08-05:00", 
+                "message": "Merge branch 'master' of https://github.com/Narcolapser/garden.joystick", 
+                "project": "Kivy Garden: Joystick", 
+                "title": "Merge branch 'master' of https://github.com/Narcolapser/garden.joystick"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-02 07:44:45-05:00", 
+                "message": "Initial commit", 
+                "project": "Kivy Garden: Joystick", 
+                "title": "Initial commit"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-01 10:04:41-05:00", 
+                "message": "I've got a little bit of polishing left to do on the code. Mostly\nit will be removing commented code and removing debug print\nstatements, oh and adding comments for maintainability. But beyond\nthat it's basically done. Now I need to figure out how to share it\nvia the Kivy Garden.\n", 
+                "project": "Kivy Garden: Joystick", 
+                "title": "Finished it! Mostly at least."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-06-27 21:32:26-05:00", 
+                "message": "I fixed the maths. The main the was that I was assigning it to\nthe pad's x and y verses pad's center. I also had to deal with a\nflipped sign. Basically subtracting the widget's center from the\ntouch rather than the other way around (despite that being how I\nleft that).\n", 
+                "project": "Kivy Garden: Joystick", 
+                "title": "Fixed the maths!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-06-27 20:40:38-05:00", 
+                "message": "For a number of games I have planed, I need an onscreen joystick.\nSo far I have actually managed to get most of the behavior I'm\nlooking for programmed in. The last piece of behavior that is\nneeded is what happens when a touch starts inside the joystick area\nand moves out. I tried implementing it tonight, but ran into some\nbugs. It gets a little funky. Not sure where my math went wrong.\n\nThere will also need to be some work done to generalize it a little\nmore. Right now it basically has to be 200x200. I've put in some\ncalculations that attempt to deal with arbitrary sizes, but getting\na function joystick has been my first priority of course.\n", 
+                "project": "Kivy Garden: Joystick", 
+                "title": "Initial commit on Joystick widget."
+            }
+        ], 
+        "url": "kivy_joystick"
+    }, 
+    "mccc": {
+        "name": "Command Craft", 
+        "path": "/home/toben/Eurus/ssg projects/MinecraftCommandCraft", 
+        "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-06-19 21:26:51-05:00", 
+                "message": "With the 1.12 release I've now got a much easier system to deal\nwith over all I'd say. Functions are super nice. They will really\nchange how this all works. I just create the model and call the\nfunction.\n\nSo now materials are used to decide what a block is. This works with\nmost things, but not so much for command blocks. Materials have a\nmaximum length, and commands shoot over that really fast. So I've\ngot a hackish way of doing it right now with command replacements.\nSo there is improvements to be had, but the plugin is hardly a\nfull fledged plugin just yet, and I've got plenty to learn, so all\nin all I'd say this is going well. w00t!\n", 
+                "project": "Command Craft", 
+                "title": "GREAT progress!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-10 21:25:43-05:00", 
+                "message": "it did not like facing:up or {facing:up} but it can totally dig\nfacing=up. Minecraft commands are weird.\n", 
+                "project": "Command Craft", 
+                "title": "So it would seem, equality is the key."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-07 17:44:21-05:00", 
+                "message": "I'm going to have the name you give the block change things in the out put of\nthe fill commmands so you can change the block type easily. Work in progess,\nbut it is progressing quite nicely. Time for Civ.\n", 
+                "project": "Command Craft", 
+                "title": "Started working on transforms."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-07 17:32:30-05:00", 
+                "message": "There can now be multiple towers. This will allow for bigger and bigger\ncommands to exist. When your command, currently, gets taller than 50,\nit starts a new tower.\n", 
+                "project": "Command Craft", 
+                "title": "Multi towers now works."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-07 08:20:40-05:00", 
+                "message": "Merge branch 'master' of https://github.com/Narcolapser/Minecraft-Command-Craft", 
+                "project": "Command Craft", 
+                "title": "Merge branch 'master' of https://github.com/Narcolapser/Minecraft-Command-Craft"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-07 08:19:32-05:00", 
+                "message": "Not sure what I changed last...", 
+                "project": "Command Craft", 
+                "title": "Not sure what I changed last..."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-07 08:18:41-05:00", 
+                "message": "Initial commit", 
+                "project": "Command Craft", 
+                "title": "Initial commit"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-26 21:37:44-05:00", 
+                "message": "I need to work on multiple command columns next.\n", 
+                "project": "Command Craft", 
+                "title": "Added clearing back in."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-25 21:46:17-05:00", 
+                "message": "I can now make models in blender and export them into minecraft creations.\nI've got a little ways to go yet. I'm next wanting to have the ability to\nspecify block groups in blender and that will then be skinned from a\nseperate file. This will provide the ability to change the block types in\nbatches.\n\nBut all in all it was a good night. I now feel like I can start making\nstages!\n", 
+                "project": "Command Craft", 
+                "title": "IT WORKS!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-21 21:39:45-05:00", 
+                "message": "I need to deal with negative numbers.", 
+                "project": "Command Craft", 
+                "title": "I need to deal with negative numbers."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-19 21:35:48-05:00", 
+                "message": "Some quick fiddling.", 
+                "project": "Command Craft", 
+                "title": "Some quick fiddling."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-17 21:58:50-05:00", 
+                "message": "Working on importing 3D models now. super cool.", 
+                "project": "Command Craft", 
+                "title": "Working on importing 3D models now. super cool."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-15 20:23:12-05:00", 
+                "message": "specifically the final tower in a sequence should erease the rest of the command block towers.\n", 
+                "project": "Command Craft", 
+                "title": "Started work on multi towering."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-14 13:53:28-05:00", 
+                "message": "No longer will I have to think about the commands as I write them.\nThey will now automatically be adjusted to fit the compiling script.\n", 
+                "project": "Command Craft", 
+                "title": "New script that makes things relative!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-25 21:42:25-05:00", 
+                "message": "Basic compiler works. w00t!", 
+                "project": "Command Craft", 
+                "title": "Basic compiler works. w00t!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-25 18:56:42-05:00", 
+                "message": "Got the basic compiler working. w00t!", 
+                "project": "Command Craft", 
+                "title": "Got the basic compiler working. w00t!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-25 15:30:11-05:00", 
+                "message": "Initial commit", 
+                "project": "Command Craft", 
+                "title": "Initial commit"
+            }
+        ], 
+        "url": "mccc"
+    }, 
+    "pallet_packer": {
+        "name": "Pallet Packer", 
+        "path": "/home/toben/Eurus/ssg projects/warehouse_game", 
+        "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-06-12 20:55:00-05:00", 
+                "message": "I'm not sure how to get controls on the cab of the truck with out\nsome serious hack and slash around the code I've already made. It\nmight be time to do a rewrite. I've learned a fair bit about what\nnot to do here. I think I could do it better again.\n", 
+                "project": "Pallet Packer", 
+                "title": "I think I've hit my terminus on this one."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-22 21:35:32-05:00", 
+                "message": "I have removed racks because I realized I screwed up on how this is\nsupposed to go together. Trucks and the ware house weren't lining\nup, I've changed that now. I've also added trucks of many colors and\npallets of many colors and it knows what pallet in what truck you\nclick on. progress!\n", 
+                "project": "Pallet Packer", 
+                "title": "I removed racks!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-22 19:59:05-05:00", 
+                "message": "I have added racks!", 
+                "project": "Pallet Packer", 
+                "title": "I have added racks!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-01 21:37:11-05:00", 
+                "message": "Merge branch 'master' of 192.168.0.100:/home/toben/Code/warehouse", 
+                "project": "Pallet Packer", 
+                "title": "Merge branch 'master' of 192.168.0.100:/home/toben/Code/warehouse"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-02 02:34:16+00:00", 
+                "message": "Initial commit", 
+                "project": "Pallet Packer", 
+                "title": "Initial commit"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-05-01 21:31:20-05:00", 
+                "message": "Initial commit of my warehouse management game.", 
+                "project": "Pallet Packer", 
+                "title": "Initial commit of my warehouse management game."
+            }
+        ], 
+        "url": "pallet_packer"
+    }, 
+    "ssg": {
+        "name": "Studio Sleepy Giraffe", 
+        "path": "/home/toben/Code/studiosleepygiraffe", 
+        "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-20 21:26:52+00:00", 
+                "message": "Push test.", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Push test."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-20 21:22:53+00:00", 
+                "message": "Initial commit of website.", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Initial commit of website."
+            }
+        ], 
+        "url": "ssg"
+    }
+}

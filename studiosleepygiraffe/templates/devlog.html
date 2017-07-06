@@ -1,10 +1,17 @@
 {% extends "bootstrap/base.html" %}
-{% block title %}Studio Sleepy Giraffe{% endblock %}
+{% block title %}Studio Sleepy Giraffe: Development Log{% endblock %}
 
 {% block navbar %}
 {{nav.mynavbar.render()}}
 {% endblock %}
 
 {% block content %}
-	<h1>Dev Log page</h1>
+	<h1>Development logs for: {{content['name']}}</h1>
+	{% for post in posts %}
+		<h2>{{post['title']}}</h2>
+		<p>{{post['message']}}</p>
+		<p>written: {{post['date'][:10]}} by: {{post['author']}} on branch: {{post['branch']}}</p>
+	{% endfor %}
 {% endblock %}
+
+

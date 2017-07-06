@@ -1,10 +1,33 @@
 {% extends "bootstrap/base.html" %}
 {% block title %}Studio Sleepy Giraffe{% endblock %}
+{% block styles %}
+	<link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+{% endblock %}
 
 {% block navbar %}
 {{nav.mynavbar.render()}}
 {% endblock %}
 
 {% block content %}
-	<h1>App page</h1>
+	<h1>Apps</h1>
+	<h2><a href="app/Pallet_Packer">Pallet Packer</a></h2>
+	<p>A logistics chaos game. You are in charge of a warehouse.
+	you must get your pallets un-loaded from the trucks and then
+	fill the trucks with the pallets they are waiting for.</p>
+
+	<h2><a href="app/Flight_Night">Flight Night</a></h2>
+	<p>Homebrew helper. Want to keep track of your BAC but the ABV
+	of your drinks and their sizes are all over the place? Then
+	Flight night is for you.</p>
+
+	<h2><a href="app/Fluffy_Kidney">Fluffy Kidney</a></h2>
+	<p>A recipe app that is designed for you to add your own recipes,
+	leave your self notes, make updates, and build menu plans.
+	</p>
+
+	<h2><a href="app/Studio_Sleepy_Giraffe">Studio Sleepy Giraffe</a></h2>
+	<p>This website! It's a software like any other, so this is some
+	information on it.
+	</p>
 {% endblock %}

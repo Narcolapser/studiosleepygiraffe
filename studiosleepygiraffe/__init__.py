@@ -2,6 +2,7 @@ from flask import Flask, render_template, send_file
 from flask_bootstrap import Bootstrap
 from flask_nav import Nav
 from flask_nav.elements import Navbar, View
+import json
 
 app = Flask(__name__)
 Bootstrap(app)
@@ -9,13 +10,13 @@ Bootstrap(app)
 nav = Nav()
 @nav.navigation()
 def mynavbar():
-        return Navbar('Stduio Sleepy Giraffe',
-                      View('Home', 'home'),
-                      View('Apps', 'apps'),
-                      View('Dev Log', 'devlog'),
-                      View('About', 'about'),
-                      View('Contact', 'contact')
-                )
+	return Navbar('Stduio Sleepy Giraffe',
+			View('Home', 'home'),
+			View('Apps', 'apps'),
+			View('Dev Log', 'devlogs'),
+			View('About', 'about'),
+			View('Contact', 'contact')
+		)
 nav.init_app(app)
 
 @app.route("/")
@@ -24,23 +25,36 @@ def index():
 
 @app.route("/home")
 def home():
-        return render_template('home.html')
+	return render_template('home.html')
 
 @app.route("/apps")
 def apps():
-        return render_template('home.html')
+	return render_template('apps.html')
 
-@app.route("/devlog")
-def devlog():
-        return render_template('home.html')
+@app.route("/app/<app_name>")
+def disp_app(app_name):
+	content = {'name':app_name}
+	apps = json.load(open("resources/projects.json"))
+	return render_template('app.html',content=content,posts=apps[app_name])
+
+@app.route("/devlogs")
+def devlogs():
+	apps = json.load(open("resources/git-post/repos.json"))
+	return render_template('devlogs.html',apps=apps)
+
+@app.route("/devlogs/<app_name>")
+def disp_logs(app_name):
+	content = {'name':app_name}
+	apps = json.load(open("resources/projects.json"))
+	return render_template('devlog.html',content=content,posts=apps[app_name]['posts'])
 
 @app.route("/about")
 def about():
-        return render_template('home.html')
+	return render_template('about.html')
 
 @app.route("/contact")
 def contact():
-        return render_template('home.html')
+	return render_template('contact.html')
 
 @app.route("/version")
 def version():
