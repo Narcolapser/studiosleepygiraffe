@@ -2,12 +2,23 @@ from flask import Flask, render_template, send_file
 from flask_bootstrap import Bootstrap
 from flask_nav import Nav
 from flask_nav.elements import Navbar, View
+from flask import Markup
 import json
 import os
+import markdown
 
 app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+if '/home/toben' in APP_ROOT:
+	APP_ROOT += "/"
 Bootstrap(app)
+
+def getAppFromRepos(app_name):
+	apps = json.load(open(APP_ROOT + "resources/repos.json"))
+	for app in apps:
+		if app['url'] == app_name:
+			return app
+	None
 
 nav = Nav()
 @nav.navigation()
@@ -31,17 +42,20 @@ def home():
 
 @app.route("/apps")
 def apps():
-	return render_template('apps.html')
+	apps = json.load(open(APP_ROOT + "resources/repos.json"))
+	return render_template('apps.html',apps=apps)
 
-@app.route("/app/<app_name>")
+@app.route("/apps/<app_name>")
 def disp_app(app_name):
-	content = {'name':app_name}
-	apps = json.load(open("resources/projects.json"))
-	return render_template('app.html',content=content,posts=apps[app_name])
+	app = getAppFromRepos(app_name)
+	print(app)
+	content = open(APP_ROOT + "resources/" + app['url'] + ".md").read()
+	content = Markup(markdown.markdown(content))
+	return render_template('app.html',app=app,content=content)
 
 @app.route("/devlogs")
 def devlogs():
-	apps = json.load(open(APP_ROOT + "resources/git-post/repos.json"))
+	apps = json.load(open(APP_ROOT + "resources/repos.json"))
 	return render_template('devlogs.html',apps=apps)
 
 @app.route("/devlogs/<app_name>")
