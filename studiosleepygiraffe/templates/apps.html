@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-	<h1>Apps</h1>
+	<!--<h1>Apps</h1>
 	<h2><a href="app/Pallet_Packer">Pallet Packer</a></h2>
 	<p>A logistics chaos game. You are in charge of a warehouse.
 	you must get your pallets un-loaded from the trucks and then
@@ -29,5 +29,8 @@
 	<h2><a href="app/Studio_Sleepy_Giraffe">Studio Sleepy Giraffe</a></h2>
 	<p>This website! It's a software like any other, so this is some
 	information on it.
-	</p>
+	</p>-->
+	{% for app in apps %}
+		<a href="/apps/{{app['url']}}"><h2>{{app['name']}}</h2></a>
+	{% endfor %}
 {% endblock %}

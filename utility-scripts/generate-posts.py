@@ -55,7 +55,7 @@ class Post:
 
 
 if __name__ == "__main__":
-	repos = json.load(open("repos.json",'r'))
+	repos = json.load(open("../studiosleepygiraffe/resources/repos.json",'r'))
 	projects = {}
 	for repo in repos:
 		project = repo
@@ -70,4 +70,4 @@ if __name__ == "__main__":
 #		except Exception as e:
 #			print("Skipping '{0}' because: {1}".format(repo,e))
 		projects[repo['url']] = project
-	json.dump(projects,open("projects.json",'w'),indent=4, sort_keys=True)
+	json.dump(projects,open("../studiosleepygiraffe/resources/projects.json",'w'),indent=4, sort_keys=True)

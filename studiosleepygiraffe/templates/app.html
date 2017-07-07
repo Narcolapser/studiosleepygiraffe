@@ -10,9 +10,5 @@
 {% endblock %}
 
 {% block content %}
-	{% for post in posts %}
-		<h2>{{post['title']}}</h2>
-		<p>{{post['message']}}</p>
-		<p>written: {{post['date'][:10]}} by: {{post['author']}}</p>
-	{% endfor %}
+	<body>{{content}}</body>
 {% endblock %}
