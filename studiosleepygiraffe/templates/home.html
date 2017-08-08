@@ -1,18 +1,6 @@
-<html>
-	<head>
-		<title>Studio Sleepy Giraffe</title>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-	</head>
+{% extends "ssg.html" %}
+{% block content %}
+	<h1>Hello, Welcome to Studio Sleepy Giraffe.</h1>
+	<p>This site is still under construction. In fact you shouldn't even be here. I'm sure you feel clever.</p>
+{% endblock %}
 
-	<body class="main">
-		<div class="banner">
-			<img class="header" src="static/inverted_SSG.jpg" align="middle"/>
-		</div>
-		<div>
-			{{nav.mynavbar.render()}}
-		</div>
-		<h1>Hello, Welcome to Studio Sleepy Giraffe.</h1>
-		<p>This site is still under construction. In fact you shouldn't even be here. I'm sure you feel clever.</p>
-	</body>
-</html>

@@ -17,3 +17,5 @@ This script takes an obj file, such as one exported from blender, and turns it i
 
 # Basic order of things
 Build an object in blender. You will make a bounding box for every fill command. So each fill is a different object, that's important. Export that object from blender to an obj. Run objtofill.py on it. save the out put to a file. Run mcpile on that. Save the output to your clip board, paste into a minecraft command block.
+
+

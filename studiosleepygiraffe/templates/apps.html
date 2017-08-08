@@ -1,21 +1,8 @@
-<html>
-	<head>
-		<title>Studio Sleepy Giraffe</title>
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-	</head>
-
-	<body class="main">
-		<div class="banner">
-			<img class="header" src="static/inverted_SSG.jpg" align="middle"/>
-		</div>
-		<div>
-			{{nav.mynavbar.render()}}
-		</div>
-		<div class="content">
-			{% for app in apps %}
-				<a href="/apps/{{app['url']}}"><h2>{{app['name']}}</h2></a>
-			{% endfor %}
-		</div>
-	</body>
-</html>
+{% extends "ssg.html" %}
+{% block content %}
+{% for app in apps %}
+<div class="app">
+	<a href="/apps/{{app['url']}}"><h2>{{app['name']}}</h2></a>
+<div>
+{% endfor %}
+{% endblock %}

@@ -117,6 +117,38 @@
             {
                 "author": "Toben Archer", 
                 "branch": "master", 
+                "date": "2017-07-31 21:24:19-05:00", 
+                "message": "I have added trails to the ships and torpedoes. It makes the game\nmuch prettier and gives a better sense of movement seeing the trail\nof the objects flying around. It makes the game feel like it is\nactually a legit game and not some high school project.\n\nTorpedoes now collide with each other, so you can theoretically\nprotect yourself from an incoming torpedo, though it would be\npretty spectacular if you did. I imagine it could work well for\nspray and pray on an incoming torpedo.\n\nThe system for firing torpedoes is greatly simplified. But I did it\nin a way that should allow for some fun later. I've got it set now\nthat you have one fire button and one recall button. This allows\nyou to just have a panic button that kills your own torpedoes\nshould you be about to kill yourself. The number of torpedoes will\nalso be something that can be edited.\n\nI've made a burn down chart. 11 items on it before I can make an\ninitial release of the game onto the android play store. I hope to\ndo so in just a few more weeks like this one.\n", 
+                "project": "Gravity Duel", 
+                "title": "Trails and Tuuuuuuuuuuuuuuubes!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-17 20:38:12-05:00", 
+                "message": "I've fix the launch speed of the torpedoes so they actually feel\nshot now rather than just kinda rolled out of your ship. You can\nstart a new game immediately upon your current game ending,also it\nprovides a little note about who the winner is. Flipped the player\n1 controller so it would be oriented correctly for tablet between\nplayer game style.\n", 
+                "project": "Gravity Duel", 
+                "title": "Much improved!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-11 21:38:02-05:00", 
+                "message": "I've setup the buildozer file and renaimed duel.py to main.py\nbecuase I'm comptent and totally know that buildozer needs your\ncode to be in main.py. But Tried it with wife, was funny. Needs\na fair bit of tweeking, but the bones are there and great.\n", 
+                "project": "Gravity Duel", 
+                "title": "Buildozing!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-11 20:40:07-05:00", 
+                "message": "I have achieved minimum viable product on this app. I'm going to\nnow try to load it up as an android app and see if my wife and I\ncan play it.\n\nYou can: Naviaget your ship, shoot torpedos, crash into the sun,\nblow your opponent away, and blow your self away. You can also\nshoot an unlimited number of torpedos and you can't self destruct\nthem. So this should be an interesting few games.\n", 
+                "project": "Gravity Duel", 
+                "title": "Minimum viable product"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
                 "date": "2017-07-04 11:23:37-05:00", 
                 "message": "I am nearing on a minimum viable product. Things done today:\n\n1. Joystick multi touch\nI'll have to back port these to the original joystick repo. I have\nfixed the problem where the joysticks would all respond to the same\ntouch as soon as that touch moved. Now the joysticks keep track of\nwhat touch touched them and only respond to it.\n\n2. Joystick mahts:\nI've added into the joystick class the maths for all that you could\nwant from the joystick. Now, not only can you get the pad_x and\npad_y as percent of total range, you can also get the angle,\nradians, and magnitude of the joystick. This allows you to work\nwith it in what ever form you desire.\n\n3. Ship rotation.\n4. Ship thursters.\n5. sun collision.\n6. started on torpedos.\nNot finished yet, but I've started working on torpedoes. They are\ncurrently having issues of being fired from not your ship. But I\nhave an idea on what could be causing that problem. The layout.\n\nLots done today! but now I need to research dancing for my friend's\nwedding. Busy life right now. busy life.\n", 
                 "project": "Gravity Duel", 
@@ -208,6 +240,22 @@
         "name": "Kivy Garden: Joystick", 
         "path": "/home/toben/Eurus/ssg projects/kivy joystick", 
         "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-10 21:24:28-05:00", 
+                "message": "Forgot the media.", 
+                "project": "Kivy Garden: Joystick", 
+                "title": "Forgot the media."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-10 20:20:25-05:00", 
+                "message": "I believe I've got this already now for Kivy Garden. It was a bit\nof a thing to try and get the pep8 checker working. I basically\njust copied a number of files from the kivy designer over to my\ndist-packages directory. I actually had to make the kivy/tools/\npep8checker directory in order to put the files there. It was a bit\nof a mess.\n\nBut I can finally commit, as you can see. I did also make a few\nchanges worth noting. I fixed the issue where on touch move would\nbe picked up by the joystick even if it wasn't the joystick's\ntouch that moved.\n", 
+                "project": "Kivy Garden: Joystick", 
+                "title": "Preped for Kivy Gardening"
+            }, 
             {
                 "author": "Toben Archer", 
                 "branch": "master", 
@@ -453,6 +501,190 @@
         "name": "Studio Sleepy Giraffe", 
         "path": "/home/toben/Code/studiosleepygiraffe", 
         "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-08-07 21:26:12-05:00", 
+                "message": "I've got style actually starting to appear on the website now. I\nbanged my head against the flask-bootstrap templates for a while\nbut in the end decided to not use the base templates and instead\ncreate my own. This requires a little more effort, but it allows me\na lot more control. Since HTML is still something I'm trying to\nmaster, keeping it simple is a great help.\n\nI've downloaded a bootstrap css style. I can easily change the\nstyle of my whole site but just swapping these files out. Pretty\nneat really! Right now I've just choosen a simple black style. I'm\nfound of sites that are primarily dark colors, it feels less\nstraining to look at. As I add pictures and things, it may be less\nof a deal and I'll probably switch to a lighter style, but this\nworks for now.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Style is coming!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-08 17:32:31+00:00", 
+                "message": "I've added the read me for the website's repo. Just space duel left to have a read me. Then each project will have it's own description page.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Added README."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-07 21:28:38+00:00", 
+                "message": "Conflicts:\n\tstudiosleepygiraffe/__init__.py\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Merge branch 'git-post'"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-07 16:23:29-05:00", 
+                "message": "I've decided to leverage the README.md file for the summary of the\napp. I'll probably end up doing something more interesting in the\nfuture, but this is certainly a functional first step, something\nthat allows me to get this website up sooner than later.\n\nI've also re-arranged things a bit. I've moved my git-post/posts.py\nfile into utility-scripts/ folder. It and copy-markdown.py are the\noccupants of my new utility-scripts folder. These are scripts I'll\nhave to run periodically for now to get the data to show.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Apps now does it's own thing."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-06 16:21:52+00:00", 
+                "message": "Merge branch 'git-post'", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Merge branch 'git-post'"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-06 11:21:25-05:00", 
+                "message": "Merge branch 'git-post' of ssh://studiosleepygiraffe.com:41990/home/toben/Eurus/ssg projects/studiosleepygiraffe into git-post", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Merge branch 'git-post' of ssh://studiosleepygiraffe.com:41990/home/toben/Eurus/ssg projects/studiosleepygiraffe into git-post"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-06 11:20:49-05:00", 
+                "message": "Things can get a bit hap hazard when you are developing across 3\ngit repos at once!\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Missed a file."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-06 16:18:48+00:00", 
+                "message": "Missed a forward slash.", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Missed a forward slash."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-06 16:14:12+00:00", 
+                "message": "A small fix, but I have updated the pathing for resources. While\nresource/projects.json worked fine for the dev enviorment, it was\nfailing in production. So I added a bit that I found on stack\noverflow: https://stackoverflow.com/q/14825787\n\nThis introduced me to getting the location of the current file and\nsaving it as APP_ROOT. This should work in both dev and prod.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "APP_ROOT"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-06 10:57:51-05:00", 
+                "message": "I also updated the devlog templates. I'm moving the autoblogging\nover to the devlog tab like it supposed to be. I'll do write ups\nfor the apps section probably next. Those to will probably also be\nautomated deally bobs. I think I'll use the README.md files for\nthat. This way I can maintain a nice summary page while in the\ncode as usual. I'll probably have this whole site automated by the\ntime I actually feel like publishing it. xD\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Merge branch 'nickle' into git-post"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-05 21:21:57+00:00", 
+                "message": "Artifacts.", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Artifacts."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-05 21:20:24+00:00", 
+                "message": "I had to make a few tweaks to the output to make it easier to work\nwith. Should be good to use now.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Some tweeks."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-07-05 20:55:50+00:00", 
+                "message": "I got the posts.py file working like I want it to now. Turns out\nthere was a trailing '\\n' causing all the problems. But I decided\nto upgrade the repos file to use json so I could add more info to\nthe projects.\n\nIn looking at this, I might release this as it's own project in the\nfuture. Autoblogging via git commit messages is pretty knifty and\nI think more people than just me would enjoy it. We'll see. Right\nnow I'm jsut happy to get all the projects in to the system.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Works now!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-06-29 14:50:29-05:00", 
+                "message": "It is mostly done as a matter of crossed wires. But I've added the\nfeature where commits are posted as blog entries to the apps page.\nNot entirely intentional. But I was already down that rabbit hole\nso I kept going. I'll make the appropriate changes soon to move the\ngit commit auto blogging over to the dev log page, which I've yet\nto make. ^^;\n\nBut it's progress! The site is starting to have some idea of the\ncontent that I want in it available. And I'm slowly starting to\nunderstand how to piece it all together. It is my first flask app\nafter all. Man, never thought I'd be making web apps. I suppose I\nnever really fancied myself as a mobile developer either. But here\nwe are. Making kivy and flask apps.\n\nTO THE KING!\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Apps now are devlogs! Wait."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-06-27 21:27:01+00:00", 
+                "message": "I've added a little more to this. Now there are \"posts\" that will\nencapsulate all the information for a post. I've run into a problem\nhowever which I'm not sure what is causing it. That sentence got\nweird. I think the user not being able to access the git repo is\nbasically the problem. Which is probably do to clever tricks with\nthe NFS mount not being quite as clever as I want.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Created post objects."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-06-26 21:22:51+00:00", 
+                "message": "This too will one day become a blog post. I'll probably have single\nline commits be ignored, or tweeted or something. But right now\njust got it set up so that it will find git commit messages and\nturn them into a title and a body.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Started work on system for having posts done by git commits."
+            }, 
+            {
+                "author": "Archer", 
+                "branch": "master", 
+                "date": "2017-05-18 15:46:10-05:00", 
+                "message": "I'm realizing I need to take the approach of make the HTML and then make\nthe css to format it. that seems to be the way the systems are designed to\nwork. So I've started trying to add some content that I will then learn\nhow to form how I want. I also made static content to start with. I'll\nlearn how to do the fancy stuff with dynamic content as soon as I learn\nhow to even get a page up.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Started fiddling with the html a bit for apps."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-20 13:54:18-05:00", 
+                "message": "I've got a long way to go.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Some basic layout coming in."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-04-11 16:37:20+00:00", 
+                "message": "Added missing files.", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Added missing files."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-21 02:19:04+00:00", 
+                "message": "Now I'll be able to bother getting something more interesting in place.\nBut also I need to look into ssl certificates.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Basic site is up. I've got a decent looking landing page."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-20 21:57:18+00:00", 
+                "message": "Got pictures being served.", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Got pictures being served."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-20 21:47:33+00:00", 
+                "message": "Got templates working.", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Got templates working."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-03-20 21:38:51+00:00", 
+                "message": "learning how this works. Reduced it back to one file for now.", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "learning how this works. Reduced it back to one file for now."
+            }, 
             {
                 "author": "Toben Archer", 
                 "branch": "master", 
