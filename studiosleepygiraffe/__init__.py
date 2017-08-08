@@ -21,7 +21,7 @@ def getAppFromRepos(app_name):
 nav = Nav()
 @nav.navigation()
 def mynavbar():
-	return Navbar('Stduio Sleepy Giraffe',
+	return Navbar('Studio Sleepy Giraffe',
 			View('Home', 'home'),
 			View('Apps', 'apps'),
 			View('Dev Log', 'devlogs'),
@@ -76,6 +76,10 @@ def version():
 
 @app.route("/static/<fname>")
 def get_resource(fname):
+	if fname == "style.css":
+		print("Requested style.css")
+		return send_file("static/style.css", mimetype="text/css")
+	print(fname)
 	return send_file("static/" + fname, mimetype='image/jpeg')
 
 if __name__ == "__main__":

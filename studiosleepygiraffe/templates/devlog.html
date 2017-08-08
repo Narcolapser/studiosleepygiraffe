@@ -1,17 +1,24 @@
-{% extends "bootstrap/base.html" %}
-{% block title %}Studio Sleepy Giraffe: Development Log{% endblock %}
+<html>
+	<head>
+		<title>Studio Sleepy Giraffe</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='bootstrap.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	</head>
 
-{% block navbar %}
-{{nav.mynavbar.render()}}
-{% endblock %}
-
-{% block content %}
-	<h1>Development logs for: {{content['name']}}</h1>
-	{% for post in posts %}
-		<h2>{{post['title']}}</h2>
-		<p>{{post['message']}}</p>
-		<p>written: {{post['date'][:10]}} by: {{post['author']}} on branch: {{post['branch']}}</p>
-	{% endfor %}
-{% endblock %}
-
-
+	<body class="main">
+		<div class="banner">
+			<img class="header" src="static/inverted_SSG.jpg" align="middle"/>
+		</div>
+		<div>
+			{{nav.mynavbar.render()}}
+		</div>
+		<div class="content">
+			<h1>Development logs for: {{content['name']}}</h1>
+			{% for post in posts %}
+				<h2>{{post['title']}}</h2>
+				<p>{{post['message']}}</p>
+				<p>written: {{post['date'][:10]}} by: {{post['author']}} on branch: {{post['branch']}}</p>
+			{% endfor %}
+		</div>
+	</body>
+</html>
