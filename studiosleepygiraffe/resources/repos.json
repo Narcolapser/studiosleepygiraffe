@@ -2,36 +2,43 @@
 	{
 		"path":"/home/toben/Code/studiosleepygiraffe",
 		"name":"Studio Sleepy Giraffe",
-		"url":"ssg"
-	},
-	{
-		"path":"/home/toben/Eurus/ssg projects/warehouse_game",
-		"name":"Pallet Packer",
-		"url":"pallet_packer"
-	},
-	{
-		"path":"/home/toben/Eurus/ssg projects/Flight Night",
-		"name":"Flight Night",
-		"url":"flight_night"
+		"url":"ssg",
+		"description":"SSG's website information."
 	},
 	{
 		"path":"/home/toben/Eurus/ssg projects/duel",
 		"name":"Gravity Duel",
-		"url":"gduel"
+		"url":"gduel",
+		"description":"A game of gravity bomb lobbing."
 	},
 	{
 		"path":"/home/toben/Eurus/ssg projects/kivy joystick",
 		"name":"Kivy Garden: Joystick",
-		"url":"kivy_joystick"
-	},
-	{
-		"path":"/home/toben/Eurus/ssg projects/Kivy-Kazam",
-		"name":"Kivy-Kazam",
-		"url":"kivy-kazam"
+		"url":"kivy_joystick",
+		"description":"An onscreen joystick for use in games."
 	},
 	{
 		"path":"/home/toben/Eurus/ssg projects/MinecraftCommandCraft",
 		"name":"Command Craft",
-		"url":"mccc"
+		"url":"mccc",
+		"description":"A collection of scripts for making minecraft buildings with Blender3D"
+	},
+	{
+		"path":"/home/toben/Eurus/ssg projects/Flight Night",
+		"name":"Flight Night",
+		"url":"flight_night",
+		"description":"A app for tracking your BAC at homebrew club"
+	},
+	{
+		"path":"/home/toben/Eurus/ssg projects/Kivy-Kazam",
+		"name":"Kivy-Kazam",
+		"url":"kivy-kazam",
+		"description":"A simple program for prototyping Kivy Layouts."
+	},
+	{
+		"path":"/home/toben/Eurus/ssg projects/warehouse_game",
+		"name":"Pallet Packer",
+		"url":"pallet_packer",
+		"description":"A game of frantic logistics."
 	}
 ]

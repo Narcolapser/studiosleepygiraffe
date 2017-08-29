@@ -1,8 +1,15 @@
 {% extends "ssg.html" %}
 {% block content %}
 {% for app in apps %}
-<div class="app">
-	<a href="/apps/{{app['url']}}"><h2>{{app['name']}}</h2></a>
-<div>
+<a href="/apps/{{app['url']}}">
+	<div class="app border rounded">
+		<div class="app_details">
+			<h2>{{app['name']}}</h2>
+			<p>{{app['description']}}</p>
+		</div>
+		<div class="crop-height" style="background-image: url(/static/{{app['url']}}1.png); background-position: center;"></div>
+		<div class="crop-height second" style="background-image: url(/static/{{app['url']}}2.png); background-position: center;"></div>
+	</div>
+</a>
 {% endfor %}
 {% endblock %}

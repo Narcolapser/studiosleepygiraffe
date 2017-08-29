@@ -1,5 +1,40 @@
 img.header {display: block; margin-left: auto; margin-right: auto;}
 body {
-  font-size: 28px;
+	font-size: 28px;
+}
+div.app {
+	height: 206px;
+	position: relative;
+	margin: 20px;
+	border: 3px solid gray;
+	border-radius: 10px;
 }
 
+.app_details {
+	position: absolute;
+	z-index: 10;
+}
+
+.crop-height {
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	/* max-width: 1200px; /* img src width (if known) */
+	max-width: 400px;
+	overflow: hidden; 
+	height: 200px;
+	width: 25%;
+}
+
+.crop-height.second{
+	right: 25%;
+}
+
+.about_text{
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.about_picture{
+	position: relative;
+}
