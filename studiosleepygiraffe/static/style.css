@@ -31,10 +31,11 @@ div.app {
 }
 
 .about_text{
-	max-width: 600px;
+	max-width: 50%;
 	margin: 0 auto;
 }
 
 .about_picture{
-	position: relative;
+	float:left
+	width: 50%;
 }
