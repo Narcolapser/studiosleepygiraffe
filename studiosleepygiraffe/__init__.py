@@ -34,9 +34,19 @@ nav.init_app(app)
 def index():
 	return render_template('index.html')
 
+@app.route("/houses")
+def houses():
+	return render_template('houses.html')
+
+@app.route("/house/<house_name>")
+def house(house_name):
+	photolist = os.listdir("static/housepics/"+house_name)
+	return render_template('house.html',photos=photolist,house=house_name)
+
 @app.route("/home")
 def home():
-	return render_template('home.html')
+#	return render_template('home.html')
+	return render_template('houses.html')
 
 @app.route("/apps")
 def apps():
@@ -80,6 +90,8 @@ def get_resource(fname):
 		print("Requested style.css")
 		return send_file("static/style.css", mimetype="text/css")
 	print(fname)
+	if ".js" in fname:
+		return send_file("static/"+fname,mimetype="text/script")
 	return send_file("static/" + fname, mimetype='image/jpeg')
 
 if __name__ == "__main__":
