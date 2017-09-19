@@ -1,5 +1,6 @@
 {
     "flight_night": {
+        "description": "A app for tracking your BAC at homebrew club", 
         "name": "Flight Night", 
         "path": "/home/toben/Eurus/ssg projects/Flight Night", 
         "posts": [
@@ -111,9 +112,34 @@
         "url": "flight_night"
     }, 
     "gduel": {
+        "description": "A game of gravity bomb lobbing.", 
         "name": "Gravity Duel", 
         "path": "/home/toben/Eurus/ssg projects/duel", 
         "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-09-05 20:33:49-05:00", 
+                "message": "I added a makefile. For some reason buildozer won't compile the apk\non my NFS drive. I must copy the code to my physical drive and then\nit will build properly. So the make file is just a save of that set\nof copy functions. And then some where to remember the actual build\ncall to buildozer.\n", 
+                "project": "Gravity Duel", 
+                "title": "oooh, two commits in one night!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-09-05 20:12:24-05:00", 
+                "message": "I got so carried away with the debugging last time that I forgot\nto commit. woops. oh well. So what have I done tonight?\n\nWell, tonight specifically I haven't done too much. I got the\nsettings to work properly. This is good as it allows the game to be\nplayable again on handhelds. It wasn't work for a while as a result\nof the config not finding necessary values.\n\nLast time I coded I accomplished quite a number of things. I got\nthe settings screen up and running, if not fully working. I fixed\nthe issue where red wouldn't be able to fire until they recalled\ntheir torpedoes at the begining of the game. Shots that collide or\nfall into the sun now get removed from the counter. When you start\na new game, the previous shots are removed, clearing the gamefield.\nAnd I added a score keeper. I'm intending to add a \"first to x\"\ngame mode in the rules, so this puts down one of the needed\ncomponents of that.\n\nLeft to do:\nAdd an icon.\nFirst to x matches\nship selector\nnicer ships\nexplosion on ship destroyed\nsound\n\nwhich honestly isn't a particularly long list! Hopefully I'll have\nsomething up in the app store here soon. w00t w00t!\n", 
+                "project": "Gravity Duel", 
+                "title": "I forgot to commit last time."
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-08-21 21:21:04-05:00", 
+                "message": "I did not get as much done as I had hoped I would. I have a managed\nto get the game seperated out into screens now. That helps. You can\nstart a new game and it will throw up a victory screen and then\nyou can go back to the menu or play again. Progress to be sure.\n\nWhat I'm slightly annoyed with is my lack of progress on the\nsettings front. I was trying to get the settings screen to work\nand I just didn't quite get it because I couldn't figure out how\nto get config to behave. And I need to go empty the litter box now\nbefore going to bed. Hopefully I'll be able to accomplish more\nlater this week.\n", 
+                "project": "Gravity Duel", 
+                "title": "Slow progress tonight."
+            }, 
             {
                 "author": "Toben Archer", 
                 "branch": "master", 
@@ -166,6 +192,7 @@
         "url": "gduel"
     }, 
     "kivy-kazam": {
+        "description": "A simple program for prototyping Kivy Layouts.", 
         "name": "Kivy-Kazam", 
         "path": "/home/toben/Eurus/ssg projects/Kivy-Kazam", 
         "posts": [
@@ -237,6 +264,7 @@
         "url": "kivy-kazam"
     }, 
     "kivy_joystick": {
+        "description": "An onscreen joystick for use in games.", 
         "name": "Kivy Garden: Joystick", 
         "path": "/home/toben/Eurus/ssg projects/kivy joystick", 
         "posts": [
@@ -300,6 +328,7 @@
         "url": "kivy_joystick"
     }, 
     "mccc": {
+        "description": "A collection of scripts for making minecraft buildings with Blender3D", 
         "name": "Command Craft", 
         "path": "/home/toben/Eurus/ssg projects/MinecraftCommandCraft", 
         "posts": [
@@ -443,6 +472,7 @@
         "url": "mccc"
     }, 
     "pallet_packer": {
+        "description": "A game of frantic logistics.", 
         "name": "Pallet Packer", 
         "path": "/home/toben/Eurus/ssg projects/warehouse_game", 
         "posts": [
@@ -498,9 +528,26 @@
         "url": "pallet_packer"
     }, 
     "ssg": {
+        "description": "SSG's website information.", 
         "name": "Studio Sleepy Giraffe", 
         "path": "/home/toben/Code/studiosleepygiraffe", 
         "posts": [
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-08-29 16:55:00-05:00", 
+                "message": "I've made a huge pile of changes with this commit. Pictures have\nbeen added to most of the apps on the apps page. the pictures will\nnaturallly flow behind the text for each application. I put down\nsome basic pieces for about and contact, though some tweeking is\nstill necessary. I've added a discription for each app.\n\nOver all this is really starting to close in on being a fleshed out\nwebsite the way have been envisioning/desiring. I'm pleased! Just\na little more and I'll be able to make it public facing.\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Things are looking good!"
+            }, 
+            {
+                "author": "Toben Archer", 
+                "branch": "master", 
+                "date": "2017-08-08 16:25:11-05:00", 
+                "message": "I changed all the templates to use inheritance from a base\ntemplate, ssg.html. This makes each template just a little bit\nsimplier and avoids me repeating myself. DRY woohoo!\n\nI also expanded the README.md quite a bit. I explained how the\nwhole git-posting system works and why I use markdown for the\nproject pages.\n\nMy next work will be in making things a little more fancy. I've\ngot several ideas written down in my sketch book on how to make the\napps page more exciting. I intend on making each app a kind of\nbutton with text and images inside. But of course automatically\ngenerated so I don't have to bog myself down with creating content\nfor the website. Let the website create itself!\n", 
+                "project": "Studio Sleepy Giraffe", 
+                "title": "Template inheritance now in use."
+            }, 
             {
                 "author": "Toben Archer", 
                 "branch": "master", 

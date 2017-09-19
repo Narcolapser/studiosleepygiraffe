@@ -32,7 +32,8 @@ nav.init_app(app)
 
 @app.route("/")
 def index():
-	return render_template('index.html')
+#	return render_template('index.html')
+	return render_template('houses.html')
 
 @app.route("/houses")
 def houses():
@@ -40,7 +41,7 @@ def houses():
 
 @app.route("/house/<house_name>")
 def house(house_name):
-	photolist = os.listdir("static/housepics/"+house_name)
+	photolist = os.listdir(APP_ROOT + "static/housepics/"+house_name)
 	return render_template('house.html',photos=photolist,house=house_name)
 
 @app.route("/home")
