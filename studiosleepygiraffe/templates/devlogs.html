@@ -1,9 +1,11 @@
 {% extends "ssg.html" %}
 {% block content %}
-<h1>Development logs</h1>
+<div class="narrow-content">
+	<h1>Development logs</h1>
 
-<p>These development logs are the comments I have made as I work on my projects. They are actually made up of the commit messages from the repo for each project. This has encouraged me to have meaningful commit messages as they are effectively my way of blogging about my project as I work on it. The best part is that because they are commit messages, new posts are just part of my natural workflow. For more information see the apps page for "Studio Sleepy Giraffe."</p><hr/>
-{% for app in apps %}
-	<a href="/devlogs/{{app['url']}}"><h3>{{app['name']}}</h3></a>
-{% endfor %}
+	<p>These development logs are the comments I have made as I work on my projects. They are actually made up of the commit messages from the repo for each project. This has encouraged me to have meaningful commit messages as they are effectively my way of blogging about my project as I work on it. The best part is that because they are commit messages, new posts are just part of my natural workflow. For more information see the apps page for "Studio Sleepy Giraffe."</p><hr/>
+	{% for app in apps %}
+		<a href="/devlogs/{{app['url']}}"><h3>{{app['name']}}</h3></a>
+	{% endfor %}
+</div>
 {% endblock %}

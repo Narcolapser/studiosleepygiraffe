@@ -30,12 +30,15 @@ div.app {
 	right: 25%;
 }
 
-.about_text{
+.narrow-content{
 	max-width: 50%;
 	margin: 0 auto;
 }
 
 .about_picture{
-	float:left
+	float:left;
 	width: 50%;
+	margin: 20px;
 }
+
+

@@ -23,7 +23,7 @@ nav = Nav()
 def mynavbar():
 	return Navbar('Studio Sleepy Giraffe',
 			View('Home', 'home'),
-			View('Apps', 'apps'),
+			View('Projects', 'apps'),
 			View('Dev Log', 'devlogs'),
 			View('About', 'about'),
 			View('Contact', 'contact')
@@ -32,7 +32,7 @@ nav.init_app(app)
 
 @app.route("/")
 def index():
-	return render_template('index.html')
+	return render_template('home.html')
 
 @app.route("/home")
 def home():
@@ -60,6 +60,10 @@ def devlogs():
 def disp_logs(app_name):
 	content = {'name':app_name}
 	apps = json.load(open(APP_ROOT + "resources/projects.json"))
+	for post in apps[app_name]['posts']:
+		post['message'] = post['message'].replace('\n\n','<br>')
+		post['message'] = post['message'].replace('\n','')
+		post['message'] = post['message'].replace('<br>','\n\n')
 	return render_template('devlog.html',content=content,posts=apps[app_name]['posts'])
 
 @app.route("/about")
