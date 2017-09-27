@@ -25,8 +25,7 @@ def mynavbar():
 			View('Home', 'home'),
 			View('Projects', 'apps'),
 			View('Dev Log', 'devlogs'),
-			View('About', 'about'),
-			View('Contact', 'contact')
+			View('About', 'about')
 		)
 nav.init_app(app)
 
