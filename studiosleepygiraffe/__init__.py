@@ -21,7 +21,7 @@ def getAppFromRepos(app_name):
 nav = Nav()
 @nav.navigation()
 def mynavbar():
-	return Navbar('Studio Sleepy Giraffe',
+	return Navbar("",
 			View('Home', 'home'),
 			View('Projects', 'apps'),
 			View('Dev Log', 'devlogs'),
