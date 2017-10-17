@@ -18,6 +18,12 @@
 		"description":"A game of gravity bomb lobbing."
 	},
 	{
+		"path":"/home/toben/Code/dash-server",
+		"name":"Dash Lib",
+		"url":"dashlib",
+		"description":"A library for Amazon dashbutton hijinks. "
+	},
+	{
 		"path":"/home/toben/Code/garden.joystick",
 		"name":"Kivy Garden: Joystick",
 		"url":"kivy_joystick",
@@ -40,12 +46,6 @@
 		"name":"Flight Night",
 		"url":"flight_night",
 		"description":"A app for tracking your BAC at homebrew club"
-	},
-	{
-		"path":"/home/toben/Code/dash-server",
-		"name":"Dash Lib",
-		"url":"dashlib",
-		"description":"A library for Amazon dashbutton hijinks. "
 	},
 	{
 		"path":"/home/toben/Code/Kivy-Kazam",
