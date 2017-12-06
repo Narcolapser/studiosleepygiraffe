@@ -30,11 +30,23 @@ div.app {
 	right: 25%;
 }
 
-.about_text{
-	max-width: 600px;
+.narrow-content{
+	max-width: 50%;
 	margin: 0 auto;
 }
 
 .about_picture{
-	position: relative;
+	float:left;
+	width: 50%;
+	margin: 20px;
+}
+
+.navbar .navbar-nav {
+	display:inline-block;
+	float: none;
+	vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+	text-align: center;
 }

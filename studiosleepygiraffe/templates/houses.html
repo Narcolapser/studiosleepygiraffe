@@ -1,6 +1,7 @@
 {% extends "ssg.html" %}
 {% block content %}
 <h1>Houses in consideration:</h1></br></br>
-<a href="house/clark"><h2>Clark St.</h2></a></br>
-<a href="house/nharvard"><h2>North Harvard</h2></a></br>
+{% for house in houses %}
+	<a href="house/{{house}}"><h2>{{house}}</h2></a></br>
+{% endfor %}
 {% endblock %}

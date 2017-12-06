@@ -1,42 +1,60 @@
 [
 	{
+		"path":"/home/toben/Code/python-o365",
+		"name":"O365",
+		"url":"o365",
+		"description":"A simple python library for interaction with Office 365."
+	},
+	{
 		"path":"/home/toben/Code/studiosleepygiraffe",
 		"name":"Studio Sleepy Giraffe",
 		"url":"ssg",
 		"description":"SSG's website information."
 	},
 	{
-		"path":"/home/toben/Eurus/ssg projects/duel",
+		"path":"/home/toben/Code/duel",
 		"name":"Gravity Duel",
 		"url":"gduel",
 		"description":"A game of gravity bomb lobbing."
 	},
 	{
-		"path":"/home/toben/Eurus/ssg projects/kivy joystick",
+		"path":"/home/toben/Code/dash-server",
+		"name":"Dash Lib",
+		"url":"dashlib",
+		"description":"A library for Amazon dashbutton hijinks. "
+	},
+	{
+		"path":"/home/toben/Code/garden.joystick",
 		"name":"Kivy Garden: Joystick",
 		"url":"kivy_joystick",
 		"description":"An onscreen joystick for use in games."
 	},
 	{
-		"path":"/home/toben/Eurus/ssg projects/MinecraftCommandCraft",
-		"name":"Command Craft",
-		"url":"mccc",
-		"description":"A collection of scripts for making minecraft buildings with Blender3D"
+		"path":"/home/toben/Code/automatic-fiesta",
+		"name":"Automatic Fiesta",
+		"url":"automatic-fiesta",
+		"description":"A system for automatically distributing code to satellite micropython nodes based on MAC address."
 	},
 	{
-		"path":"/home/toben/Eurus/ssg projects/Flight Night",
+		"path":"/home/toben/Code/MinecraftCommandCraft",
+		"name":"Command Craft",
+		"url":"mccc",
+		"description":"A collection of scripts for making minecraft buildings with Blender3D."
+	},
+	{
+		"path":"/home/toben/Code/Flight Night",
 		"name":"Flight Night",
 		"url":"flight_night",
 		"description":"A app for tracking your BAC at homebrew club"
 	},
 	{
-		"path":"/home/toben/Eurus/ssg projects/Kivy-Kazam",
+		"path":"/home/toben/Code/Kivy-Kazam",
 		"name":"Kivy-Kazam",
 		"url":"kivy-kazam",
 		"description":"A simple program for prototyping Kivy Layouts."
 	},
 	{
-		"path":"/home/toben/Eurus/ssg projects/warehouse_game",
+		"path":"/home/toben/Code/warehouse",
 		"name":"Pallet Packer",
 		"url":"pallet_packer",
 		"description":"A game of frantic logistics."
