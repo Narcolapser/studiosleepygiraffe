@@ -34,8 +34,9 @@ nav.init_app(app)
 
 @app.route("/")
 def index():
-	return render_template('index.html')
-	return render_template('houses.html')
+#	return render_template('index.html')
+#	return render_template('houses.html')
+	return render_template('home.html')
 
 @app.route("/houses")
 def houses():
