@@ -24,6 +24,12 @@
 		"description":"A library for Amazon dashbutton hijinks. "
 	},
 	{
+		"path":"/home/toben/Code/ncsplayer",
+		"name":"NCS Player",
+		"url":"ncsplayer",
+		"description":"A proof of concept kivy video streamer."
+	},
+	{
 		"path":"/home/toben/Code/garden.joystick",
 		"name":"Kivy Garden: Joystick",
 		"url":"kivy_joystick",
