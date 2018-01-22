@@ -9,6 +9,8 @@ import markdown
 
 app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__)) + "/"
+BLOG_DIR = "/home/toben/Code/blog/"
+#BLOG_DIR = APP_ROOT + "static/blog/"
 Bootstrap(app)
 
 def getAppFromRepos(app_name):
@@ -24,6 +26,7 @@ def mynavbar():
 	return Navbar("",
 			View('Home', 'home'),
 			View('Projects', 'apps'),
+			View('Blog', 'blog'), #not sure why but this expects me to put contact here...
 			View('Dev Log', 'devlogs'),
 			View('About', 'about')
 		)
@@ -81,13 +84,36 @@ def disp_logs(app_name):
 def about():
 	return render_template('about.html')
 
-@app.route("/contact")
-def contact():
-	return render_template('contact.html')
+@app.route("/blog")
+def blog():
+	filenames = os.listdir(BLOG_DIR)
+	processed_posts = []
+	for i in filenames:
+		post = getPost(i)
+		if post:
+			processed_posts.append(post)
+	posts = {i[0]:i[1] for i in processed_posts}
+	titles = posts.keys()
+	titles.sort(reverse=True)
+	return render_template('blog.html',posts=posts,titles=titles)
+
+@app.route("/blog/<post>")
+def blog_post(post):
+	return render_template('blogpost.html',title=post,content=getPost(post))
+
+def getPost(fname):
+	print("=======================================================")
+	try:
+		with open(BLOG_DIR + fname) as f:
+			content = f.read()
+	except Exception as e:
+		print(e)
+		return None
+	return (fname,content)
 
 @app.route("/version")
 def version():
-	return "0.1.2"
+	return "0.2.0"
 
 @app.route("/static/<fname>")
 def get_resource(fname):

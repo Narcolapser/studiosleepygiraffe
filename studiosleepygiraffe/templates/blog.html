@@ -1,0 +1,10 @@
+{% extends "ssg.html" %}
+{% block content %}
+<div class="narrow-content">
+	<h1 style="text-align:  center;" >Blog</h1>
+	<hr/>
+	{% for post in titles %}
+		<a href="/blog/{{post}}"><h2>{{post}}</h2></a>
+	{% endfor %}
+</div>
+{% endblock %}
