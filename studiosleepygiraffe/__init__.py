@@ -90,14 +90,26 @@ def blog_post(post):
 	return render_template('blogpost.html',title=post,content=getPost(post))
 
 def getPost(fname):
-	print("=======================================================")
 	try:
 		with open(BLOG_DIR + fname) as f:
-			content = f.read()
+			content = json.load(f)
+		content['content'] = Markup(markdown.markdown(content['content']))
+		print(content)
 	except Exception as e:
 		print(e)
 		return None
-	return (fname,content)
+	return content
+
+@app.route("/blog/cover/<fname>")
+def get_cover(fname):
+	print("Getting cover:" + BLOG_DIR + "covers/" + fname)
+	if ".jpg" in fname:
+		return send_file(BLOG_DIR + "covers/" + fname, mimetype='image/jpeg')
+
+@app.route("/blog/tags/<tag>")
+def get_posts_with_tag(tag):
+	print("fetching posts with tag: " + tag)
+	return render_template('blogtag.html', tag=tag)
 
 @app.route("/version")
 def version():
