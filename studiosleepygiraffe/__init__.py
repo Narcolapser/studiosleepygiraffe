@@ -90,31 +90,48 @@ def blog():
 	filenames = os.listdir(BLOG_DIR)
 	processed_posts = []
 	for i in filenames:
-		post = getPost(i)
-		if post:
-			processed_posts.append(post)
-	posts = {i[0]:i[1] for i in processed_posts}
+		if '.json' in i:
+			post = getPostInfo(i)
+			if post:
+				processed_posts.append(post)
+	posts = {i['date']+": "+i['title']:i for i in processed_posts}
 	titles = posts.keys()
 	titles.sort(reverse=True)
 	return render_template('blog.html',posts=posts,titles=titles)
 
-@app.route("/blog/<post>")
-def blog_post(post):
-	return render_template('blogpost.html',title=post,content=getPost(post))
-
-def getPost(fname):
-	print("=======================================================")
+def getPostInfo(fname):
 	try:
 		with open(BLOG_DIR + fname) as f:
-			content = f.read()
+			content = json.load(f)
+		content['file'] = fname.replace('.json','')
 	except Exception as e:
 		print(e)
 		return None
-	return (fname,content)
+	return content
+
+@app.route("/blog/<post>")
+def blog_post(post):
+	with open(BLOG_DIR + post + '.json') as f:
+		content = json.load(f)
+	if content['content_file']:
+		md = open(BLOG_DIR + content['content_file']).read()
+		content['content'] = Markup(markdown.markdown(md))
+	return render_template('blogpost.html',title=post,content=content)
+
+@app.route("/blog/cover/<fname>")
+def get_cover(fname):
+	print("Getting cover:" + BLOG_DIR + "covers/" + fname)
+	if ".jpg" in fname:
+		return send_file(BLOG_DIR + "covers/" + fname, mimetype='image/jpeg')
+
+@app.route("/blog/tags/<tag>")
+def get_posts_with_tag(tag):
+	print("fetching posts with tag: " + tag)
+	return render_template('blogtag.html', tag=tag)
 
 @app.route("/version")
 def version():
-	return "0.2.0"
+	return "0.2.1"
 
 @app.route("/static/<fname>")
 def get_resource(fname):
