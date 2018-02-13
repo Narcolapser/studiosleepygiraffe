@@ -1,0 +1,31 @@
+<html>
+	<Title>Snow Removal</title>
+	<h1>Toben Archer Snow Removal</h1>
+	<hr/>
+	<p>Toben Archer</p>
+	<p>1019 West Main St.</p>
+	<p>Vermillion, SD 57069</p>
+	<p>Phone: 605-937-6985</p>
+	<hr/><br/>
+	<p>Services for the month of {{month}}:</p>
+	
+	{% for clearing in clearings %}
+		<table style="width:100%;">
+			<tr>
+				<td>{{month_num}}-{{clearing}}-2018:</td>
+				<td style="text-align:right;">$50</td>
+			</tr>
+		</table>
+		<p>All sidewalks, steps, and entry areas on Alpha Phi property at 707 E. Cedar.</p>
+		<br/>
+	{% endfor %}
+
+	<hr/>
+	<table style="width:100%;">
+		<tr>
+			<td>Total:</td>
+			<td style="text-align:right;">${{(clearings|length)*50}}</td>
+		</tr>
+	</table>
+</html>
+
