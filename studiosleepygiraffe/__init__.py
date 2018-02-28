@@ -87,6 +87,22 @@ def disp_logs(app_name):
 def about():
 	return render_template('about.html')
 
+@app.route("/about/resume")
+def resumeHTML():
+	return resume()
+
+@app.route("/about/resume.pdf")
+def resumePDF():
+	template = resume()
+	pdf = StringIO()
+	pisa.CreatePDF(StringIO(template.encode('utf-8')),pdf)
+	pdf.seek(0)
+	return send_file(pdf,attachment_filename="Toben_Archer.pdf",mimetype='application/pdf')
+
+def resume():
+	resume_json = json.load(open(APP_ROOT + "resources/resume.json"))
+	return render_template('resume.html',resume=resume_json)
+
 @app.route("/blog")
 def blog():
 	filenames = os.listdir(BLOG_DIR)

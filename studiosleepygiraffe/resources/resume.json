@@ -1,0 +1,96 @@
+{
+	"employment":
+	[
+		{
+			"dates":"August 2013 - September 2015",
+			"org":"Operation Mobilization",
+			"title":"Lifehope Systems Administrator and Dancelink Ministry",
+			"responsibilities":
+			[
+				"As a Systems Administrator I have been heavily involved in both the management and development of the systems we use. While I work with another Sysadm in the Birmingham Lifehope office, I am solely responsible for the other Lifehope facility in London.",
+				"In dance ministry I work alongside the Lifehope Dancelink director to teach dance and theology of arts. We use dance as a form of evangelism, intercession, and worship."
+			]
+		},
+		{
+			"dates":"January 2013 - August 2013",
+			"org":"Ozone Solutions",
+			"title":"Intern - Software Developer",
+			"responsibilities":
+			[
+				"I independently maintained their entire server infrastructure.",
+				"I developed new systems that facilitate their ability to see and communicate with their customers worldwide."
+			]
+		},
+		{
+			"dates":"August 2010 - May 2013",
+			"org":"Computing Services Work Study",
+			"title":"Computing Services Work Study",
+			"responsibilities":
+			[
+				"I fixed software and hardware problems with student computers and the college computers around campus.",
+				"Assisted with the installation of the phone system and the refactoring of the network currently in use at NWC."
+			]
+		},
+		{
+			"dates":"May 2012 - August 2012",
+			"org":"Twin Lakes Christian Center",
+			"title":"Technology Coordinator",
+			"responsibilities":
+			[
+				"Attended to problems on the network such as filtering and outages.",
+				"Managed (setup, tear down, and running) all of the audio/video equipment that were used for camp activities, worship, family reunions and more.",
+				"Served as a counselor for Elementary, Junior High, and Senior High camps."
+			]
+		},
+		{
+			"dates":"May 2009 - August 2010",
+			"org":"Country Maid Inc.",
+			"title":"Software Developer and General IT",
+			"responsibilities":
+			[
+				"Developed software to be used as an inventory tracking system.",
+				"Assisted in the selection of hardware and systems for warehouse management.",
+				"Designed and created layout and schema for barcodes throughout the warehouse.",
+				"Assisted in the managing of various IT related issues."
+			]
+		}
+	],
+	"skills":
+	[
+		{
+			"title":"Software Development",
+			"content":[
+				"Created a program for distributing compute-intensive programs across a network that could scale to hundreds of machines while having a minimal footprint on the client machines.",
+				"Contributed to the open source project Salt for several of the project’s Windows modules. Most notably I wrote the module for managing the Windows Update Agent which David Boucha, Senior Software Engineer for Salt, decided to incorporate into the mainline Salt project.",
+				"Developed a service for my employer Ozone Solutions that would synchronize all of their client information between their various account management systems as well as create a weighted map of the locations of their clients worldwide."
+			]
+		},
+		{
+			"title":"Mentoring",
+			"content":[
+				"Completed the Operation Mobilization Mentoring Clinic and received certificate of achievement.",
+				"Learned to establish rapport with students/protégés.",
+				"Learned various methods for determining where a protégé is struggling how best to free them to be able to thrive in academic, personal, and practical realms."
+			]
+		},
+		{
+			"title":"Performing Arts",
+			"content":[
+				"Instructor and choreographer for OM-Arts International Incarnate program for developing artists learning to use their art form in faith and Christian mission.",
+				"Performed with OM-Arts in Bobbio Italy, 2014.",
+				"Worked in capacities as an actor, stage manager, writer, master electrician, and/or director for several plays in high school and college.",
+				"Nominated for Irene Ryan Acting Scholarship Competition, Kennedy Center American College Theater Festival 2013.",
+				"Performed as a member of the Northwestern Symphonic Band for all four years of my collegiate career.",
+				"Performed as a member of the Northwestern A Capella Choir for 2 years."
+			]
+		}
+	],
+	"volunteering":
+	[
+		"Counselor for seven years at the local Christian camp for day camp, elementary, and Junior high camps.",
+		"Ran sound equipment for each church I have regularly attended.",
+		"Participated as a musician in my church during high school and current church in the UK.",
+		"I worked with the Catholic Social Services mental health team during disaster relief after the tornado in Parkersburg, IA.",
+		"I was an assistant teacher at Pomeroy-Palmer High School teaching fundamental electronics."
+	]
+}
