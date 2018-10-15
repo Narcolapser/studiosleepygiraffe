@@ -9,6 +9,8 @@ import json
 import os
 import markdown
 
+import iot
+
 app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__)) + "/"
 BLOG_DIR = "/home/toben/Code/blog/"
@@ -200,6 +202,12 @@ def get_snowpdf(month):
 	pisa.CreatePDF(StringIO(template.encode('utf-8')),pdf)
 	pdf.seek(0)
 	return send_file(pdf,attachment_filename=month+".pdf",mimetype='application/pdf')
+
+@app.route("/iot/<device>/<method>")
+def device_request(device,method):
+	print("sent a request to {0} for the method {1}".format(device,method))
+	iot.run(device,method)
+	return str({'result':'success'})
 
 if __name__ == "__main__":
 	app.run()
