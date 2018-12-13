@@ -11,6 +11,7 @@ import markdown
 
 from blueprints.snow import snow_api
 from blueprints.blog import blog_api
+import iot
 
 from util import log_visit
 
@@ -86,6 +87,22 @@ def disp_logs(app_name):
 def about():
     return render_template('about.html')
 
+@app.route("/about/resume")
+def resumeHTML():
+	return resume()
+
+@app.route("/about/resume.pdf")
+def resumePDF():
+	template = resume()
+	pdf = StringIO()
+	pisa.CreatePDF(StringIO(template.encode('utf-8')),pdf)
+	pdf.seek(0)
+	return send_file(pdf,attachment_filename="Toben_Archer.pdf",mimetype='application/pdf')
+
+def resume():
+	resume_json = json.load(open(APP_ROOT + "resources/resume.json"))
+	return render_template('resume.html',resume=resume_json)
+
 @app.route("/blog")
 def blog():
     pass
@@ -104,6 +121,12 @@ def get_resource(fname):
         return send_file("static/"+fname,mimetype="text/script")
     return send_file("static/" + fname, mimetype='image/jpeg')
 
+
+@app.route("/iot/<device>/<method>")
+def device_request(device,method):
+	print("sent a request to {0} for the method {1}".format(device,method))
+	iot.run(device,method)
+	return str({'result':'success'})
 
 if __name__ == "__main__":
     app.run()
