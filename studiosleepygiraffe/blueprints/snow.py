@@ -3,7 +3,7 @@ from flask import request
 from flask import Flask, render_template, send_file
 from flask import Markup
 from xhtml2pdf import pisa
-from StringIO import StringIO
+from io import StringIO
 
 import os
 
