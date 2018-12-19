@@ -21,7 +21,7 @@ def blog():
 			if post:
 				processed_posts.append(post)
 	posts = {i['date']+": "+i['title']:i for i in processed_posts}
-	titles = posts.keys()
+	titles = list(posts.keys())
 	titles.sort(reverse=True)
 	return render_template('blog.html',posts=posts,titles=titles)
 
