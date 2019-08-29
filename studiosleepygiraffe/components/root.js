@@ -92,7 +92,8 @@ class DevLog extends React.Component {
     }
 
     componentDidMount(){
-        request.get('/devlogs.json')
+        var req = new XMLHttpRequest();
+        req.open("GET", "
     }
 
     render()
