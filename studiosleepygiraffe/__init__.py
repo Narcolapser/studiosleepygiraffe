@@ -86,6 +86,10 @@ def disp_app(app_name):
 def devlogs():
     apps = json.load(open(APP_ROOT + "resources/repos.json"))
     return render_template('devlogs.html',apps=apps)
+    
+@app.route("/devlogs.json")
+def devlogsjson():
+    return open(APP_ROOT + "resources/repos.json").read()
 
 
 @app.route("/devlogs/<app_name>")
@@ -123,6 +127,10 @@ def get_resource(file_name):
     if ".js" in file_name:
         return send_file("static/"+file_name, mimetype="text/script")
     return send_file("static/" + file_name, mimetype='image/jpeg')
+
+@app.route("/components/<file_name>")
+def get_components(file_name):
+    return send_file("components/"+file_name, mimetype="text/script")
 
 
 @app.route("/iot/<device>/<method>")

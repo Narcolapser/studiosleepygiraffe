@@ -13,16 +13,16 @@ resume_api = Blueprint('resume_api', __name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__)) + "/../"
 
 
-@resume_api.route("/resume")
+@resume_api.route("/html")
 def resume_html():
     return resume()
 
 
-@resume_api.route("/resume.pdf")
+@resume_api.route("/Toben_Archer.pdf")
 def resume_pdf():
     template = resume()
     pdf = StringIO()
-    pisa.CreatePDF(StringIO(template.encode('utf-8')),pdf)
+    pisa.CreatePDF(StringIO(template),pdf)
     pdf.seek(0)
     return send_file(pdf, attachment_filename="Toben_Archer.pdf", mimetype='application/pdf')
 

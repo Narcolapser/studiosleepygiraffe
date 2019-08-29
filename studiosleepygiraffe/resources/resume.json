@@ -2,13 +2,23 @@
 	"employment":
 	[
 		{
+			"dates":"January 2016 - Present",
+			"org":"University of South Dakota",
+			"title":"Senior Programmer/Analyst",
+			"responsibilities":
+			[
+				"Developed a tailored solution to answer the problem of making content easily editable to staff and viewable to students on our student portal. Once implemented it saved the university thousands annually on licensing costs for outdated system we had been wanting to move off of.",
+				"I pushed to keep USD on the latest versions of our open source projects and maintained their integrations. Including the university student portal and our Central Authentication Service (CAS).",
+				"Maintainence and Development of the university's High Performance Cluster."
+			]
+		},{
 			"dates":"August 2013 - September 2015",
 			"org":"Operation Mobilization",
 			"title":"Lifehope Systems Administrator and Dancelink Ministry",
 			"responsibilities":
 			[
-				"As a Systems Administrator I have been heavily involved in both the management and development of the systems we use. While I work with another Sysadm in the Birmingham Lifehope office, I am solely responsible for the other Lifehope facility in London.",
-				"In dance ministry I work alongside the Lifehope Dancelink director to teach dance and theology of arts. We use dance as a form of evangelism, intercession, and worship."
+				"As a Systems Administrator I was heavily involved in both the management and development of the systems we used. While I worked with another Sysadm in the Birmingham Lifehope office, I was solely responsible for the other Lifehope facility in London.",
+				"In dance ministry I worked alongside the Lifehope Dancelink director to teach dance and theology of arts. We used dance as a form of evangelism, intercession, and worship."
 			]
 		},
 		{
@@ -19,27 +29,6 @@
 			[
 				"I independently maintained their entire server infrastructure.",
 				"I developed new systems that facilitate their ability to see and communicate with their customers worldwide."
-			]
-		},
-		{
-			"dates":"August 2010 - May 2013",
-			"org":"Computing Services Work Study",
-			"title":"Computing Services Work Study",
-			"responsibilities":
-			[
-				"I fixed software and hardware problems with student computers and the college computers around campus.",
-				"Assisted with the installation of the phone system and the refactoring of the network currently in use at NWC."
-			]
-		},
-		{
-			"dates":"May 2012 - August 2012",
-			"org":"Twin Lakes Christian Center",
-			"title":"Technology Coordinator",
-			"responsibilities":
-			[
-				"Attended to problems on the network such as filtering and outages.",
-				"Managed (setup, tear down, and running) all of the audio/video equipment that were used for camp activities, worship, family reunions and more.",
-				"Served as a counselor for Elementary, Junior High, and Senior High camps."
 			]
 		},
 		{
