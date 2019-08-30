@@ -79,7 +79,7 @@ function Project(props)
     return (
     <div style={{position:"relative",color:"white",padding:"10px",margin:"20px 0px",background:"#333"}} onClick={props.onClick}>
         <div style={{position:"absolute",top:"8px",left:"16px",textShadow:"3px 3px black"}}>
-            <h2>{props.name}: {props.url}</h2>
+            <h2>{props.name}</h2>
             <p>{props.description}</p>
         </div>
         <img src={"/static/" + props.url + "1.png"} style={{width:"50%",overflow:"hidden",height:"200px"}}/>
@@ -170,7 +170,7 @@ class DevLog extends React.Component {
     {
         return (
         <div style={{maxWidth:"50%",margin:"0 auto",fontSize:"28px",color:"white"}} className={this.props.className}>
-            <h1 style={{textAlign:"center"}}>The mind behind<br/>Studio Sleepy Giraffe</h1>
+            <h1 style={{textAlign:"center"}}>Developers log</h1>
                 <p>These development logs are the comments I have made as I work on my projects. They are actually made up of the commit messages from the repo for each project. This has encouraged me to have meaningful commit messages as they are effectively my way of blogging about my project as I work on it. The best part is that because they are commit messages, new posts are just part of my natural workflow. For more information see the apps page for "Studio Sleepy Giraffe."</p><hr/>
             <div style={{display:this.state.displayAll ? '' : 'hidden'}}>
                 {this.renderProjects()}
@@ -185,14 +185,76 @@ class DevLog extends React.Component {
     }
 }
 
+function BlogLink(props)
+{
+    return (
+    <div style={{position:"relative",color:"white",padding:"10px",margin:"20px 0px",background:"#333"}} onClick={props.onClick}>
+        <h2>{props.title}</h2>
+    </div>
+    );
+}
+
 class Blog extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            displayAll: true,
+            post: '',
+            postTitle: '',
+            posts: []
+            };
     }
+    
+    componentDidMount(){
+        this.loadAll()
+    }
+    
+    loadAll(){
+        var req = new XMLHttpRequest();
+        req.open("GET", "/blog.json",false);
+        req.send()
+        let content = JSON.parse(req.responseText);
+        this.setState({posts:content,displayAll:true,post:'',postTitle:''});
+    }
+    
+    renderLinks(){
+        var posts = [];
+        console.log(this.state.posts);
+        for(let i=0; i < this.state.posts.length; i++)
+            posts.push(<BlogLink title={this.state.posts[i].title} onClick={() => this.handleClick(i)}/>);
+        console.log(posts);
+        return posts;
+    }
+    
+    renderPost(){
+        return this.state.post;
+    }
+    
+    handleClick(post){
+        var req = new XMLHttpRequest();
+        req.open("GET", "/blog/" + this.state.posts[post].content_file ,false);
+        req.send();
+        this.setState({posts:[],displayAll:false,post:req.responseText,postTitle:this.state.posts[post].title});
+    }
+    
+    
+    
     render()
     {
         return (
-            <div>Blog</div>
+        <div className={this.props.className}>
+            <div style={{maxWidth:"50%",margin:"0 auto",fontSize:"28px",color:"white"}}>
+                <h1 style={{textAlign:"center"}}>Web Log</h1><hr/>
+                <div style={{display:this.state.displayAll ? '' : 'hidden'}}>
+                    {this.renderLinks()}
+                </div>
+            </div>
+            <div style={{maxWidth:"80%",display:this.state.displayAll ? 'hidden' : '',margin:"0 auto",fontSize:"28px",color:"white"}}>
+                <h1 style={{textAlign:"center"}}>{this.state.postTitle}</h1>
+                <button onClick={() => this.loadAll()}>Back</button>
+                <div dangerouslySetInnerHTML={{__html: this.renderPost()}}></div>
+            </div>
+        </div>
             );
     }
 }

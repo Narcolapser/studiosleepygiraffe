@@ -22,8 +22,8 @@ BLOG_DIR = "/home/toben/Code/blog/"
 # BLOG_DIR = APP_ROOT + "static/blog/"
 Bootstrap(app)
 
-app.register_blueprint(snow_api, url_prefix='/snow')
-app.register_blueprint(blog_api, url_prefix='/blog')
+#app.register_blueprint(snow_api, url_prefix='/snow')
+#app.register_blueprint(blog_api, url_prefix='/blog')
 app.register_blueprint(resume_api, url_prefix='/resume')
 
 
@@ -99,6 +99,7 @@ def devlogjson(app_name):
         post['message'] = post['message'].replace('\n\n','<br>')
         post['message'] = post['message'].replace('\n','')
         post['message'] = post['message'].replace('<br>','\n\n')
+        post['date'] = post['date'][0:10]
     return json.dumps(apps[app_name]['posts'])
 
 
@@ -110,7 +111,6 @@ def disp_logs(app_name):
         post['message'] = post['message'].replace('\n\n','<br>')
         post['message'] = post['message'].replace('\n',' ')
         post['message'] = post['message'].replace('<br>','\n\n')
-        post['date'] = post['date'][0:10]
     return render_template('devlog.html',content=content,posts=apps[app_name]['posts'])
 
 
@@ -119,10 +119,36 @@ def about():
     return render_template('about.html')
 
 
-@app.route("/blog")
+@app.route("/blog.json")
 def blog():
-    pass
+	filenames = os.listdir(BLOG_DIR)
+	processed_posts = []
+	for i in filenames:
+		if '.json' in i:
+			post = getPostInfo(i)
+			if post:
+				processed_posts.append(post)
+	return json.dumps(processed_posts)
+#	posts = {i['date']+": "+i['title']:i for i in processed_posts}
+#	titles = list(posts.keys())
+#	titles.sort(reverse=True)
+#	return json.dumps(posts)
 
+@app.route("/blog/<mdfile>")
+def blogpost(mdfile):
+	md = open(BLOG_DIR + mdfile).read()
+	content = Markup(markdown.markdown(md))
+	return content
+
+def getPostInfo(fname):
+	try:
+		with open(BLOG_DIR + fname) as f:
+			content = json.load(f)
+		content['file'] = fname.replace('.json','')
+	except Exception as e:
+		print(e)
+		return None
+	return content
 
 @app.route("/version")
 def version():
