@@ -66,10 +66,24 @@ function About(props)
     return (
     <div style={{maxWidth:"50%",margin:"0 auto",fontSize:"28px",color:"white"}} className={props.className}>
         <h1 style={{textAlign:"center"}}>The mind behind<br/>Studio Sleepy Giraffe</h1>
-        <img className="about_picture" src="/static/face.jpeg"/>
+        <img className="about_picture" src="/static/face.jpeg" style={{float:"left",width:"50%",margin:"20px"}}/>
         <p>I am Toben "Narcolapser" Archer. I work as a software developer by day and the same by night as a hobby. At home I work primarily in Python and Kivy making apps for Android and PC. This website, made with Flask and React, is setup primarily as a professional website. It is here so that I can point potential employeers or partners to something to get a little information about me.</p>
         
         <p>Resume: <a href="/resume/html">HTML</a> or <a href="/resume/Toben_Archer.pdf">PDF Download</a></p>
+    </div>
+    );
+}
+
+function Project(props)
+{
+    return (
+    <div style={{position:"relative",color:"white",padding:"10px",margin:"20px 0px",background:"#333"}} onClick={props.onClick}>
+        <div style={{position:"absolute",top:"8px",left:"16px",textShadow:"3px 3px black"}}>
+            <h2>{props.name}: {props.url}</h2>
+            <p>{props.description}</p>
+        </div>
+        <img src={"/static/" + props.url + "1.png"} style={{width:"50%",overflow:"hidden",height:"200px"}}/>
+        <img src={"/static/" + props.url + "2.png"} style={{width:"50%",overflow:"hidden",height:"200px"}}/>
     </div>
     );
 }
@@ -86,14 +100,70 @@ class Projects extends React.Component {
     }
 }
 
+function LogPost(props)
+{
+    return (
+        <div>
+            <h2>{props.title}</h2>
+            <p style={{whiteSpace:"pre-wrap"}}>{props.message}</p>
+            <p>written: {props.date} by: {props.author} on branch: {props.branch}</p>
+        </div>
+    );
+}
+
 class DevLog extends React.Component {
     constructor(props) {
         super(props)
+        this.state = {
+            projects:[],
+            posts:[],
+            displayAll: true,
+            project: ''
+        };
     }
 
     componentDidMount(){
+        this.loadAll()
+    }
+    
+    loadAll(){
         var req = new XMLHttpRequest();
-        req.open("GET", "
+        req.open("GET", "/projects.json",false);
+        req.send()
+        var content = JSON.parse(req.responseText);
+        this.setState({projects:content,posts:[],displayAll:true,project:''});
+    }
+    
+    handleClick(project){
+        var req = new XMLHttpRequest();
+        req.open("GET", "/devlog/" + this.state.projects[project].url + ".json",false);
+        req.send()
+        var content = JSON.parse(req.responseText);
+        this.setState({projects:[],posts:content,displayAll:false,project:this.state.projects[project].name});
+    }
+    
+    renderProjects(){
+        var links = [];
+        
+        for(let i = 0; i < this.state.projects.length; i++)
+        {
+            links.push(<Project
+                url={this.state.projects[i].url}
+                name={this.state.projects[i].name}
+                description={this.state.projects[i].description}
+                onClick={() => this.handleClick(i)}/>);
+        }
+        return links;
+    }
+    
+    renderPosts(){
+        var posts = [];
+        
+        for(let i=0; i < this.state.posts.length; i++)
+        {
+            posts.push(LogPost(this.state.posts[i]));
+        }
+        return posts;
     }
 
     render()
@@ -102,6 +172,14 @@ class DevLog extends React.Component {
         <div style={{maxWidth:"50%",margin:"0 auto",fontSize:"28px",color:"white"}} className={this.props.className}>
             <h1 style={{textAlign:"center"}}>The mind behind<br/>Studio Sleepy Giraffe</h1>
                 <p>These development logs are the comments I have made as I work on my projects. They are actually made up of the commit messages from the repo for each project. This has encouraged me to have meaningful commit messages as they are effectively my way of blogging about my project as I work on it. The best part is that because they are commit messages, new posts are just part of my natural workflow. For more information see the apps page for "Studio Sleepy Giraffe."</p><hr/>
+            <div style={{display:this.state.displayAll ? '' : 'hidden'}}>
+                {this.renderProjects()}
+            </div>
+            <div style={{display:this.state.displayAll ? 'hidden' : ''}}>
+                <h1 style={{textAlign:"center"}}>{this.state.project}</h1>
+                <button onClick={() => this.loadAll()}>Back</button>
+                {this.renderPosts()}
+            </div>
         </div>
             );
     }
