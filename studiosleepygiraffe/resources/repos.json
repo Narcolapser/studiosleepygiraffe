@@ -24,12 +24,6 @@
 		"description":"A library for Amazon dashbutton hijinks. "
 	},
 	{
-		"path":"/home/toben/Code/ncsplayer",
-		"name":"NCS Player",
-		"url":"ncsplayer",
-		"description":"A proof of concept kivy video streamer."
-	},
-	{
 		"path":"/home/toben/Code/garden.joystick",
 		"name":"Kivy Garden: Joystick",
 		"url":"kivy_joystick",
@@ -46,23 +40,5 @@
 		"name":"Command Craft",
 		"url":"mccc",
 		"description":"A collection of scripts for making minecraft buildings with Blender3D."
-	},
-	{
-		"path":"/home/toben/Code/Flight Night",
-		"name":"Flight Night",
-		"url":"flight_night",
-		"description":"A app for tracking your BAC at homebrew club"
-	},
-	{
-		"path":"/home/toben/Code/Kivy-Kazam",
-		"name":"Kivy-Kazam",
-		"url":"kivy-kazam",
-		"description":"A simple program for prototyping Kivy Layouts."
-	},
-	{
-		"path":"/home/toben/Code/warehouse",
-		"name":"Pallet Packer",
-		"url":"pallet_packer",
-		"description":"A game of frantic logistics."
 	}
 ]
