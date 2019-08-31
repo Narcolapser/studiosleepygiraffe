@@ -53,6 +53,8 @@ class Post:
 		data['date'] = str(self.date)
 		return data
 
+my_names = ['Toben Archer','Narcolapser','Toben']
+others = set()
 
 if __name__ == "__main__":
 	repos = json.load(open("../studiosleepygiraffe/resources/repos.json",'r'))
@@ -66,8 +68,13 @@ if __name__ == "__main__":
 		posts = getPosts(r,branch,repo['name'])
 		for p in posts:
 			#print(p.json())
+			#print((p.author,))
+			if str(p.author) not in my_names:
+				others.add(str(p.author))
+				continue
 			project['posts'].append(p.dict())
 #		except Exception as e:
 #			print("Skipping '{0}' because: {1}".format(repo,e))
 		projects[repo['url']] = project
 	json.dump(projects,open("../studiosleepygiraffe/resources/projects.json",'w'),indent=4, sort_keys=True)
+	for o in others: print(o)

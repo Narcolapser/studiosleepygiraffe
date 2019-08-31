@@ -1,7 +1,4 @@
 from flask import Flask, render_template, send_file
-#from flask_bootstrap import Bootstrap
-#from flask_nav import Nav
-#from flask_nav.elements import Navbar, View
 from flask import Markup
 from flask import request
 
@@ -9,9 +6,6 @@ import json
 import os
 import markdown
 
-#from blueprints.snow import snow_api
-#from blueprints.blog import blog_api
-#from blueprints.resume import resume_api
 import iot
 
 #from utils import visit
@@ -19,12 +13,6 @@ import iot
 app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__)) + "/"
 BLOG_DIR = "/home/toben/Code/blog/"
-# BLOG_DIR = APP_ROOT + "static/blog/"
-#Bootstrap(app)
-
-#app.register_blueprint(snow_api, url_prefix='/snow')
-#app.register_blueprint(blog_api, url_prefix='/blog')
-#app.register_blueprint(resume_api, url_prefix='/resume')
 
 
 def get_application_from_repositories(app_name):
@@ -33,23 +21,6 @@ def get_application_from_repositories(app_name):
         if application['url'] == app_name:
             return application
     None
-
-
-#nav = Nav()
-
-
-#@nav.navigation()
-#def mynavbar():
-#    return Navbar("",
-#            View('Home', 'home'),
-#            View('Projects', 'apps'),
-#            View('Blog', 'blog'),
-#            View('Dev Log', 'devlogs'),
-#            View('About', 'about')
-#        )
-
-
-#nav.init_app(app)
 
 
 #@app.before_request
