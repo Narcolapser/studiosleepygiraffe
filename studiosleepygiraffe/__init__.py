@@ -91,6 +91,12 @@ def devlogs():
 def devlogsjson():
     return open(APP_ROOT + "resources/repos.json").read()
 
+@app.route("/project/<name>")
+def project(name):
+    md = open(APP_ROOT + "resources/" + name + ".md").read()
+    content = Markup(markdown.markdown(md))
+    return content 
+
 @app.route("/devlog/<app_name>.json")
 def devlogjson(app_name):
     content = {'name':app_name}

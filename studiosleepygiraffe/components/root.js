@@ -90,12 +90,76 @@ function Project(props)
 
 class Projects extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
+        this.state = {
+            displayAll: true,
+            project: '',
+            projectTitle: '',
+            projects: []
+            };
     }
+    
+    componentDidMount(){
+        this.loadAll()
+    }
+    
+    loadAll(){
+        var req = new XMLHttpRequest();
+        req.open("GET", "/projects.json",false);
+        req.send()
+        let content = JSON.parse(req.responseText);
+        this.setState({projects:content,displayAll:true,project:'',projectTitle:''});
+    }
+    
+    renderProjects(){
+        var links = [];
+        
+        for(let i = 0; i < this.state.projects.length; i++)
+        {
+            links.push(<Project
+                url={this.state.projects[i].url}
+                name={this.state.projects[i].name}
+                description={this.state.projects[i].description}
+                onClick={() => this.handleClick(i)}/>);
+        }
+        return links;
+    }
+    
+    renderProject(){
+        return this.state.project;
+    }
+    
+    handleClick(project){
+        var req = new XMLHttpRequest();
+        req.open("GET", "/project/" + this.state.projects[project].url ,false);
+        req.send();
+        this.setState({projects:[],displayAll:false,
+                        project:req.responseText,
+                        projectTitle:this.state.projects[project].name});
+    }
+    
+    
+    
     render()
     {
         return (
-            <div>Projects</div>
+        <div className={this.props.className}>
+            <div style={{maxWidth:"50%",margin:"0 auto",fontSize:"28px",color:"white"}}>
+                <h1 style={{textAlign:"center"}}>Web Log</h1><hr/>
+                <div style={{display:this.state.displayAll ? '' : 'hidden'}}>
+                    {this.renderProjects()}
+                </div>
+            </div>
+            <div style={{maxWidth:"80%",display:this.state.displayAll ? 'hidden' : '',margin:"0 auto",fontSize:"28px",color:"white"}}>
+                <h1 style={{textAlign:"center"}}>{this.state.projectTitle}</h1>
+                <a style={{display:this.state.displayAll ? 'none' : '',
+                    backgroundColor:"#333",
+                    color:"white",
+                    padding: "14px 16px",
+                    fontSize: "17px"}} onClick={() => this.loadAll()}>Back</a>
+                <div dangerouslySetInnerHTML={{__html: this.renderProject()}}></div>
+            </div>
+        </div>
             );
     }
 }
@@ -177,7 +241,11 @@ class DevLog extends React.Component {
             </div>
             <div style={{display:this.state.displayAll ? 'hidden' : ''}}>
                 <h1 style={{textAlign:"center"}}>{this.state.project}</h1>
-                <button onClick={() => this.loadAll()}>Back</button>
+                <a style={{display:this.state.displayAll ? 'none' : '',
+                    backgroundColor:"#333",
+                    color:"white",
+                    padding: "14px 16px",
+                    fontSize: "17px"}} onClick={() => this.loadAll()}>Back</a>
                 {this.renderPosts()}
             </div>
         </div>
@@ -251,7 +319,11 @@ class Blog extends React.Component {
             </div>
             <div style={{maxWidth:"80%",display:this.state.displayAll ? 'hidden' : '',margin:"0 auto",fontSize:"28px",color:"white"}}>
                 <h1 style={{textAlign:"center"}}>{this.state.postTitle}</h1>
-                <button onClick={() => this.loadAll()}>Back</button>
+                <a style={{display:this.state.displayAll ? 'none' : '',
+                    backgroundColor:"#333",
+                    color:"white",
+                    padding: "14px 16px",
+                    fontSize: "17px"}} onClick={() => this.loadAll()}>Back</a>
                 <div dangerouslySetInnerHTML={{__html: this.renderPost()}}></div>
             </div>
         </div>
@@ -277,7 +349,7 @@ class SSG extends React.Component {
                 <div className="banner">
                     <img
                         className="header"
-                        src="/static/inverted_SSG.jpg.bak"
+                        src="/static/inverted_SSG.jpg"
                         title="Studio Sleepy Giraffe logo"
                         style={{'display':'block','marginLeft':'auto','marginRight': 'auto','width': '466px'}}
                         />
