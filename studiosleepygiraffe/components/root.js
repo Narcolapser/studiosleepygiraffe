@@ -240,7 +240,7 @@ function BlogLink(props)
 {
     return (
     <div style={{position:"relative",color:"white",padding:"10px",margin:"20px 0px",background:"#333"}} onClick={props.onClick}>
-        <h2>{props.title}</h2>
+        <h2>{props.date}: {props.title}</h2>
     </div>
     );
 }
@@ -252,6 +252,7 @@ class Blog extends React.Component {
             displayAll: true,
             post: '',
             postTitle: '',
+            postDate: '',
             posts: []
             };
     }
@@ -265,14 +266,16 @@ class Blog extends React.Component {
         req.open("GET", "/blog.json",false);
         req.send()
         let content = JSON.parse(req.responseText);
-        this.setState({posts:content,displayAll:true,post:'',postTitle:''});
+        this.setState({posts:content,displayAll:true,post:'',postTitle:'',postDate:''});
     }
     
     renderLinks(){
         var posts = [];
         console.log(this.state.posts);
         for(let i=0; i < this.state.posts.length; i++)
-            posts.push(<BlogLink title={this.state.posts[i].title} onClick={() => this.handleClick(i)}/>);
+            posts.push(<BlogLink title={this.state.posts[i].title}
+                         date={this.state.posts[i].date}
+                         onClick={() => this.handleClick(i)}/>);
         console.log(posts);
         return posts;
     }
@@ -285,7 +288,10 @@ class Blog extends React.Component {
         var req = new XMLHttpRequest();
         req.open("GET", "/blog/" + this.state.posts[post].content_file ,false);
         req.send();
-        this.setState({posts:[],displayAll:false,post:req.responseText,postTitle:this.state.posts[post].title});
+        this.setState({posts:[],displayAll:false,
+                        post:req.responseText,
+                        postTitle:this.state.posts[post].title,
+                        postDate:this.state.posts[post].date});
     }
     
     
@@ -300,7 +306,7 @@ class Blog extends React.Component {
                     {this.renderLinks()}
                 </div>
             </div>
-            <div style={{maxWidth:"80%",display:this.state.displayAll ? 'hidden' : '',margin:"0 auto",fontSize:"28px",color:"white"}}>
+            <div style={{maxWidth:"80%",display:this.state.displayAll ? 'none' : '',margin:"0 auto",fontSize:"28px",color:"white"}}>
                 <h1 style={{textAlign:"center"}}>{this.state.postTitle}</h1>
                 <a style={{display:this.state.displayAll ? 'none' : '',
                     backgroundColor:"#333",
@@ -308,6 +314,7 @@ class Blog extends React.Component {
                     padding: "14px 16px",
                     fontSize: "17px"}} onClick={() => this.loadAll()}>Back</a>
                 <div dangerouslySetInnerHTML={{__html: this.renderPost()}}></div>
+                <p>Writen by Toben Archer on: {this.state.postDate}</p>
             </div>
         </div>
             );

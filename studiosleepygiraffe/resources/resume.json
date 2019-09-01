@@ -7,9 +7,10 @@
 			"title":"Senior Programmer/Analyst",
 			"responsibilities":
 			[
-				"Developed a tailored solution to answer the problem of making content easily editable to staff and viewable to students on our student portal. Once implemented it saved the university thousands annually on licensing costs for outdated system we had been wanting to move off of.",
-				"I pushed to keep USD on the latest versions of our open source projects and maintained their integrations. Including the university student portal and our Central Authentication Service (CAS).",
-				"Maintainence and Development of the university's High Performance Cluster."
+				"I develop and maintain a tailored solution to answer the problem of making content easily editable to staff and viewable to students on our student portal. Once implemented, it saved the university thousands annually on licensing costs for the outdated system we wanted to discontinue.",
+				"I am responsible for the full-stack deployment of our student portal, servicing several thousand students daily. I maintain the integrations into several data sources and provide technical assistance to marketing for correctly displaying content.",
+				"I maintain integrations of the various open-source software packages we make use of on campus, such as our Central Authentication Service (CAS).",
+				"I aid with the maintenance and development of the university's High-Performance Cluster and the statewide Data Store."
 			]
 		},{
 			"dates":"August 2013 - September 2015",
@@ -17,8 +18,8 @@
 			"title":"Lifehope Systems Administrator and Dancelink Ministry",
 			"responsibilities":
 			[
-				"As a Systems Administrator I was heavily involved in both the management and development of the systems we used. While I worked with another Sysadm in the Birmingham Lifehope office, I was solely responsible for the other Lifehope facility in London.",
-				"In dance ministry I worked alongside the Lifehope Dancelink director to teach dance and theology of arts. We used dance as a form of evangelism, intercession, and worship."
+				"As a Systems Administrator, I was heavily involved in both the management and development of the systems we used. While I worked with another Sysadm in the Birmingham Lifehope office, I was solely responsible for the other Lifehope facility in London.",
+				"In dance ministry, I worked alongside the Lifehope Dancelink director to teach dance and theology of arts. We used dance as a form of evangelism, intercession, and worship."
 			]
 		},
 		{
@@ -27,7 +28,7 @@
 			"title":"Intern - Software Developer",
 			"responsibilities":
 			[
-				"I independently maintained their entire server infrastructure.",
+				"During the time their full-time developer was on a several month missions trip, I independently maintained the entire server infrastructure.",
 				"I developed new systems that facilitate their ability to see and communicate with their customers worldwide."
 			]
 		},
@@ -49,8 +50,10 @@
 		{
 			"title":"Software Development",
 			"content":[
+				"Setup a system for hijacking Amazon Dash buttons to re-use them as general-purpose IoT buttons.",
+				"Developed several small applications for Android.",
+				"Created a python library for interacting with Office 365, though this project has grown beyond me now.",
 				"Created a program for distributing compute-intensive programs across a network that could scale to hundreds of machines while having a minimal footprint on the client machines.",
-				"Contributed to the open source project Salt for several of the project’s Windows modules. Most notably I wrote the module for managing the Windows Update Agent which David Boucha, Senior Software Engineer for Salt, decided to incorporate into the mainline Salt project.",
 				"Developed a service for my employer Ozone Solutions that would synchronize all of their client information between their various account management systems as well as create a weighted map of the locations of their clients worldwide."
 			]
 		},
@@ -67,7 +70,7 @@
 			"content":[
 				"Instructor and choreographer for OM-Arts International Incarnate program for developing artists learning to use their art form in faith and Christian mission.",
 				"Performed with OM-Arts in Bobbio Italy, 2014.",
-				"Worked in capacities as an actor, stage manager, writer, master electrician, and/or director for several plays in high school and college.",
+				"Worked in capacities as an actor, stage manager, writer, master electrician, and/or director for several plays at Northwestern College.",
 				"Nominated for Irene Ryan Acting Scholarship Competition, Kennedy Center American College Theater Festival 2013.",
 				"Performed as a member of the Northwestern Symphonic Band for all four years of my collegiate career.",
 				"Performed as a member of the Northwestern A Capella Choir for 2 years."
@@ -77,8 +80,7 @@
 	"volunteering":
 	[
 		"Counselor for seven years at the local Christian camp for day camp, elementary, and Junior high camps.",
-		"Ran sound equipment for each church I have regularly attended.",
-		"Participated as a musician in my church during high school and current church in the UK.",
+		"Ran sound equipment and/or performed as a musicianfor each church I have regularly attended.",
 		"I worked with the Catholic Social Services mental health team during disaster relief after the tornado in Parkersburg, IA.",
 		"I was an assistant teacher at Pomeroy-Palmer High School teaching fundamental electronics."
 	]
