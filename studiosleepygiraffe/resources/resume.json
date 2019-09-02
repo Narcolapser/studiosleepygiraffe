@@ -18,8 +18,10 @@
 			"title":"Lifehope Systems Administrator and Dancelink Ministry",
 			"responsibilities":
 			[
-				"As a Systems Administrator, I was heavily involved in both the management and development of the systems we used. While I worked with another Sysadm in the Birmingham Lifehope office, I was solely responsible for the other Lifehope facility in London.",
-				"In dance ministry, I worked alongside the Lifehope Dancelink director to teach dance and theology of arts. We used dance as a form of evangelism, intercession, and worship."
+				"As a Systems Administrator, I was heavily involved in both the management and development of the systems we used. While I worked with another Sysadm in the Birmingham Lifehope office, I was solely responsible for Lifehope's facility in London.",
+				"I provided technical support to our teams working in evangelism.",
+				"In dance ministry, I worked alongside the Lifehope Dancelink director to teach dance and theology of arts. We used dance as a form of evangelism, intercession, and worship.",
+				"I lived in a diverse multi-cultural community and participated in regular spiritual and team-building exercises, including a weekly prayer night and daily team devotions."
 			]
 		},
 		{
@@ -28,8 +30,8 @@
 			"title":"Intern - Software Developer",
 			"responsibilities":
 			[
-				"During the time their full-time developer was on a several month missions trip, I independently maintained the entire server infrastructure.",
-				"I developed new systems that facilitate their ability to see and communicate with their customers worldwide."
+				"I developed new systems that facilitate their ability to see and communicate with their customers worldwide.",
+				"I independently maintained the entire server infrastructure for several months while the full time developer was away."
 			]
 		},
 		{
@@ -38,10 +40,10 @@
 			"title":"Software Developer and General IT",
 			"responsibilities":
 			[
-				"Developed software to be used as an inventory tracking system.",
-				"Assisted in the selection of hardware and systems for warehouse management.",
-				"Designed and created layout and schema for barcodes throughout the warehouse.",
-				"Assisted in the managing of various IT related issues."
+				"I developed software to be used as an inventory tracking system.",
+				"I designed and created layout and schema for barcodes throughout the warehouse.",
+				"Along with the other developers, I assisted in the selection of hardware and systems for warehouse management.",
+				"As part of the IT team, I assisted in the managing of various IT related issues."
 			]
 		}
 	],
@@ -50,9 +52,9 @@
 		{
 			"title":"Software Development",
 			"content":[
-				"Setup a system for hijacking Amazon Dash buttons to re-use them as general-purpose IoT buttons.",
+				"Set up a system for repurposing Amazon Dash buttons to re-use them as general-purpose IoT buttons.",
 				"Developed several small applications for Android.",
-				"Created a python library for interacting with Office 365, though this project has grown beyond me now.",
+				"Created a Python library for interacting with Office 365.",
 				"Created a program for distributing compute-intensive programs across a network that could scale to hundreds of machines while having a minimal footprint on the client machines.",
 				"Developed a service for my employer Ozone Solutions that would synchronize all of their client information between their various account management systems as well as create a weighted map of the locations of their clients worldwide."
 			]
@@ -62,7 +64,7 @@
 			"content":[
 				"Completed the Operation Mobilization Mentoring Clinic and received certificate of achievement.",
 				"Learned to establish rapport with students/protégés.",
-				"Learned various methods for determining where a protégé is struggling how best to free them to be able to thrive in academic, personal, and practical realms."
+				"Learned various methods for determining where a protégé is struggling and how best to free them to be able to thrive in academic, personal, and practical realms."
 			]
 		},
 		{
@@ -70,7 +72,7 @@
 			"content":[
 				"Instructor and choreographer for OM-Arts International Incarnate program for developing artists learning to use their art form in faith and Christian mission.",
 				"Performed with OM-Arts in Bobbio Italy, 2014.",
-				"Worked in capacities as an actor, stage manager, writer, master electrician, and/or director for several plays at Northwestern College.",
+				"Worked in capacities as an actor, stage manager, writer, master electrician, and director for several plays at Northwestern College.",
 				"Nominated for Irene Ryan Acting Scholarship Competition, Kennedy Center American College Theater Festival 2013.",
 				"Performed as a member of the Northwestern Symphonic Band for all four years of my collegiate career.",
 				"Performed as a member of the Northwestern A Capella Choir for 2 years."
@@ -79,8 +81,8 @@
 	],
 	"volunteering":
 	[
-		"Counselor for seven years at the local Christian camp for day camp, elementary, and Junior high camps.",
-		"Ran sound equipment and/or performed as a musicianfor each church I have regularly attended.",
+		"I was a counselor for seven years at the local Christian camp for day camp, elementary, and junior high camps.",
+		"At every church I have regularly attended, I have run sound equipment or performed as a musician.",
 		"I worked with the Catholic Social Services mental health team during disaster relief after the tornado in Parkersburg, IA.",
 		"I was an assistant teacher at Pomeroy-Palmer High School teaching fundamental electronics."
 	]
