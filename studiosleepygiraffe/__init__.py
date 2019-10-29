@@ -1,8 +1,8 @@
 import sys
 from flask import Flask, render_template, send_file
-from flask_bootstrap import Bootstrap
-from flask_nav import Nav
-from flask_nav.elements import Navbar, View
+#from flask_bootstrap import Bootstrap
+#from flask_nav import Nav
+#from flask_nav.elements import Navbar, View
 from flask import Markup
 from flask import request
 
@@ -10,22 +10,22 @@ import json
 import os
 import markdown
 
-from blueprints.snow import snow_api
-from blueprints.blog import blog_api
-from blueprints.resume import resume_api
+#from blueprints.snow import snow_api
+#from blueprints.blog import blog_api
+#from blueprints.resume import resume_api
 import iot
 
-from utils import visit
+#from utils import visit
 
 app = Flask(__name__)
 APP_ROOT = os.path.dirname(os.path.abspath(__file__)) + "/"
 BLOG_DIR = "/home/toben/Code/blog/"
 # BLOG_DIR = APP_ROOT + "static/blog/"
-Bootstrap(app)
+#Bootstrap(app)
 
 #app.register_blueprint(snow_api, url_prefix='/snow')
 #app.register_blueprint(blog_api, url_prefix='/blog')
-app.register_blueprint(resume_api, url_prefix='/resume')
+#app.register_blueprint(resume_api, url_prefix='/resume')
 
 
 def get_application_from_repositories(app_name):
@@ -36,26 +36,26 @@ def get_application_from_repositories(app_name):
     None
 
 
-nav = Nav()
+#nav = Nav()
 
 
-@nav.navigation()
-def mynavbar():
-    return Navbar("",
-            View('Home', 'home'),
-            View('Projects', 'apps'),
-            View('Blog', 'blog'),
-            View('Dev Log', 'devlogs'),
-            View('About', 'about')
-        )
+#@nav.navigation()
+#def mynavbar():
+#    return Navbar("",
+#            View('Home', 'home'),
+#            View('Projects', 'apps'),
+#            View('Blog', 'blog'),
+#            View('Dev Log', 'devlogs'),
+#            View('About', 'about')
+#        )
 
 
-nav.init_app(app)
+#nav.init_app(app)
 
 
-@app.before_request
-def init_log_visit():
-    visit.log_visit(request)
+#@app.before_request
+#def init_log_visit():
+#    visit.log_visit(request)
 
 
 @app.route("/")
@@ -91,6 +91,12 @@ def devlogs():
 @app.route("/projects.json")
 def devlogsjson():
     return open(APP_ROOT + "resources/repos.json").read()
+
+@app.route("/project/<name>")
+def project(name):
+    md = open(APP_ROOT + "resources/" + name + ".md").read()
+    content = Markup(markdown.markdown(md))
+    return content 
 
 @app.route("/devlog/<app_name>.json")
 def devlogjson(app_name):
