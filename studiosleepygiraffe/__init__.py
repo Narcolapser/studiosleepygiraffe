@@ -34,6 +34,41 @@ def index(path):
     return render_template('index.html')
 
 
+@app.route("/projects.json")
+def devlogsjson():
+    return open(APP_ROOT + "resources/repos.json").read()
+
+
+@app.route("/project/<name>")
+def project(name):
+    md = open(APP_ROOT + "resources/" + name + ".md").read()
+    content = Markup(markdown.markdown(md))
+    return content 
+
+
+@app.route("/devlog/<app_name>.json")
+def devlogjson(app_name):
+    content = {'name':app_name}
+    apps = json.load(open(APP_ROOT + "resources/projects.json"))
+    for post in apps[app_name]['posts']:
+        post['message'] = post['message'].replace('\n\n','<br>')
+        post['message'] = post['message'].replace('\n','')
+        post['message'] = post['message'].replace('<br>','\n\n')
+        post['date'] = post['date'][0:10]
+    return json.dumps(apps[app_name]['posts'])
+
+
+@app.route("/devlogs/<app_name>")
+def disp_logs(app_name):
+    content = {'name':app_name}
+    apps = json.load(open(APP_ROOT + "resources/projects.json"))
+    for post in apps[app_name]['posts']:
+        post['message'] = post['message'].replace('\n\n','<br>')
+        post['message'] = post['message'].replace('\n',' ')
+        post['message'] = post['message'].replace('<br>','\n\n')
+    return render_template('devlog.html',content=content,posts=apps[app_name]['posts'])
+
+
 @app.route("/static/<file_name>")
 def get_resource(file_name):
     if file_name == "style.css":
