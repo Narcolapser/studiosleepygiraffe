@@ -57,17 +57,9 @@ class Projects extends React.Component {
 			<div>
 				<h2>Projects!</h2>
 				<ul>
-					<li>
-						<Link to="/projects/ssg">Studio Sleepy Giraffe</Link>
-					</li>
-					<li>
-						<Link to="/projects/O365">Office 365</Link>
-					</li>
-					<li>
-						<Link to="/projects/gduel">Gravity Duel</Link>
-					</li>
+					{this.state.projects
+					.map(project => <li><Link to={"/projects/"+project.url}>{project.name}</Link></li>)}
 				</ul>
-				{this.state.projects.map(project => <p>{project.name}</p>)}
 			</div>
 		);
 	}
