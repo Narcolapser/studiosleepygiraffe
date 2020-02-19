@@ -1,4 +1,4 @@
-let {Router, Route, Link, browserHistory} = window.ReactRouter;
+let {Router, Route, Link, browserHistory, useParams, Switch} = window.ReactRouter;
 
 class Index extends React.Component {
 	render() {
@@ -7,7 +7,7 @@ class Index extends React.Component {
 				<div className="banner">
 					<img
 						className="header"
-						src="/static/inverted_SSG.jpg"
+						src="/static/img/inverted_SSG.jpg"
 						title="Studio Sleepy Giraffe logo"
 						style={{'display':'block','marginLeft':'auto','marginRight': 'auto','width': '466px'}}
 						/>
@@ -29,7 +29,7 @@ class Home extends React.Component {
 		return (
 			<div style={{maxWidth:"50%",margin:"0 auto",fontSize:"28px",color:"white"}}>
 				<h1 style={{textAlign:"center"}}>The mind behind<br/>Studio Sleepy Giraffe</h1>
-				<img className="about_picture" src="/static/face.jpeg" style={{float:"left",width:"50%",margin:"20px"}}/>
+				<img className="about_picture" src="/static/img/face.jpeg" style={{float:"left",width:"50%",margin:"20px"}}/>
 				<p>I am Toben <a href="https://github.com/narcolapser">"Narcolapser"</a> Archer. I work as a software developer by day and the same by night as a hobby. At home I work primarily in Python and Kivy making apps for Android and PC. This website, made with Flask and React, is setup primarily as a professional website. It is my personal website for sharing my work with friends, family, and potential employeers. To see what projects I have been working on click on the "Projects" tab in the nav bar. To read my mind (see what I was thinking as I worked on the various projects) go to the "Developers Log" page and select a project to read all of the development log for that project. To read longer stories covering various topics try the "Blog" tab.
 				</p>
 				<p>Resume: <a href="/resume/html">HTML</a> or <a href="/resume/Toben_Archer.pdf">PDF Download</a></p>
@@ -113,6 +113,15 @@ class Projects extends React.Component {
 	}
 }
 
+class ProjectDisp extends React.Component {
+	render() {
+		let { id } = useParams();
+		return (
+			<div>ID: {id}</div>
+		);
+	}
+}
+
 class DevLog extends React.Component {
 	render() {
 		return (
@@ -129,6 +138,18 @@ class Blog extends React.Component {
 	}
 }
 
+function Child() {
+  // We can use the `useParams` hook here to access
+  // the dynamic pieces of the URL.
+  let { id } = useParams();
+
+  return (
+    <div>
+      <h3>ID: {id}</h3>
+    </div>
+  );
+}
+
 ReactDOM.render((
 	<Router history={browserHistory}>
 		<Route path='/' component={Index}>
@@ -137,6 +158,9 @@ ReactDOM.render((
 			<Route path='devlog' component={DevLog}/>
 			<Route path='blog' component={Blog}/>
 		</Route>
+		<Switch>
+			<Route path="/projects/:id" children={ProjectDisp}/>
+		</Switch>
 	</Router>
 	), document.getElementById('content')
 );
