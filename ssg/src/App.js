@@ -41,7 +41,7 @@ export default function ParamsExample() {
 					</Route>
 					<Route path="/projects/:id" children={<GetProject />} />
 
-					<Route path="/devlogs">
+					<Route exact path="/devlogs">
 						<DevLogs />
 					</Route>
 					<Route path="/devlogs/:id" children={<GetDevLog />} />

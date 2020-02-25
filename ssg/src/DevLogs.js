@@ -34,11 +34,19 @@ export class DevLog extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {'project': props.project,
-						'logs': ''}
+						logs: {description:'',
+								name:'',
+								url:'',
+								posts:[]}}
 	}
-	
+
 	render() {
-		return (<div> {this.state.logs} </div>);
+		return (<div> {this.state.logs.posts.map((post) => {
+			return (<div>
+						<h3>{post.title}</h3>
+						<p>{post.message}</p>
+					</div>)})} 
+			</div>);
 	}
 	
 	componentDidMount() {
@@ -50,12 +58,11 @@ export class DevLog extends React.Component {
 export function GetDevLog() {
 	// We can use the `useParams` hook here to access
 	// the dynamic pieces of the URL.
-	console.log("Hello there");
 	let { id } = useParams();
 
 	return (
 		<div>
-			<p>id: {id}</p>
+			<DevLog project={id} />
 		</div>
 	);
 }
