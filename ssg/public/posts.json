@@ -1,0 +1,38 @@
+[
+	{
+		"content_file":"2018-01-22.md",
+		"tags":["website"],
+		"author":"Toben Archer",
+		"cover":"sleepygiraffe1.jpg",
+		"cover_text":"A cute picture of a sleeping giraffe",
+		"date":"2018-01-22",
+		"title":"Blog Introduction"
+	},
+	{
+		"content_file":"2018-01-30.md",
+		"tags":["website"],
+		"author":"Toben Archer",
+		"cover":"Chili cook off 2018 flyer.jpg",
+		"cover_text":"Flyer for 2018 chili cook off.",
+		"date":"2018-01-30",
+		"title":"ITS Chili Cook Off"
+	},
+	{
+		"content_file":"2018-04-10.md",
+		"tags":["git github O365"],
+		"author":"Toben Archer",
+		"cover":"sleepygiraffe5.jpg",
+		"cover_text":"A sleepy giraffe",
+		"date":"2018-04-10",
+		"title":"Python O365 Anxiety"
+	},
+	{
+		"content_file":"2019-11-15.md",
+		"tags":["Security","Private Cloud","IoT","Privacy"],
+		"author":"Toben Archer",
+		"cover":"hey_wirewap.jpg",
+		"cover_text":"A meme about people's benign acceptance of intrusion",
+		"date":"2019-11-15",
+		"title":"Network Choker"
+	}
+]

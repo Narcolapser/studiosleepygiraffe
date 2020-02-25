@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import { Projects, GetProject} from './Projects.js'
 import { DevLogs, GetDevLog } from './DevLogs.js'
+import { Blog, GetBlogTag, GetBlogPost} from './Blog.js'
 
 // Params are placeholders in the URL that begin
 // with a colon, like the `:id` param defined in
@@ -45,6 +46,12 @@ export default function ParamsExample() {
 						<DevLogs />
 					</Route>
 					<Route path="/devlogs/:id" children={<GetDevLog />} />
+
+					<Route exact path="/blog">
+						<Blog />
+					</Route>
+					<Route path="/blog/tags/:id" children={<GetBlogTag />} />
+					<Route path="/blog/posts/:id" children={<GetBlogPost />} />
 
 				</Switch>
 			</div>

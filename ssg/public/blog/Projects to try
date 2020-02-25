@@ -1,0 +1,15 @@
+I have this idea, primarily for my own education. A number of simple systems to allow one to get in at the base level of various things. I’d like them to be as small as possible, preferably a single file, pure python, with the default libraries. Candidates:
+
+Web Server
+Network monitor (Like Nagios)
+Database (using a sqlite3 backend)
+LDAP (maybe.)
+FTP
+Telnet
+SSH (I don’t know how doable this is)
+SMTP
+POP3
+A shell like BASH
+
+Cloud file server
+Diff based RESTful file collaboration system
