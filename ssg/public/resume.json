@@ -1,0 +1,89 @@
+{
+	"employment":
+	[
+		{
+			"dates":"January 2016 - Present",
+			"org":"University of South Dakota",
+			"title":"Senior Programmer/Analyst",
+			"responsibilities":
+			[
+				"I develop and maintain a tailored solution to answer the problem of making content easily editable to staff and viewable to students on our student portal. Once implemented, it saved the university thousands annually on licensing costs for the outdated system we wanted to discontinue.",
+				"I am responsible for the full-stack deployment of our student portal, servicing several thousand students daily. I maintain the integrations into several data sources and provide technical assistance to marketing for correctly displaying content.",
+				"I maintain integrations of the various open-source software packages we make use of on campus, such as our Central Authentication Service (CAS).",
+				"I aid with the maintenance and development of the university's High-Performance Cluster and the statewide Data Store."
+			]
+		},{
+			"dates":"August 2013 - September 2015",
+			"org":"Operation Mobilization",
+			"title":"Lifehope Systems Administrator and Dancelink Ministry",
+			"responsibilities":
+			[
+				"As a Systems Administrator, I was heavily involved in both the management and development of the systems we used. While I worked with another Sysadm in the Birmingham Lifehope office, I was solely responsible for Lifehope's facility in London.",
+				"I provided technical support to our teams working in evangelism.",
+				"In dance ministry, I worked alongside the Lifehope Dancelink director to teach dance and theology of arts. We used dance as a form of evangelism, intercession, and worship.",
+				"I lived in a diverse multi-cultural community and participated in regular spiritual and team-building exercises, including a weekly prayer night and daily team devotions."
+			]
+		},
+		{
+			"dates":"January 2013 - August 2013",
+			"org":"Ozone Solutions",
+			"title":"Intern - Software Developer",
+			"responsibilities":
+			[
+				"I developed new systems that facilitate their ability to see and communicate with their customers worldwide.",
+				"I independently maintained the entire server infrastructure for several months while the full time developer was away."
+			]
+		},
+		{
+			"dates":"May 2009 - August 2010",
+			"org":"Country Maid Inc.",
+			"title":"Software Developer and General IT",
+			"responsibilities":
+			[
+				"I developed software to be used as an inventory tracking system.",
+				"I designed and created layout and schema for barcodes throughout the warehouse.",
+				"Along with the other developers, I assisted in the selection of hardware and systems for warehouse management.",
+				"As part of the IT team, I assisted in the managing of various IT related issues."
+			]
+		}
+	],
+	"skills":
+	[
+		{
+			"title":"Software Development",
+			"content":[
+				"Set up a system for repurposing Amazon Dash buttons to re-use them as general-purpose IoT buttons.",
+				"Developed several small applications for Android.",
+				"Created a Python library for interacting with Office 365.",
+				"Created a program for distributing compute-intensive programs across a network that could scale to hundreds of machines while having a minimal footprint on the client machines.",
+				"Developed a service for my employer Ozone Solutions that would synchronize all of their client information between their various account management systems as well as create a weighted map of the locations of their clients worldwide."
+			]
+		},
+		{
+			"title":"Mentoring",
+			"content":[
+				"Completed the Operation Mobilization Mentoring Clinic and received certificate of achievement.",
+				"Learned to establish rapport with students/protégés.",
+				"Learned various methods for determining where a protégé is struggling and how best to free them to be able to thrive in academic, personal, and practical realms."
+			]
+		},
+		{
+			"title":"Performing Arts",
+			"content":[
+				"Instructor and choreographer for OM-Arts International Incarnate program for developing artists learning to use their art form in faith and Christian mission.",
+				"Performed with OM-Arts in Bobbio Italy, 2014.",
+				"Worked in capacities as an actor, stage manager, writer, master electrician, and director for several plays at Northwestern College.",
+				"Nominated for Irene Ryan Acting Scholarship Competition, Kennedy Center American College Theater Festival 2013.",
+				"Performed as a member of the Northwestern Symphonic Band for all four years of my collegiate career.",
+				"Performed as a member of the Northwestern A Capella Choir for 2 years."
+			]
+		}
+	],
+	"volunteering":
+	[
+		"I was a counselor for seven years at the local Christian camp for day camp, elementary, and junior high camps.",
+		"At every church I have regularly attended, I have run sound equipment or performed as a musician.",
+		"I worked with the Catholic Social Services mental health team during disaster relief after the tornado in Parkersburg, IA.",
+		"I was an assistant teacher at Pomeroy-Palmer High School teaching fundamental electronics."
+	]
+}

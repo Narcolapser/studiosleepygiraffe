@@ -3,10 +3,10 @@ import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
-	Link,
-	useParams
+	Link
 } from "react-router-dom";
-import axios from 'axios'
+import { Projects, GetProject} from './Projects.js'
+import { DevLogs, GetDevLog } from './DevLogs.js'
 
 // Params are placeholders in the URL that begin
 // with a colon, like the `:id` param defined in
@@ -28,7 +28,7 @@ export default function ParamsExample() {
 						<Link to="/projects">Projects</Link>
 					</li>
 					<li>
-						<Link to="/devlog">Dev Log</Link>
+						<Link to="/devlogs">Dev Log</Link>
 					</li>
 					<li>
 						<Link to="/blog">Blog</Link>
@@ -39,46 +39,15 @@ export default function ParamsExample() {
 					<Route exact path="/projects">
 						<Projects />
 					</Route>
-					<Route path="/projects/:id" children={<Child />} />
+					<Route path="/projects/:id" children={<GetProject />} />
+
+					<Route path="/devlogs">
+						<DevLogs />
+					</Route>
+					<Route path="/devlogs/:id" children={<GetDevLog />} />
+
 				</Switch>
 			</div>
 		</Router>
 	);
 }
-
-class Projects extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {'projects': []};
-	}
-	
-	render() {
-		return (
-			<div>
-				<h2>Projects!</h2>
-				<ul>
-					{this.state.projects
-					.map(project => <li><Link to={"/projects/"+project.url}>{project.name}</Link></li>)}
-				</ul>
-			</div>
-		);
-	}
-	componentDidMount()
-	{
-		axios.get('/projects.json')
-		.then(response => this.setState({'projects': response.data}));
-	}
-}
-
-function Child() {
-	// We can use the `useParams` hook here to access
-	// the dynamic pieces of the URL.
-	let { id } = useParams();
-
-	return (
-		<div>
-			<h3>ID: {id}</h3>
-		</div>
-	);
-}
-

@@ -1,0 +1,112 @@
+{
+      "description":"A library for Amazon dashbutton hijinks. ",
+      "name":"Dash Lib",
+      "path":"/home/toben/Code/ssg/dashlib",
+      "posts":[
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-09-14 08:25:39-05:00",
+            "message":"I keep thinking markdown header is \"=\" and not \"#\" fixed that.",
+            "project":"Dash Lib",
+            "title":"typo"
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-09-14 13:23:58+00:00",
+            "message":"Merge branch 'master' of https://github.com/Narcolapser/dashlib",
+            "project":"Dash Lib",
+            "title":"Merge branch 'master' of https://github.com/Narcolapser/dashlib"
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-09-13 21:08:54+00:00",
+            "message":"Merge branch 'master' of https://github.com/Narcolapser/dashlib into headless",
+            "project":"Dash Lib",
+            "title":"Merge branch 'master' of https://github.com/Narcolapser/dashlib into headless"
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-09-13 16:06:49-05:00",
+            "message":"Initial commit",
+            "project":"Dash Lib",
+            "title":"Initial commit"
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-09-13 02:39:59+00:00",
+            "message":"It's time for bed. But I got this basically to where I wanted it.\nIt is generalized so you can now setup a system relatively easily.\nThere is a bit of effort getting the interface setup properly, but\nassuming you can do that, the rest is easy.\n\nI expanded and updated the README.md preparing for a github\nrelease in the near future.\n",
+            "project":"Dash Lib",
+            "title":"Just needs a touch of polish."
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-09-13 00:55:59+00:00",
+            "message":"I've started to break things up in a sensible way to make this a\nlibrary that can be reused more and hopefully distributed to the\nworld at large. It's got some ways to go yet, but right now I need\nto do some sys admin stuff with my repos so I need this code\ncommited so I can move it.\n",
+            "project":"Dash Lib",
+            "title":"Progress towards a more sensible library."
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-09-12 19:58:38+00:00",
+            "message":"I'm saving what I've got here now, but I think I'm going to take\nthis project in a bit of a different direction. I'm not going to\nbother with turning this into a service, but rather I will try to\nmake it easy to use so that if a service is what you want, you can\nmake it your self. I'll just make this a library that is easy to\nwork with. And maybe a docker container.\n",
+            "project":"Dash Lib",
+            "title":"Maybe a change in direction is needed."
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-08-10 19:54:34+00:00",
+            "message":"I've not yet achieved making this a functional service. It's a\nstep that continues to alude me. I think I'm going to have to\ndevote a decent amount of time to the study of how linux services\nare made and then I might be able to get this working the way I\nwant it to.\n\nThe good thing is that the functional side of it works just fine.\n",
+            "project":"Dash Lib",
+            "title":"Services are confusing."
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-05-09 02:16:06+00:00",
+            "message":"I've made a lot of progress. I'll still have to implement a status message of\nsome sort, but a great deal of progress has been made! woohoo!\n",
+            "project":"Dash Lib",
+            "title":"Nearly done!"
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-05-09 02:01:37+00:00",
+            "message":"I've not moved the files to more sensilbe names. Also I have added all of the\ncases for the python script to deal with the service requests. I'll just need\nto implement them now.\n",
+            "project":"Dash Lib",
+            "title":"Moved files to new names. Added cases."
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-05-09 01:46:13+00:00",
+            "message":"I removed the options so that you wouldn't have to specifiy anything at the\ncommand line. I'll add a config file later, but for now this will help with\nthe creation of a simple service.\n",
+            "project":"Dash Lib",
+            "title":"Simplified the server a bit."
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-05-09 01:32:06+00:00",
+            "message":"I'm gonna screw things up.",
+            "project":"Dash Lib",
+            "title":"I'm gonna screw things up."
+         },
+         {
+            "author":"Toben Archer",
+            "branch":"master",
+            "date":"2017-03-28 02:30:52+00:00",
+            "message":"Initial commit.",
+            "project":"Dash Lib",
+            "title":"Initial commit."
+         }
+      ],
+      "url":"dashlib"
+   }
