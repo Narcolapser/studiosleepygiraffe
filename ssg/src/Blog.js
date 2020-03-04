@@ -11,7 +11,7 @@ export class Blog extends React.Component {
 		super(props);
 		this.state = {'posts': []};
 	}
-	
+
 	render() {
 		return (
 			<div>
@@ -26,7 +26,7 @@ export class Blog extends React.Component {
 	componentDidMount()
 	{
 		axios.get('/posts.json')
-		.then(response => this.setState({'posts': response.data}));
+			.then(response => this.setState({'posts': response.data}));
 	}
 }
 
@@ -34,17 +34,30 @@ export class Blog extends React.Component {
 export class BlogPost extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {'post': props.post,
-						'markdown': ''}
+		this.state = {'markdown': '',
+						'title': '',
+						'info': {'tags':[]}}
 	}
-	
+
 	render() {
-		return (<ReactMarkdown source={this.state.markdown}/>);
+		return (
+		<div>
+			<h1>{this.state.info.title}</h1>
+			<ReactMarkdown source={this.state.markdown}/>
+			<p>On {this.state.info.date}</p>
+			<ul>
+				{this.state.info.tags
+				.map(tag => <li key={tag}><Link to={"/blog/tags/"+tag}>{tag}</Link></li>)}
+			</ul>
+		</div>);
 	}
 
 	componentDidMount() {
-		axios.get('/blog/' + this.state.post + '.md')
+		axios.get('/blog/' + this.props.post + '.md')
 			.then(response => this.setState({'markdown': response.data}));
+		axios.get('/blog/' + this.props.post + '.json')
+			.then(response => this.setState({'info': response.data}));
+
 	}
 }
 
@@ -63,25 +76,24 @@ export function GetBlogPost() {
 export class BlogTag extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {'project': props.project,
-						logs: {description:'',
-								name:'',
-								url:'',
-								posts:[]}}
+		this.state = {'posts': []}
 	}
 
 	render() {
-		return (<div> {this.state.logs.posts.map((post) => {
-			return (<div>
-						<h3>{post.title}</h3>
-						<p>{post.message}</p>
-					</div>)})} 
+		return (
+			<div>
+				<h1>{this.props.tag}</h1>
+				<ul>
+					{this.state.posts.map(post =>
+						<li key={post.id}><Link to={"/blog/posts/"+post.id}>{post.title}</Link></li>
+					)}
+				</ul>
 			</div>);
 	}
-	
+
 	componentDidMount() {
-		axios.get('/logs/' + this.state.project + '.json')
-			.then(response => this.setState({'logs': response.data}));
+		axios.get('/blog/tags/' + this.props.tag + '.json')
+			.then(response => this.setState({'posts': response.data}));
 	}
 }
 
