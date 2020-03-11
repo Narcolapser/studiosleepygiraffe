@@ -16,7 +16,7 @@ export class DevLogs extends React.Component {
 	render() {
 		return (
 			<div>
-				<Title>Dev Log!</Title>
+				<Title>Development Log</Title>
 				<Verbage>
 These development logs are the comments I have made as I work on my projects. They are actually made up of the commit messages from the repo for each project. This has encouraged me to have meaningful commit messages as they are effectively my way of blogging about my project as I work on it. The best part is that because they are commit messages, new posts are just part of my natural workflow. For more information see the apps page for "Studio Sleepy Giraffe."
 				</Verbage>

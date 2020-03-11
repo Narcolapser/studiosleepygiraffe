@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 import axios from 'axios'
 import {Title, Verbage} from './Styles'
+import ProjectLink from './ProjectLink'
 const ReactMarkdown = require('react-markdown')
 
 export class Projects extends React.Component {
@@ -17,10 +18,9 @@ export class Projects extends React.Component {
 		return (
 			<div>
 				<Title>Projects</Title>
-				<ul>
-					{this.state.projects
-					.map(project => <li key={project.url}><Link to={"/projects/"+project.url}>{project.name}</Link></li>)}
-				</ul>
+				{this.state.projects
+				.map(project => <ProjectLink name={project.name} url={project.url}
+					link={"/projects/"+project.url} description={project.description}/>)}
 			</div>
 		);
 	}

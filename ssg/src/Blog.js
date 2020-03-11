@@ -4,7 +4,28 @@ import {
 	useParams
 } from "react-router-dom";
 import axios from 'axios'
+import styled from 'styled-components';
+import {Title, Verbage} from './Styles'
 const ReactMarkdown = require('react-markdown')
+
+const BlogLink = styled(Link)`
+	position: relative;
+	color: white;
+	margin: 20px auto;
+	background: rgb(51, 51, 51);
+	padding: 2%;
+	max-width: 50%;
+
+	&:hover {
+		background-color: #ddd;
+		color: black;
+	}
+
+	&.active {
+		background-color: #ddd
+		coor: black;
+	}
+`
 
 export class Blog extends React.Component {
 	constructor(props) {
@@ -15,11 +36,9 @@ export class Blog extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2>Dev Log!</h2>
-				<ul>
+				<Title>Weblog</Title>
 					{this.state.posts
-					.map(post => <li key={post.date}><Link to={"/blog/posts/"+post.date}>{post.title}</Link></li>)}
-				</ul>
+					.map(post => <div><BlogLink to={"/blog/posts/"+post.date}>{post.title}</BlogLink><br/></div>)}
 			</div>
 		);
 	}
@@ -41,15 +60,15 @@ export class BlogPost extends React.Component {
 
 	render() {
 		return (
-		<div>
-			<h1>{this.state.info.title}</h1>
+		<Verbage>
+			<Title>{this.state.info.title}</Title>
 			<ReactMarkdown source={this.state.markdown}/>
 			<p>On {this.state.info.date}</p>
 			<ul>
 				{this.state.info.tags
 				.map(tag => <li key={tag}><Link to={"/blog/tags/"+tag}>{tag}</Link></li>)}
 			</ul>
-		</div>);
+		</Verbage>);
 	}
 
 	componentDidMount() {

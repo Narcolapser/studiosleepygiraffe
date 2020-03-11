@@ -6,12 +6,6 @@
                 "description":"SSG's website information."
         },
         {
-                "path":"/home/toben/Code/libraries/python-o365",
-                "name":"O365",
-                "url":"o365",
-                "description":"A simple python library for interaction with Office 365."
-        },
-        {
                 "path":"/home/toben/Code/ssg/duel",
                 "name":"Gravity Duel",
                 "url":"gduel",
