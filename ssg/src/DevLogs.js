@@ -4,21 +4,25 @@ import {
 	useParams
 } from "react-router-dom";
 import axios from 'axios'
+import {Title, SubTitle, Verbage} from './Styles'
+import ProjectLink from './ProjectLink'
 
 export class DevLogs extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {'projects': []};
 	}
-	
+
 	render() {
 		return (
 			<div>
-				<h2>Dev Log!</h2>
-				<ul>
-					{this.state.projects
-					.map(project => <li key={project.url}><Link to={"/devlogs/"+project.url}>{project.name}</Link></li>)}
-				</ul>
+				<Title>Dev Log!</Title>
+				<Verbage>
+These development logs are the comments I have made as I work on my projects. They are actually made up of the commit messages from the repo for each project. This has encouraged me to have meaningful commit messages as they are effectively my way of blogging about my project as I work on it. The best part is that because they are commit messages, new posts are just part of my natural workflow. For more information see the apps page for "Studio Sleepy Giraffe."
+				</Verbage>
+				{this.state.projects
+				.map(project => <ProjectLink name={project.name} url={project.url}
+					link={"/devlogs/"+project.url} description={project.description}/>)}
 			</div>
 		);
 	}
@@ -41,14 +45,14 @@ export class DevLog extends React.Component {
 	}
 
 	render() {
-		return (<div> {this.state.logs.posts.map((post) => {
+		return (<Verbage> {this.state.logs.posts.map((post) => {
 			return (<div>
-						<h3>{post.title}</h3>
+						<SubTitle>{post.title}</SubTitle>
 						<p>{post.message}</p>
-					</div>)})} 
-			</div>);
+					</div>)})}
+			</Verbage>);
 	}
-	
+
 	componentDidMount() {
 		axios.get('/logs/' + this.state.project + '.json')
 			.then(response => this.setState({'logs': response.data}));

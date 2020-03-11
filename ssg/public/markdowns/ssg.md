@@ -1,4 +1,4 @@
-#Studio Sleepy Giraffe
+# Studio Sleepy Giraffe
 
 I am a software developer, I did not want to deal with updating content on my website, rather I wanted it done automatically. Further, I'm very used to using git, and why not save the content of my website in a git repository? It simplifies moving the code around and allows me to keep a record. So I created a git repo to not only contain the HTML templates, static resources, etc. of Studio Sleepy Giraffe but also containt the scripts that automate the population of the website.
 
@@ -9,15 +9,15 @@ One of the first utilities I created for the Studio Sleepy Giraffe website is on
 ``` json
 {
     "flight_night": {
-        "name": "Flight Night", 
-        "path": "/home/toben/Eurus/ssg projects/Flight Night", 
+        "name": "Flight Night",
+        "path": "/home/toben/Eurus/ssg projects/Flight Night",
         "posts": [
             {
-                "author": "Toben Archer", 
-                "branch": "master", 
-                "date": "2017-03-20 21:01:16-05:00", 
-                "message": "Fixed number alignment and session scrunch.", 
-                "project": "Flight Night", 
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2017-03-20 21:01:16-05:00",
+                "message": "Fixed number alignment and session scrunch.",
+                "project": "Flight Night",
                 "title": "Fixed number alignment and session scrunch."
             }
         ]

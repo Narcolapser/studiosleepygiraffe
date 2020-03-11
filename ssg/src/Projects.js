@@ -4,6 +4,7 @@ import {
 	useParams
 } from "react-router-dom";
 import axios from 'axios'
+import {Title, Verbage} from './Styles'
 const ReactMarkdown = require('react-markdown')
 
 export class Projects extends React.Component {
@@ -11,11 +12,11 @@ export class Projects extends React.Component {
 		super(props);
 		this.state = {'projects': []};
 	}
-	
+
 	render() {
 		return (
 			<div>
-				<h2>Projects!</h2>
+				<Title>Projects</Title>
 				<ul>
 					{this.state.projects
 					.map(project => <li key={project.url}><Link to={"/projects/"+project.url}>{project.name}</Link></li>)}
@@ -36,11 +37,11 @@ export class Project extends React.Component {
 		this.state = {'project': props.project,
 						'markdown': ''}
 	}
-	
+
 	render() {
-		return (<ReactMarkdown source={this.state.markdown}/>);
+		return (<Verbage><ReactMarkdown source={this.state.markdown}/></Verbage>);
 	}
-	
+
 	componentDidMount() {
 		axios.get('/markdowns/' + this.state.project + '.md')
 			.then(response => this.setState({'markdown': response.data}));
@@ -54,9 +55,7 @@ export function GetProject() {
 
 	return (
 		<div>
-			<p>start project</p>
 			<Project project={id}></Project>
-			<p>end project</p>
 		</div>
 	);
 }
