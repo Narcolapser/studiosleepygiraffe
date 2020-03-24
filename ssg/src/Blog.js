@@ -5,10 +5,10 @@ import {
 } from "react-router-dom";
 import axios from 'axios'
 import styled from 'styled-components';
-import {Title, Verbage} from './Styles'
+import {Title, Verbage, BoldFlatLink} from './Styles'
 const ReactMarkdown = require('react-markdown')
 
-const BlogLink = styled(Link)`
+const BlogDiv = styled.div`
 	position: relative;
 	color: white;
 	margin: 20px auto;
@@ -20,11 +20,26 @@ const BlogLink = styled(Link)`
 		background-color: #ddd;
 		color: black;
 	}
+`
 
-	&.active {
-		background-color: #ddd
-		coor: black;
-	}
+const CropHeight = styled.div`
+	max-height: 150px;
+	overflow: hidden;
+`
+
+const BlogLinkImg = styled.img`
+	display: block;
+	width: 100%;
+	
+	height: auto !important;
+`
+
+const CenterFloat = styled.div`
+	position: absolute;
+	width: 100%;
+	top: 40px;
+	text-shadow: 4px 4px grey;
+	font-size: 4vw;
 `
 
 export class Blog extends React.Component {
@@ -38,7 +53,16 @@ export class Blog extends React.Component {
 			<div>
 				<Title>Weblog</Title>
 					{this.state.posts
-					.map(post => <div><BlogLink to={"/blog/posts/"+post.date}>{post.title}</BlogLink><br/></div>)}
+					.map(post => <BlogDiv>
+							<BoldFlatLink to={"/blog/posts/"+post.date}>
+								<CenterFloat>
+									<center>{post.title}</center>
+								</CenterFloat>
+								<CropHeight>
+									<BlogLinkImg src={'/blog/covers/' + post.cover} />
+								</CropHeight>
+							</BoldFlatLink>
+						</BlogDiv>)}
 			</div>
 		);
 	}
@@ -62,6 +86,7 @@ export class BlogPost extends React.Component {
 		return (
 		<Verbage>
 			<Title>{this.state.info.title}</Title>
+			<img src={'/blog/covers/' + this.state.info.cover} />
 			<ReactMarkdown source={this.state.markdown}/>
 			<p>On {this.state.info.date}</p>
 			<ul>

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {Link} from "react-router-dom";
 
 export const Title = styled.h1`
 	text-align: center;
@@ -15,4 +16,12 @@ export const Verbage = styled.div`
 	margin: 0 auto;
 	font-size: 28px;
 	color: white;
+`
+
+export const BoldFlatLink = styled(Link)`
+	color: black;
+	font-weight: bold;
+	&:visited {
+		color: black;
+	}
 `
