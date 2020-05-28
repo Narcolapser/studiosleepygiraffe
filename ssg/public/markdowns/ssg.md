@@ -25,7 +25,7 @@ One of the first utilities I created for the Studio Sleepy Giraffe website is on
 }
 ```
 
-These are processed in flask to create the "Dev Log" section of SSG. The objective here was three fold:
+These are processed in React (or Flask depending on the version of the site) to create the "Dev Log" section of SSG. The objective here was three fold:
 
 1. Encourage me to make more meaningful commit messages. Since I knew people would potentially see my commit messages, this encouraged me to write messages that were meaningful. The hope being that some day this will serve as a type of blogging engine. Should I be working on a public facing project, those interested could check the devlog for that project. While I went about working on my projects, updates would automatically be thrown up. This leads to effortless blogging.
 2. The second part of it is related. I often see with personal websites that the content goes stale. This would allow me to keep content fresh as it would be automatically thrown up as I worked on projects. So long as I had been working, content would be fresh.
