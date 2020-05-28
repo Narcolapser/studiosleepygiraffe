@@ -1,104 +1,104 @@
-   {
-      "description":"An onscreen joystick for use in games.",
-      "name":"Kivy Garden: Joystick",
-      "path":"/home/toben/Code/ssg/garden.joystick",
-      "posts":[
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-09-13 15:57:51-05:00",
-            "message":"A commit futher down the road had removed the python 2.x style\nsuper calls. I simply restored them now so it should be compatible\nwith python 2.x again.\n",
-            "project":"Kivy Garden: Joystick",
-            "title":"python 2.7 compatability restored."
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-24 09:49:40-05:00",
-            "message":"documentation: fixed some typos & added minor details",
-            "project":"Kivy Garden: Joystick",
-            "title":"Merge pull request #5 from enteleform-forks/master"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-22 08:18:57-05:00",
-            "message":"New Widget Style & Properties, Overall Refactor/Restructure",
-            "project":"Kivy Garden: Joystick",
-            "title":"Merge pull request #3 from enteleform-forks/master"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-21 07:48:07-05:00",
-            "message":"Rename screenshot for garden gallery",
-            "project":"Kivy Garden: Joystick",
-            "title":"Merge pull request #2 from kivy-garden/gallery_screenshot"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-20 11:43:09-05:00",
-            "message":"Fixed README.md Markdown Formatting.\r\n\r\nCheers",
-            "project":"Kivy Garden: Joystick",
-            "title":"Merge pull request #1 from enteleform-forks/master"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-10 21:24:28-05:00",
-            "message":"Forgot the media.",
-            "project":"Kivy Garden: Joystick",
-            "title":"Forgot the media."
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-10 20:20:25-05:00",
-            "message":"I believe I've got this already now for Kivy Garden. It was a bit\nof a thing to try and get the pep8 checker working. I basically\njust copied a number of files from the kivy designer over to my\ndist-packages directory. I actually had to make the kivy/tools/\npep8checker directory in order to put the files there. It was a bit\nof a mess.\n\nBut I can finally commit, as you can see. I did also make a few\nchanges worth noting. I fixed the issue where on touch move would\nbe picked up by the joystick even if it wasn't the joystick's\ntouch that moved.\n",
-            "project":"Kivy Garden: Joystick",
-            "title":"Preped for Kivy Gardening"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-02 07:46:08-05:00",
-            "message":"Merge branch 'master' of https://github.com/Narcolapser/garden.joystick",
-            "project":"Kivy Garden: Joystick",
-            "title":"Merge branch 'master' of https://github.com/Narcolapser/garden.joystick"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-02 07:44:45-05:00",
-            "message":"Initial commit",
-            "project":"Kivy Garden: Joystick",
-            "title":"Initial commit"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-01 10:04:41-05:00",
-            "message":"I've got a little bit of polishing left to do on the code. Mostly\nit will be removing commented code and removing debug print\nstatements, oh and adding comments for maintainability. But beyond\nthat it's basically done. Now I need to figure out how to share it\nvia the Kivy Garden.\n",
-            "project":"Kivy Garden: Joystick",
-            "title":"Finished it! Mostly at least."
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-06-27 21:32:26-05:00",
-            "message":"I fixed the maths. The main the was that I was assigning it to\nthe pad's x and y verses pad's center. I also had to deal with a\nflipped sign. Basically subtracting the widget's center from the\ntouch rather than the other way around (despite that being how I\nleft that).\n",
-            "project":"Kivy Garden: Joystick",
-            "title":"Fixed the maths!"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-06-27 20:40:38-05:00",
-            "message":"For a number of games I have planed, I need an onscreen joystick.\nSo far I have actually managed to get most of the behavior I'm\nlooking for programmed in. The last piece of behavior that is\nneeded is what happens when a touch starts inside the joystick area\nand moves out. I tried implementing it tonight, but ran into some\nbugs. It gets a little funky. Not sure where my math went wrong.\n\nThere will also need to be some work done to generalize it a little\nmore. Right now it basically has to be 200x200. I've put in some\ncalculations that attempt to deal with arbitrary sizes, but getting\na function joystick has been my first priority of course.\n",
-            "project":"Kivy Garden: Joystick",
-            "title":"Initial commit on Joystick widget."
-         }
-      ],
-      "url":"kivy_joystick"
-   }
+{
+    "description": "An onscreen joystick for use in games.",
+    "name": "Kivy Garden: Joystick",
+    "path": "/home/toben/Code/ssg/garden.joystick",
+    "posts": [
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-09-13 15:57:51-05:00",
+            "message": "A commit futher down the road had removed the python 2.x style\nsuper calls. I simply restored them now so it should be compatible\nwith python 2.x again.\n",
+            "project": "Kivy Garden: Joystick",
+            "title": "python 2.7 compatability restored."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-24 09:49:40-05:00",
+            "message": "documentation: fixed some typos & added minor details",
+            "project": "Kivy Garden: Joystick",
+            "title": "Merge pull request #5 from enteleform-forks/master"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-22 08:18:57-05:00",
+            "message": "New Widget Style & Properties, Overall Refactor/Restructure",
+            "project": "Kivy Garden: Joystick",
+            "title": "Merge pull request #3 from enteleform-forks/master"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-21 07:48:07-05:00",
+            "message": "Rename screenshot for garden gallery",
+            "project": "Kivy Garden: Joystick",
+            "title": "Merge pull request #2 from kivy-garden/gallery_screenshot"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-20 11:43:09-05:00",
+            "message": "Fixed README.md Markdown Formatting.\r\n\r\nCheers",
+            "project": "Kivy Garden: Joystick",
+            "title": "Merge pull request #1 from enteleform-forks/master"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-10 21:24:28-05:00",
+            "message": "Forgot the media.",
+            "project": "Kivy Garden: Joystick",
+            "title": "Forgot the media."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-10 20:20:25-05:00",
+            "message": "I believe I've got this already now for Kivy Garden. It was a bit\nof a thing to try and get the pep8 checker working. I basically\njust copied a number of files from the kivy designer over to my\ndist-packages directory. I actually had to make the kivy/tools/\npep8checker directory in order to put the files there. It was a bit\nof a mess.\n\nBut I can finally commit, as you can see. I did also make a few\nchanges worth noting. I fixed the issue where on touch move would\nbe picked up by the joystick even if it wasn't the joystick's\ntouch that moved.\n",
+            "project": "Kivy Garden: Joystick",
+            "title": "Preped for Kivy Gardening"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-02 07:46:08-05:00",
+            "message": "Merge branch 'master' of https://github.com/Narcolapser/garden.joystick",
+            "project": "Kivy Garden: Joystick",
+            "title": "Merge branch 'master' of https://github.com/Narcolapser/garden.joystick"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-02 07:44:45-05:00",
+            "message": "Initial commit",
+            "project": "Kivy Garden: Joystick",
+            "title": "Initial commit"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-01 10:04:41-05:00",
+            "message": "I've got a little bit of polishing left to do on the code. Mostly\nit will be removing commented code and removing debug print\nstatements, oh and adding comments for maintainability. But beyond\nthat it's basically done. Now I need to figure out how to share it\nvia the Kivy Garden.\n",
+            "project": "Kivy Garden: Joystick",
+            "title": "Finished it! Mostly at least."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-06-27 21:32:26-05:00",
+            "message": "I fixed the maths. The main the was that I was assigning it to\nthe pad's x and y verses pad's center. I also had to deal with a\nflipped sign. Basically subtracting the widget's center from the\ntouch rather than the other way around (despite that being how I\nleft that).\n",
+            "project": "Kivy Garden: Joystick",
+            "title": "Fixed the maths!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-06-27 20:40:38-05:00",
+            "message": "For a number of games I have planed, I need an onscreen joystick.\nSo far I have actually managed to get most of the behavior I'm\nlooking for programmed in. The last piece of behavior that is\nneeded is what happens when a touch starts inside the joystick area\nand moves out. I tried implementing it tonight, but ran into some\nbugs. It gets a little funky. Not sure where my math went wrong.\n\nThere will also need to be some work done to generalize it a little\nmore. Right now it basically has to be 200x200. I've put in some\ncalculations that attempt to deal with arbitrary sizes, but getting\na function joystick has been my first priority of course.\n",
+            "project": "Kivy Garden: Joystick",
+            "title": "Initial commit on Joystick widget."
+        }
+    ],
+    "url": "kivy_joystick"
+}

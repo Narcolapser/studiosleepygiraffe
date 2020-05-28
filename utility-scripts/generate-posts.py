@@ -76,5 +76,6 @@ if __name__ == "__main__":
 #		except Exception as e:
 #			print("Skipping '{0}' because: {1}".format(repo,e))
 		projects[repo['url']] = project
-	json.dump(projects,open("../ssg/public/posts.json",'w'),indent=4, sort_keys=True)
+		json.dump(project,open('../ssg/public/logs/{}.json'.format(repo['url']),'w'), indent=4, sort_keys=True)
+#	json.dump(projects,open("../ssg/public/posts.json",'w'),indent=4, sort_keys=True)
 	for o in others: print(o)

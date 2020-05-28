@@ -1,112 +1,112 @@
-   {
-      "description":"A game of gravity bomb lobbing.",
-      "name":"Gravity Duel",
-      "path":"/home/toben/Code/ssg/duel",
-      "posts":[
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2018-03-19 21:33:15-05:00",
-            "message":"Merge branch 'master' of https://github.com/Narcolapser/Gduel-alpha",
-            "project":"Gravity Duel",
-            "title":"Merge branch 'master' of https://github.com/Narcolapser/Gduel-alpha"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2018-03-19 21:32:59-05:00",
-            "message":"Initial commit",
-            "project":"Gravity Duel",
-            "title":"Initial commit"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-10-16 20:14:00-05:00",
-            "message":"I'm drawing this project to a close for now. With this version I\nhave actually released the game to the play store. I really want to\nrecreate this with networking in mind. Make it a multi-player\nmulti-device game. But that will basically require me to rewrite\nthe entirity of the base logic to get it to work. To quote MM-M:\n\n    Plan to throw one away.\n\nThis would be that. It's been good, but it's time has come. I've\nlearned a lot in this initial push, but it is time to move on to\na different project to continue my learnings.\n",
-            "project":"Gravity Duel",
-            "title":"The one that is trown away."
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-09-18 21:27:37-05:00",
-            "message":"I have accomplished two things tonight. First of is the icon. I now\nhave a place holder icon replacing the kivy icon for the apk. I'll\ncome up with something better later or have Kennan come up with\nsomething. We'll see. But for now it is better than the default.\nThe other thing was explosions! Which actually has two facets.\nFirst: A time delay when your ship gets destroyed. This allows you\na moment to realize that you've died. But further, this gives a\nmoment for debris to fly away! It's pretty forceful, espectially if\nyou crash into the sun.\n\nLater I will make use of this time delay for allowing ties. It will\ntake a little effort since it will require a rework of the ending\ncode. But it shouldn't be to annoyingly challenging.\n",
-            "project":"Gravity Duel",
-            "title":"EXPLOSIONS!"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-09-05 20:33:49-05:00",
-            "message":"I added a makefile. For some reason buildozer won't compile the apk\non my NFS drive. I must copy the code to my physical drive and then\nit will build properly. So the make file is just a save of that set\nof copy functions. And then some where to remember the actual build\ncall to buildozer.\n",
-            "project":"Gravity Duel",
-            "title":"oooh, two commits in one night!"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-09-05 20:12:24-05:00",
-            "message":"I got so carried away with the debugging last time that I forgot\nto commit. woops. oh well. So what have I done tonight?\n\nWell, tonight specifically I haven't done too much. I got the\nsettings to work properly. This is good as it allows the game to be\nplayable again on handhelds. It wasn't work for a while as a result\nof the config not finding necessary values.\n\nLast time I coded I accomplished quite a number of things. I got\nthe settings screen up and running, if not fully working. I fixed\nthe issue where red wouldn't be able to fire until they recalled\ntheir torpedoes at the begining of the game. Shots that collide or\nfall into the sun now get removed from the counter. When you start\na new game, the previous shots are removed, clearing the gamefield.\nAnd I added a score keeper. I'm intending to add a \"first to x\"\ngame mode in the rules, so this puts down one of the needed\ncomponents of that.\n\nLeft to do:\nAdd an icon.\nFirst to x matches\nship selector\nnicer ships\nexplosion on ship destroyed\nsound\n\nwhich honestly isn't a particularly long list! Hopefully I'll have\nsomething up in the app store here soon. w00t w00t!\n",
-            "project":"Gravity Duel",
-            "title":"I forgot to commit last time."
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-08-21 21:21:04-05:00",
-            "message":"I did not get as much done as I had hoped I would. I have a managed\nto get the game seperated out into screens now. That helps. You can\nstart a new game and it will throw up a victory screen and then\nyou can go back to the menu or play again. Progress to be sure.\n\nWhat I'm slightly annoyed with is my lack of progress on the\nsettings front. I was trying to get the settings screen to work\nand I just didn't quite get it because I couldn't figure out how\nto get config to behave. And I need to go empty the litter box now\nbefore going to bed. Hopefully I'll be able to accomplish more\nlater this week.\n",
-            "project":"Gravity Duel",
-            "title":"Slow progress tonight."
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-31 21:24:19-05:00",
-            "message":"I have added trails to the ships and torpedoes. It makes the game\nmuch prettier and gives a better sense of movement seeing the trail\nof the objects flying around. It makes the game feel like it is\nactually a legit game and not some high school project.\n\nTorpedoes now collide with each other, so you can theoretically\nprotect yourself from an incoming torpedo, though it would be\npretty spectacular if you did. I imagine it could work well for\nspray and pray on an incoming torpedo.\n\nThe system for firing torpedoes is greatly simplified. But I did it\nin a way that should allow for some fun later. I've got it set now\nthat you have one fire button and one recall button. This allows\nyou to just have a panic button that kills your own torpedoes\nshould you be about to kill yourself. The number of torpedoes will\nalso be something that can be edited.\n\nI've made a burn down chart. 11 items on it before I can make an\ninitial release of the game onto the android play store. I hope to\ndo so in just a few more weeks like this one.\n",
-            "project":"Gravity Duel",
-            "title":"Trails and Tuuuuuuuuuuuuuuubes!"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-17 20:38:12-05:00",
-            "message":"I've fix the launch speed of the torpedoes so they actually feel\nshot now rather than just kinda rolled out of your ship. You can\nstart a new game immediately upon your current game ending,also it\nprovides a little note about who the winner is. Flipped the player\n1 controller so it would be oriented correctly for tablet between\nplayer game style.\n",
-            "project":"Gravity Duel",
-            "title":"Much improved!"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-11 21:38:02-05:00",
-            "message":"I've setup the buildozer file and renaimed duel.py to main.py\nbecuase I'm comptent and totally know that buildozer needs your\ncode to be in main.py. But Tried it with wife, was funny. Needs\na fair bit of tweeking, but the bones are there and great.\n",
-            "project":"Gravity Duel",
-            "title":"Buildozing!"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-11 20:40:07-05:00",
-            "message":"I have achieved minimum viable product on this app. I'm going to\nnow try to load it up as an android app and see if my wife and I\ncan play it.\n\nYou can: Naviaget your ship, shoot torpedos, crash into the sun,\nblow your opponent away, and blow your self away. You can also\nshoot an unlimited number of torpedos and you can't self destruct\nthem. So this should be an interesting few games.\n",
-            "project":"Gravity Duel",
-            "title":"Minimum viable product"
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-04 11:23:37-05:00",
-            "message":"I am nearing on a minimum viable product. Things done today:\n\n1. Joystick multi touch\nI'll have to back port these to the original joystick repo. I have\nfixed the problem where the joysticks would all respond to the same\ntouch as soon as that touch moved. Now the joysticks keep track of\nwhat touch touched them and only respond to it.\n\n2. Joystick mahts:\nI've added into the joystick class the maths for all that you could\nwant from the joystick. Now, not only can you get the pad_x and\npad_y as percent of total range, you can also get the angle,\nradians, and magnitude of the joystick. This allows you to work\nwith it in what ever form you desire.\n\n3. Ship rotation.\n4. Ship thursters.\n5. sun collision.\n6. started on torpedos.\nNot finished yet, but I've started working on torpedoes. They are\ncurrently having issues of being fired from not your ship. But I\nhave an idea on what could be causing that problem. The layout.\n\nLots done today! but now I need to research dancing for my friend's\nwedding. Busy life right now. busy life.\n",
-            "project":"Gravity Duel",
-            "title":"A dramatic step forward."
-         },
-         {
-            "author":"Toben Archer",
-            "branch":"master",
-            "date":"2017-07-02 08:32:01-05:00",
-            "message":"Name is probably taken, but it will be fine for a working title.\nGame play is basic: Two ships in orbit around a sun. You try to\nlob torpedos at each other around the sun. You have thrusters to\nget into a better position, but you might just run yourself into\nthe sun. so be careful with thruster use!\n\nI'm using the kivy Joystick I made the other day. I've already\nfound a problem with it. Two joysticks at the same time doesn't\nwork very well. I need them to track which touch they started from.\nMostly the issue is that on_touch_move doesn't check the touch it\nrecieved to see if it is the same touch as previous.\n",
-            "project":"Gravity Duel",
-            "title":"Initial commit of Duel game."
-         }
-      ],
-      "url":"gduel"
-   }
+{
+    "description": "A game of gravity bomb lobbing.",
+    "name": "Gravity Duel",
+    "path": "/home/toben/Code/ssg/duel",
+    "posts": [
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2018-03-19 21:33:15-05:00",
+            "message": "Merge branch 'master' of https://github.com/Narcolapser/Gduel-alpha",
+            "project": "Gravity Duel",
+            "title": "Merge branch 'master' of https://github.com/Narcolapser/Gduel-alpha"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2018-03-19 21:32:59-05:00",
+            "message": "Initial commit",
+            "project": "Gravity Duel",
+            "title": "Initial commit"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-10-16 20:14:00-05:00",
+            "message": "I'm drawing this project to a close for now. With this version I\nhave actually released the game to the play store. I really want to\nrecreate this with networking in mind. Make it a multi-player\nmulti-device game. But that will basically require me to rewrite\nthe entirity of the base logic to get it to work. To quote MM-M:\n\n    Plan to throw one away.\n\nThis would be that. It's been good, but it's time has come. I've\nlearned a lot in this initial push, but it is time to move on to\na different project to continue my learnings.\n",
+            "project": "Gravity Duel",
+            "title": "The one that is trown away."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-09-18 21:27:37-05:00",
+            "message": "I have accomplished two things tonight. First of is the icon. I now\nhave a place holder icon replacing the kivy icon for the apk. I'll\ncome up with something better later or have Kennan come up with\nsomething. We'll see. But for now it is better than the default.\nThe other thing was explosions! Which actually has two facets.\nFirst: A time delay when your ship gets destroyed. This allows you\na moment to realize that you've died. But further, this gives a\nmoment for debris to fly away! It's pretty forceful, espectially if\nyou crash into the sun.\n\nLater I will make use of this time delay for allowing ties. It will\ntake a little effort since it will require a rework of the ending\ncode. But it shouldn't be to annoyingly challenging.\n",
+            "project": "Gravity Duel",
+            "title": "EXPLOSIONS!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-09-05 20:33:49-05:00",
+            "message": "I added a makefile. For some reason buildozer won't compile the apk\non my NFS drive. I must copy the code to my physical drive and then\nit will build properly. So the make file is just a save of that set\nof copy functions. And then some where to remember the actual build\ncall to buildozer.\n",
+            "project": "Gravity Duel",
+            "title": "oooh, two commits in one night!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-09-05 20:12:24-05:00",
+            "message": "I got so carried away with the debugging last time that I forgot\nto commit. woops. oh well. So what have I done tonight?\n\nWell, tonight specifically I haven't done too much. I got the\nsettings to work properly. This is good as it allows the game to be\nplayable again on handhelds. It wasn't work for a while as a result\nof the config not finding necessary values.\n\nLast time I coded I accomplished quite a number of things. I got\nthe settings screen up and running, if not fully working. I fixed\nthe issue where red wouldn't be able to fire until they recalled\ntheir torpedoes at the begining of the game. Shots that collide or\nfall into the sun now get removed from the counter. When you start\na new game, the previous shots are removed, clearing the gamefield.\nAnd I added a score keeper. I'm intending to add a \"first to x\"\ngame mode in the rules, so this puts down one of the needed\ncomponents of that.\n\nLeft to do:\nAdd an icon.\nFirst to x matches\nship selector\nnicer ships\nexplosion on ship destroyed\nsound\n\nwhich honestly isn't a particularly long list! Hopefully I'll have\nsomething up in the app store here soon. w00t w00t!\n",
+            "project": "Gravity Duel",
+            "title": "I forgot to commit last time."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-08-21 21:21:04-05:00",
+            "message": "I did not get as much done as I had hoped I would. I have a managed\nto get the game seperated out into screens now. That helps. You can\nstart a new game and it will throw up a victory screen and then\nyou can go back to the menu or play again. Progress to be sure.\n\nWhat I'm slightly annoyed with is my lack of progress on the\nsettings front. I was trying to get the settings screen to work\nand I just didn't quite get it because I couldn't figure out how\nto get config to behave. And I need to go empty the litter box now\nbefore going to bed. Hopefully I'll be able to accomplish more\nlater this week.\n",
+            "project": "Gravity Duel",
+            "title": "Slow progress tonight."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-31 21:24:19-05:00",
+            "message": "I have added trails to the ships and torpedoes. It makes the game\nmuch prettier and gives a better sense of movement seeing the trail\nof the objects flying around. It makes the game feel like it is\nactually a legit game and not some high school project.\n\nTorpedoes now collide with each other, so you can theoretically\nprotect yourself from an incoming torpedo, though it would be\npretty spectacular if you did. I imagine it could work well for\nspray and pray on an incoming torpedo.\n\nThe system for firing torpedoes is greatly simplified. But I did it\nin a way that should allow for some fun later. I've got it set now\nthat you have one fire button and one recall button. This allows\nyou to just have a panic button that kills your own torpedoes\nshould you be about to kill yourself. The number of torpedoes will\nalso be something that can be edited.\n\nI've made a burn down chart. 11 items on it before I can make an\ninitial release of the game onto the android play store. I hope to\ndo so in just a few more weeks like this one.\n",
+            "project": "Gravity Duel",
+            "title": "Trails and Tuuuuuuuuuuuuuuubes!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-17 20:38:12-05:00",
+            "message": "I've fix the launch speed of the torpedoes so they actually feel\nshot now rather than just kinda rolled out of your ship. You can\nstart a new game immediately upon your current game ending,also it\nprovides a little note about who the winner is. Flipped the player\n1 controller so it would be oriented correctly for tablet between\nplayer game style.\n",
+            "project": "Gravity Duel",
+            "title": "Much improved!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-11 21:38:02-05:00",
+            "message": "I've setup the buildozer file and renaimed duel.py to main.py\nbecuase I'm comptent and totally know that buildozer needs your\ncode to be in main.py. But Tried it with wife, was funny. Needs\na fair bit of tweeking, but the bones are there and great.\n",
+            "project": "Gravity Duel",
+            "title": "Buildozing!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-11 20:40:07-05:00",
+            "message": "I have achieved minimum viable product on this app. I'm going to\nnow try to load it up as an android app and see if my wife and I\ncan play it.\n\nYou can: Naviaget your ship, shoot torpedos, crash into the sun,\nblow your opponent away, and blow your self away. You can also\nshoot an unlimited number of torpedos and you can't self destruct\nthem. So this should be an interesting few games.\n",
+            "project": "Gravity Duel",
+            "title": "Minimum viable product"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-04 11:23:37-05:00",
+            "message": "I am nearing on a minimum viable product. Things done today:\n\n1. Joystick multi touch\nI'll have to back port these to the original joystick repo. I have\nfixed the problem where the joysticks would all respond to the same\ntouch as soon as that touch moved. Now the joysticks keep track of\nwhat touch touched them and only respond to it.\n\n2. Joystick mahts:\nI've added into the joystick class the maths for all that you could\nwant from the joystick. Now, not only can you get the pad_x and\npad_y as percent of total range, you can also get the angle,\nradians, and magnitude of the joystick. This allows you to work\nwith it in what ever form you desire.\n\n3. Ship rotation.\n4. Ship thursters.\n5. sun collision.\n6. started on torpedos.\nNot finished yet, but I've started working on torpedoes. They are\ncurrently having issues of being fired from not your ship. But I\nhave an idea on what could be causing that problem. The layout.\n\nLots done today! but now I need to research dancing for my friend's\nwedding. Busy life right now. busy life.\n",
+            "project": "Gravity Duel",
+            "title": "A dramatic step forward."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2017-07-02 08:32:01-05:00",
+            "message": "Name is probably taken, but it will be fine for a working title.\nGame play is basic: Two ships in orbit around a sun. You try to\nlob torpedos at each other around the sun. You have thrusters to\nget into a better position, but you might just run yourself into\nthe sun. so be careful with thruster use!\n\nI'm using the kivy Joystick I made the other day. I've already\nfound a problem with it. Two joysticks at the same time doesn't\nwork very well. I need them to track which touch they started from.\nMostly the issue is that on_touch_move doesn't check the touch it\nrecieved to see if it is the same touch as previous.\n",
+            "project": "Gravity Duel",
+            "title": "Initial commit of Duel game."
+        }
+    ],
+    "url": "gduel"
+}

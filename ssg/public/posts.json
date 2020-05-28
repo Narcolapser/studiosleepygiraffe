@@ -975,6 +975,158 @@
             {
                 "author": "Toben Archer",
                 "branch": "master",
+                "date": "2020-05-28 10:57:42-05:00",
+                "message": "I'm now using this new React version of my website as the default. I\nthink I will try to setup a system where nginx redirects users to\ndifferent versions, built on different technology stacks, based on\ncookies. I feel like nginx can probably do that.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Merge branch 'node'"
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-05-28 10:54:54-05:00",
+                "message": "I wrote a little squeel of delight over python this morning and wanted\nto push it into my site. I also want to update the git posts. That file\nhas not been updated in quite a while.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Updating blog and git posts."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-03-23 20:24:17-05:00",
+                "message": "I'm done! I've got everything up to acceptable. I'd say this puts\nmy site at a comfortable beta. Right now I need to press on to the\nnext task: Push this onto midgard and set it up with nginx. I\ndecided I wanted to use nginx this time because it is easier to\nreverse proxy through than Apache, and I'd like to reverse proxy\ncalibre from Udgard the media server.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Done! at least enough."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-03-10 21:36:16-05:00",
+                "message": "I've got to figure out what exactly I want to do for the blog page.\nJust a list of boring looking links doesn't sound like a\nparticularly great idea. They really don't look great right now,\nbut alas it is bed time. But both projects and dev log are looking\npretty good right now so I'm pleased with tonight's progress.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Most of the way there."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-03-10 21:11:30-05:00",
+                "message": "I'm making a project link component since I will be using it from\nboth the projects tab and the dev log tab. Right now I'm to the\npoint where I need to bring in the pictures. So I'm going to save\nhere and then go fetch them and come back.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Making good progress on styling."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-03-03 20:37:37-06:00",
+                "message": "or at least the content is. All the parts are present. The posts,\nthe tags that connect the posts, the resume, etc. I've also gotten\nthe home page filled with content and the banner image in place.\nAll that is left to do now is to get all the styling that is needed\nin place so it doesn't look really bad. The week after that I'll\nlook into getting it hosted on nginx on midgard. And then I'll try\nmy hand at some ruby on rails. That should be interesting.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "The flesh is there."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-24 21:35:09-06:00",
+                "message": "I've got the basics for the blog now in. It will take a little more\neffort to include the tags and cover arts. But that is true of all\nof the tabs: More work needed. The important thing is react router\nis now catching everything and navigating you to the pags. In fact\nonly the resume page and the blog tags pages are yet to be made.\nGreat progress! Hopefully next time I'm working on this all have\nthe skeleton fully fleshed out and I will be able to start putting\nsome flesh on to it.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Blog is now in."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-24 21:16:23-06:00",
+                "message": "Route _exact_. That was what I was missing. Once I got that in then\nthe router picked up everything as expected and everything worked\ngreat. Now onto the last tab in my tabbed navigation, the blog.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "DevLogs now working."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-24 20:53:15-06:00",
+                "message": "Trying to get devlogs working now but it's giving me some strange\nbehavior. So I'm going to save before I do anything to damage the\nalready working projects section.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Projects and and working."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-18 21:29:58-06:00",
+                "message": "I've got projects dynamically loading urls now. It recieves a .json\nfile of projects and creates the urls. Pretty basic stuff but a\nnecessary step to getting this to work.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "One last quick change for the evening."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-18 21:12:30-06:00",
+                "message": "It is a radically different way of doing things than what I have\nbeen doing but I think I'll get the hang of it pretty quickly. I've\ngot the parts that I couldn't figure out previously working, though\nthe site is just a couple of p tags right now. I'm going to\nstatically host the json files for now. It is simple enough to just\nupdate them from the OS when needed. That allows me to focus on\ngetting the site up for now.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "I have some bits working."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-18 21:09:21-06:00",
+                "message": "Removed flask version.",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Removed flask version."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-18 20:20:45-06:00",
+                "message": "I'm trying to get everything to work inside of my python/flask\nenviorment and I'm hitting road bumps. Everything assumes you are\ncoding in a specific way, specifically node, and so if you aren't\nit no longer makes sense. So I'm going to try doing a react app by\nthe book.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Running into some challenges."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-10 21:30:22-06:00",
+                "message": "Merge branch 'react' of gitlab.com:narcolapser/studiosleepygiraffe into react",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Merge branch 'react' of gitlab.com:narcolapser/studiosleepygiraffe into react"
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-10 21:28:01-06:00",
+                "message": "I've got the main landing page back and the landing page for\nprojects back up. I'm currently trying to get my head around how\nexactly one creates routes procedurally. I can of course have the\njavascript file be a template file and render the content in via\npython. But that doesn't feel like the right/pure way of doing\nthis. So I'm going to keep looking. But I am pleased with what I\nhave got so far.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "A decent start."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-10 20:33:10-06:00",
+                "message": "I moved the images into a sub folder of static to make that folder\na little less crowded. I will be putting a number of .js files in\nthere. I have now a basic app working with the react router. Now I\njust need to expand it to get all my old functionality back.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Moved images"
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2020-02-10 20:23:09-06:00",
+                "message": "I'm going to kind of rework my site again this time I'm going to\nleverage react router to allow it to be a single page app and also\nbe a have functional urls and back button.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Rerouting"
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2019-10-29 16:56:17-05:00",
+                "message": "Merge branch 'react' of gitlab.com:narcolapser/studiosleepygiraffe into react",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Merge branch 'react' of gitlab.com:narcolapser/studiosleepygiraffe into react"
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
+                "date": "2019-10-29 16:54:17-05:00",
+                "message": "I've learned a few things about importing recently and have added what I\nthink should fix my blue prints problem, finally.\n",
+                "project": "Studio Sleepy Giraffe",
+                "title": "Getting blue prints working again."
+            },
+            {
+                "author": "Toben Archer",
+                "branch": "master",
                 "date": "2019-09-02 10:28:51-05:00",
                 "message": "I think I've got everything polished to a shine now. Going to push\nthis up to my website and go mow the lawn, boy is my brain tired.\n",
                 "project": "Studio Sleepy Giraffe",
