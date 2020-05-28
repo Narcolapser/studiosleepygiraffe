@@ -1,0 +1,38 @@
+[
+        {
+                "path":"/home/toben/Code/ssg/studiosleepygiraffe",
+                "name":"Studio Sleepy Giraffe",
+                "url":"ssg",
+                "description":"SSG's website information."
+        },
+        {
+                "path":"/home/toben/Code/ssg/duel",
+                "name":"Gravity Duel",
+                "url":"gduel",
+                "description":"A game of gravity bomb lobbing."
+        },
+        {
+                "path":"/home/toben/Code/ssg/Delta",
+                "name":"Delta",
+                "url":"delta",
+                "description":"A learning experience. A home attempt at a game engine."
+        },
+        {
+                "path":"/home/toben/Code/ssg/dashlib",
+                "name":"Dash Lib",
+                "url":"dashlib",
+                "description":"A library for Amazon dashbutton hijinks. "
+        },
+        {
+                "path":"/home/toben/Code/ssg/garden.joystick",
+                "name":"Kivy Garden: Joystick",
+                "url":"kivy_joystick",
+                "description":"An onscreen joystick for use in games."
+        },
+        {
+                "path":"/home/toben/Code/ssg/automatic-fiesta",
+                "name":"Automatic Fiesta",
+                "url":"automatic-fiesta",
+                "description":"A system for automatically distributing code to satellite micropython nodes based on MAC address."
+        }
+]

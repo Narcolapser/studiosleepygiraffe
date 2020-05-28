@@ -1,0 +1,10 @@
+/
+/home
+/projects
+	/all the projects' readmes
+/devlog
+	/all the projects' git posts
+/blog
+	/all the blog posts
+/resume
+/resume.pdf
