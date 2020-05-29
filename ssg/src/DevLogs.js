@@ -49,6 +49,7 @@ export class DevLog extends React.Component {
 			return (<div>
 						<SubTitle>{post.title}</SubTitle>
 						<p>{post.message}</p>
+						<p>Commited on {post.date}</p>
 					</div>)})}
 			</Verbage>);
 	}

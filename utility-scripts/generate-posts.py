@@ -1,5 +1,8 @@
 import git
 import json
+import time
+
+time_str = '%Y-%m-%d'
 
 def getMessages(repo,branch):
 	ret = [com.message for com in repo.iter_commits('master')]
@@ -21,7 +24,7 @@ class Post:
 	def __init__(self,commit,branch=None,project=None):
 		self.commit = commit
 		self.title, self.message = getPostFromMessage(commit.message)
-		self.date = commit.committed_datetime
+		self.date = commit.committed_datetime.strftime(time_str)
 		self.branch = branch
 		self.author = commit.author
 		self.project = project
@@ -40,6 +43,7 @@ class Post:
 		data['project'] = str(self.project)
 		data['title'] = self.title
 		data['message'] = self.message
+		print(type(self.date))
 		data['date'] = str(self.date)
 		return json.dumps(data)
 
