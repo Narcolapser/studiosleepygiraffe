@@ -7,6 +7,14 @@
             "author": "Toben Archer",
             "branch": "master",
             "date": "2020-05-28",
+            "message": "I updated the devlog posts to include dates so that the passage of time\nwas a little more evidant. Makes it clear some of the things were well\nin the past but that's ok.\n",
+            "project": "Studio Sleepy Giraffe",
+            "title": "Updated devlog post."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-05-28",
             "message": "Excluding this one of course. Turns out the posts.json file is not\ncurrently responsible for the content in the devlog. That is managed by\nindividual files. I really need to get around to building a proper\nbackend for my site so all of the automations can be restored.\n",
             "project": "Studio Sleepy Giraffe",
             "title": "Actual post updates."
