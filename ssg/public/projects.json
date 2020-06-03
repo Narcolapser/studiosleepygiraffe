@@ -5,6 +5,12 @@
                 "url":"ssg",
                 "description":"SSG's website information."
         },
+	{
+		"path":"/home/toben/Code/ssg/panerus",
+		"name":"Panerus",
+		"url":"panerus",
+		"description":"A simple music authoring program for Javanese Gamelan music."
+	},
         {
                 "path":"/home/toben/Code/ssg/duel",
                 "name":"Gravity Duel",
