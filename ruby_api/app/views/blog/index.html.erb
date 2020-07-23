@@ -1,0 +1,14 @@
+{
+	"posts":
+	[
+	<% @posts.each do |post| %>
+		{
+			"date":"<%= post['date'] %>",
+			"title":"<%= post['title'] %>",
+			"author":"<%= post['author'] %>",
+			"cover":"<%= post['cover'] %>",
+		},
+	<% end %>
+	]
+}
+
