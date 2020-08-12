@@ -63,7 +63,7 @@ export default function ParamsExample() {
 					<NavBar >
 						<NavLink to="/">Home</NavLink>
 						<NavLink to="/projects">Projects</NavLink>
-						<NavLink to="/devlogs">Dev Log</NavLink>
+						<NavLink to="/logs">Dev Log</NavLink>
 						<NavLink to="/blog">Blog</NavLink>
 					</NavBar>
 
@@ -81,10 +81,10 @@ export default function ParamsExample() {
 						</Route>
 						<Route path="/projects/:id" children={<GetProject />} />
 
-						<Route exact path="/devlogs">
+						<Route exact path="/logs">
 							<DevLogs />
 						</Route>
-						<Route path="/devlogs/:id" children={<GetDevLog />} />
+						<Route path="/logs/:id" children={<GetDevLog />} />
 
 						<Route exact path="/blog">
 							<Blog />

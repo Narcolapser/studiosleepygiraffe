@@ -26,7 +26,7 @@ export class Projects extends React.Component {
 	}
 	componentDidMount()
 	{
-		axios.get('/projects.json')
+		axios.get('http://api.studiosleepygiraffe.com/projects')
 		.then(response => this.setState({'projects': response.data}));
 	}
 }

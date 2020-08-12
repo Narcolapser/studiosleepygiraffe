@@ -1,0 +1,16 @@
+[Unit]
+Description = Ruby version of my websites API.
+After=network.target
+
+[Service]
+Type=simple
+User=ruby
+Environment="PATH=/home/toben/.rvm/gems/ruby-2.7.0/bin:/home/toben/.rvm/rubies/ruby-2.7.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Environment="GEM_HOME=/home/toben/.rvm/gems/ruby-2.7.0"
+Environment="GEM_PATH=/home/toben/.rvm/gems/ruby-2.7.0:/home/toben/.rvm/gems/ruby-2.7.0@global"
+WorkingDirectory=/var/www/studiosleepygiraffe/ruby_api/
+ExecStart=/home/toben/.rvm/gems/ruby-2.7.0/bin/rails server
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

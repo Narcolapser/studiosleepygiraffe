@@ -30,7 +30,7 @@ const CropHeight = styled.div`
 const BlogLinkImg = styled.img`
 	display: block;
 	width: 100%;
-	
+
 	height: auto !important;
 `
 
@@ -68,7 +68,7 @@ export class Blog extends React.Component {
 	}
 	componentDidMount()
 	{
-		axios.get('/posts.json')
+		axios.get('http://api.studiosleepygiraffe.com/posts')
 			.then(response => this.setState({'posts': response.data}));
 	}
 }

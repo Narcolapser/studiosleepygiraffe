@@ -14,6 +14,7 @@ export class DevLogs extends React.Component {
 	}
 
 	render() {
+		console.log(JSON.stringify(this.state.projects))
 		return (
 			<div>
 				<Title>Development Log</Title>
@@ -22,13 +23,13 @@ These development logs are the comments I have made as I work on my projects. Th
 				</Verbage>
 				{this.state.projects
 				.map(project => <ProjectLink name={project.name} url={project.url}
-					link={"/devlogs/"+project.url} description={project.description}/>)}
+					link={project.url} description={project.description}/>)}
 			</div>
 		);
 	}
 	componentDidMount()
 	{
-		axios.get('/projects.json')
+		axios.get('http://api.studiosleepygiraffe.com/logs')
 		.then(response => this.setState({'projects': response.data}));
 	}
 }
@@ -55,7 +56,9 @@ export class DevLog extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('/logs/' + this.state.project + '.json')
+		console.log(JSON.stringify(this.state));
+		console.log('http://api.studiosleepygiraffe.com/logs/' + this.state.project);
+		axios.get('http://api.studiosleepygiraffe.com/logs/' + this.state.project)
 			.then(response => this.setState({'logs': response.data}));
 	}
 }
