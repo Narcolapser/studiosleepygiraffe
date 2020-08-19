@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, send_file, abort
 import sys
 import os
 import json
@@ -36,6 +36,10 @@ def project_info(project):
 	
 	return jsonify(json.loads(open('/home/toben/Code/ssg/'+project+'/info.json').read()))
 
+@app.route('/projects/<project>/<resource>')
+def project_resource(project,resource):
+	pass
+
 @app.route('/posts')
 def posts():
 	directories = glob.glob('/home/toben/Code/blog/*-*-*')
@@ -56,10 +60,29 @@ def posts():
 def post(post):
 	directories = glob.glob('/home/toben/Code/blog/*-*-*')
 	posts = [directory[22:] for directory in directories]
-	info = {'Status':'Failure'}
 	if post in posts:
 		info = json.load(open('/home/toben/Code/blog/{}/info.json'.format(post)))
+	else:
+		info = {'Status':'Failure'}
 	return jsonify(info)
+
+@app.route('/posts/<post>/<resource>')
+def post_resource(post,resource):
+	directories = glob.glob('/home/toben/Code/blog/*-*-*')
+	posts = [directory[22:] for directory in directories]
+	if post in posts:
+		if resource == 'post.md':
+			return open('/home/toben/Code/blog/{}/post.md'.format(post)).read()
+
+		files = json.load(open('/home/toben/Code/blog/{}/info.json'.format(post)))['files']
+		print(files)
+		print(resource)
+		if resource in files:
+			return send_file('/home/toben/Code/blog/{}/{}'.format(post,resource))
+		else:
+			abort(404)
+	else:
+		info = {'Status':'Failure'}
 
 @app.route('/logs')
 def logs():
