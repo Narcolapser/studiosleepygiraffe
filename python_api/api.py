@@ -29,8 +29,6 @@ def projects():
 
 @app.route('/projects/<project>')
 def project_info(project):
-	print(project)
-	print(project_names)
 	if project not in project_names:
 		return jsonify({'status':'failure'})
 	
@@ -38,7 +36,23 @@ def project_info(project):
 
 @app.route('/projects/<project>/<resource>')
 def project_resource(project,resource):
-	pass
+	if project not in project_names:
+		return jsonify({'status':'failure'})
+	
+	if resource == 'README.md':
+		return open('/home/toben/Code/ssg/{}/README.md'.format(project)).read()
+	
+	if resource == 'banner1.png':
+		return send_file('/home/toben/Code/ssg/{}/banner1.png'.format(project))
+
+	if resource == 'banner2.png':
+		return send_file('/home/toben/Code/ssg/{}/banner2.png'.format(project))
+	
+	files = json.load(open('/home/toben/Code/ssg/{}/info.json'))['files']
+	if resource in files:
+		return send_file('/home/toben/Code/ssg/{}/{}'.format(project,resource))
+	else:
+		abort(404)
 
 @app.route('/posts')
 def posts():

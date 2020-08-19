@@ -1,7 +1,8 @@
 {
 	"path":"/home/toben/Code/ssg/studiosleepygiraffe",
 	"name":"Studio Sleepy Giraffe",
-	"url":"/ssg",
+	"url":"/studiosleepygiraffe",
 	"description":"The code used to make my personal website.",
-	"rank":1
+	"rank":1,
+	"files":[]
 }
