@@ -20,7 +20,7 @@ export class Projects extends React.Component {
 				<Title>Projects</Title>
 				{this.state.projects
 				.map(project => <ProjectLink name={project.name} url={project.url}
-					link={"/projects/"+project.url} description={project.description}/>)}
+					link={"/projects"+project.url} description={project.description}/>)}
 			</div>
 		);
 	}
@@ -43,7 +43,7 @@ export class Project extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('/markdowns/' + this.state.project + '.md')
+		axios.get('http://api.studiosleepygiraffe.com/projects/' + this.state.project + '/README.md')
 			.then(response => this.setState({'markdown': response.data}));
 	}
 }

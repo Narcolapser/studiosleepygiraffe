@@ -59,7 +59,7 @@ export class Blog extends React.Component {
 									<center>{post.title}</center>
 								</CenterFloat>
 								<CropHeight>
-									<BlogLinkImg src={'/blog/covers/' + post.cover} />
+									<BlogLinkImg src={'http://api.studiosleepygiraffe.com' + post.url + '/cover.jpg'} />
 								</CropHeight>
 							</BoldFlatLink>
 						</BlogDiv>)}
@@ -97,9 +97,9 @@ export class BlogPost extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('/blog/' + this.props.post + '.md')
+		axios.get('http://api.studiosleepygiraffe.com/posts/' + this.props.post + '/post.md')
 			.then(response => this.setState({'markdown': response.data}));
-		axios.get('/blog/' + this.props.post + '.json')
+		axios.get('http://api.studiosleepygiraffe.com/posts/' + this.props.post)
 			.then(response => this.setState({'info': response.data}));
 
 	}

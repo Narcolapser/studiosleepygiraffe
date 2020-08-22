@@ -21,7 +21,7 @@ def _project_comp(left, right):
 def _get_rank(project):
 	return project['rank']
 
-@app.route('/projects')
+@app.route('/projects/')
 def projects():
 	projects = [json.loads(open(project).read()) for project in project_files]
 	projects.sort(key=_get_rank)
@@ -54,7 +54,7 @@ def project_resource(project,resource):
 	else:
 		abort(404)
 
-@app.route('/posts')
+@app.route('/posts/')
 def posts():
 	directories = glob.glob('/home/toben/Code/blog/*-*-*')
 	posts = []
@@ -64,10 +64,11 @@ def posts():
 		post['url'] = '/posts/' + directory[22:]
 		info = json.load(open('{}/info.json'.format(directory)))
 		post['title'] = info['title']
-		post['cover'] = info['cover']
+		post['cover'] = 'cover.jpg'
 		post['author'] = info['author']
 		
 		posts.append(post)
+	posts.sort(key=lambda post: post['date'],reverse=True)
 	return jsonify(posts)
 
 @app.route('/posts/<post>')
@@ -88,6 +89,9 @@ def post_resource(post,resource):
 		if resource == 'post.md':
 			return open('/home/toben/Code/blog/{}/post.md'.format(post)).read()
 
+		if resource == 'cover.jpg':
+			return send_file('/home/toben/Code/blog/{}/cover.jpg'.format(post))
+
 		files = json.load(open('/home/toben/Code/blog/{}/info.json'.format(post)))['files']
 		print(files)
 		print(resource)
@@ -98,7 +102,7 @@ def post_resource(post,resource):
 	else:
 		info = {'Status':'Failure'}
 
-@app.route('/logs')
+@app.route('/logs/')
 def logs():
 	projects = [json.loads(open(project).read()) for project in project_files]
 	projects.sort(key=_get_rank)
