@@ -79,16 +79,18 @@ export class BlogPost extends React.Component {
 		super(props);
 		this.state = {'markdown': '',
 						'title': '',
-						'info': {'tags':[]}}
+						'info': {'tags':[],'files':[]}}
 	}
 
 	render() {
 		return (
 		<Verbage>
 			<Title>{this.state.info.title}</Title>
-			<img src={'/blog/covers/' + this.state.info.cover} />
+			<img src={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/cover.jpg'} />
 			<ReactMarkdown source={this.state.markdown}/>
-			<p>On {this.state.info.date}</p>
+			{this.state.info.files
+			.map(file => <div><a href={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/' + file}>{file}</a><br/></div>)}
+			<p>Posted on: {this.state.info.date}</p>
 			<ul>
 				{this.state.info.tags
 				.map(tag => <li key={tag}><Link to={"/blog/tags/"+tag}>{tag}</Link></li>)}

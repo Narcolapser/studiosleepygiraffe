@@ -77,6 +77,7 @@ def post(post):
 	posts = [directory[22:] for directory in directories]
 	if post in posts:
 		info = json.load(open('/home/toben/Code/blog/{}/info.json'.format(post)))
+		info['date'] = post
 	else:
 		info = {'Status':'Failure'}
 	return jsonify(info)
