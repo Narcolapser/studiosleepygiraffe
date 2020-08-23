@@ -1,4 +1,5 @@
 from flask import Flask, render_template, jsonify, send_file, abort
+from datetime import datetime
 import sys
 import os
 import json
@@ -111,12 +112,56 @@ def logs():
 
 @app.route('/logs/<project>')
 def log(project):
-	print(project)
-	print(project_names)
 	if project not in project_names:
 		return jsonify({'status':'failure'})
 	
-	return jsonify(json.loads(open('/home/toben/Code/ssg/'+project+'/logs.json').read()))
+	return jsonify(json.load(open('/home/toben/Code/ssg/'+project+'/logs.json')))
+
+def get_rss_date(date):
+	val = datetime.strptime(date, '%Y-%m-%d')
+	return val.strftime('%a, %d %b %y %T UTC')
+
+def get_json_date(date):
+	pass
+
+@app.route('/feed.<feed_type>')
+def feed(feed_type):
+	print('Getting feed for ' + feed_type)
+	directories = glob.glob('/home/toben/Code/blog/*-*-*')
+	blog_posts = []
+	for post in [directory[22:] for directory in directories]:
+		info = json.load(open('/home/toben/Code/blog/{}/info.json'.format(post)))
+		info['date'] = post
+		info['text'] = '\n'.join(open('/home/toben/Code/blog/{}/post.md'.format(post)).read().split('\n')[0:3])
+		blog_posts.append(info)
+
+	posts = []
+	for post in blog_posts:
+		val = {}
+		val['title'] = post['title']
+		val['link'] = 'http://www.studiosleepygiraffe.com/blog/posts/{}'.format(post['date'])
+		val['date'] = datetime.strptime(post['date'], '%Y-%m-%d') #get_rss_date(post['date'])
+		val['text'] = post['text']
+		val['author'] = post['author']
+		posts.append(val)
+		
+	for project in project_names:
+		logs = json.load(open('/home/toben/Code/ssg/{}/logs.json'.format(project)))
+		for log in logs['posts']:
+			val = {}
+			val['title'] = '{}: {}'.format(project.capitalize(), log['title'])
+			val['link'] = 'http://www.studiosleepygiraffe.com/logs/{}'.format(project)
+			val['date'] = datetime.strptime(log['date'], '%Y-%m-%d')
+			val['text'] = log['message']
+			val['author'] = log['author']
+			posts.append(val)
+
+	posts.sort(key=lambda post: post['date'], reverse=True)
+	if feed_type == 'rss':
+		return render_template('rss.xml', posts=posts[0:20])
+	else:
+		return jsonify(posts[0:20])
+
 
 if __name__ == "__main__":
 	app.run(host='0.0.0.0', port=3000)
