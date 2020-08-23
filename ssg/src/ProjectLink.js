@@ -1,11 +1,6 @@
 import React from "react";
-import {
-	Link,
-	useParams
-} from "react-router-dom";
 import styled from 'styled-components';
-import axios from 'axios'
-import {Title, Verbage, BoldFlatLink} from './Styles'
+import {BoldFlatLink} from './Styles'
 
 const FloatText = styled.div`
   position: absolute;
@@ -36,10 +31,6 @@ const ProjectImg = styled.img`
 `
 
 export default class ProjectLink extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		return (
 			<BlockDiv>

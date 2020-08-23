@@ -30,13 +30,13 @@ const CropHeight = styled.div`
 const BlogLinkImg = styled.img`
 	display: block;
 	width: 100%;
-
 	height: auto !important;
 `
 
 const CenterFloat = styled.div`
 	position: absolute;
-	width: 100%;
+	width: auto;
+	min-width: 92%;
 	top: 40px;
 	text-shadow: 4px 4px grey;
 	font-size: 4vw;
@@ -53,13 +53,13 @@ export class Blog extends React.Component {
 			<div>
 				<Title>Weblog</Title>
 					{this.state.posts
-					.map(post => <BlogDiv>
+					.map(post => <BlogDiv key={post.date}>
 							<BoldFlatLink to={"/blog/posts/"+post.date}>
 								<CenterFloat>
 									<center>{post.title}</center>
 								</CenterFloat>
 								<CropHeight>
-									<BlogLinkImg src={'http://api.studiosleepygiraffe.com' + post.url + '/cover.jpg'} />
+									<BlogLinkImg src={'http://api.studiosleepygiraffe.com' + post.url + '/cover.jpg'} alt={post.cover_text} />
 								</CropHeight>
 							</BoldFlatLink>
 						</BlogDiv>)}
@@ -83,13 +83,17 @@ export class BlogPost extends React.Component {
 	}
 
 	render() {
+		let cover = <img alt="loading..."/>
+		if (this.state.info.date !== undefined){
+			cover = <img style={{'max-width': '100%'}} src={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/cover.jpg'} alt={this.state.info.cover_text} />
+		}
 		return (
 		<Verbage>
 			<Title>{this.state.info.title}</Title>
-			<img src={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/cover.jpg'} />
+			{ cover }
 			<ReactMarkdown source={this.state.markdown}/>
 			{this.state.info.files
-			.map(file => <div><a href={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/' + file}>{file}</a><br/></div>)}
+			.map(file => <div key={file}><a href={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/' + file}>{file}</a><br/></div>)}
 			<p>Posted on: {this.state.info.date}</p>
 			<ul>
 				{this.state.info.tags

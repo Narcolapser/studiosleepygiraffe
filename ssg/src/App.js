@@ -56,6 +56,7 @@ export default function ParamsExample() {
 				<img
 				src="/inverted_SSG.jpg"
 				title="Studio Sleepy Giraffe logo"
+				alt="Studio Sleepy Giraffe logo"
 				style={{'display':'block','marginLeft':'auto','marginRight': 'auto','width': '466px'}}/>
 			</div>
 			<Router>
