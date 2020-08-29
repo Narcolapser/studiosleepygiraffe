@@ -117,13 +117,6 @@ def log(project):
 	
 	return jsonify(json.load(open('/home/toben/Code/ssg/'+project+'/logs.json')))
 
-def get_rss_date(date):
-	val = datetime.strptime(date, '%Y-%m-%d')
-	return val.strftime('%a, %d %b %y %T UTC')
-
-def get_json_date(date):
-	pass
-
 @app.route('/feed.<feed_type>')
 def feed(feed_type):
 	print('Getting feed for ' + feed_type)
@@ -140,7 +133,7 @@ def feed(feed_type):
 		val = {}
 		val['title'] = post['title']
 		val['link'] = 'http://www.studiosleepygiraffe.com/blog/posts/{}'.format(post['date'])
-		val['date'] = datetime.strptime(post['date'], '%Y-%m-%d') #get_rss_date(post['date'])
+		val['date'] = datetime.strptime(post['date'], '%Y-%m-%d')
 		val['text'] = post['text']
 		val['author'] = post['author']
 		posts.append(val)
