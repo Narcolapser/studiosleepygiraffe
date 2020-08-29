@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Studio Sleepy Giraffe</title>
+		<link>http://www.studiosleepygiraffe.com/</link>
+		<description>What has been happening at SSG.</description>
+				{% for post in posts %}
+				<item>
+					<title>{{ post['title'] }}</title>
+					<link>{{ post['link'] }}</link>
+					<pubDate>{{ post['date'].strftime('%a, %d %b %y %T UTC') }}</pubDate>
+					<description><![CDATA[{{ post['text']|safe }}]]></description>
+				</item>{% endfor %}
+	</channel>
+</rss>
