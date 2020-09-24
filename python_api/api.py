@@ -102,12 +102,39 @@ def post_resource(post,resource):
 		else:
 			abort(404)
 	else:
-		info = {'Status':'Failure'}
+		return jsonify({'Status':'Failure'})
+
+@app.route('/posts/tags/')
+def tags():
+	directories = glob.glob('/home/toben/Code/blog/*-*-*')
+	posts = []
+	tags = []
+	for directory in directories:
+		info = json.load(open('{}/info.json'.format(directory)))
+		posts.append(info)
+		tags += info['tags']
+
+	tags = set(tags)
+	return jsonify(list(tags))
+
+@app.route('/posts/tags/<tag>')
+def tag(tag):
+	print(tag)
+	directories = glob.glob('/home/toben/Code/blog/*-*-*')
+	posts = []
+	for directory in directories:
+		info = json.load(open('{}/info.json'.format(directory)))
+		if tag.lower() in [tag.lower() for tag in info['tags']]:
+			info['date'] = directory.split('/')[-1]
+			posts.append(info)
+
+	return jsonify(posts)
 
 @app.route('/logs/')
 def logs():
 	projects = [json.loads(open(project).read()) for project in project_files]
-	projects.sort(key=_get_rank)
+	projects.sort(key= lambda project: project['rank'])
+	for project in projects: project['url'] = '/logs' + project['url']
 	return jsonify(projects)
 
 @app.route('/logs/<project>')

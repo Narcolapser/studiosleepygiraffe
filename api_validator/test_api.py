@@ -82,10 +82,17 @@ class Test_API():
 
 		tags = set(tags)
 
-		print(tags)
-		assert False
+		assert requests.get(base_url + '/posts/tags').json().sort() == list(tags).sort()
+		
+		for tag in tags:
+			posts = []
+			for directory in directories:
+				info = json.load(open('{}/info.json'.format(directory)))
+				if tag.lower() in [tag.lower() for tag in info['tags']]:
+					info['date'] = directory.split('/')[-1]
+					posts.append(info)
+			assert requests.get(base_url + '/posts/tags/' + tag).json() == posts
 
-	
 	def test_feeds(self):
 		# Check RSS feed
 		directories = glob.glob('/home/toben/Code/blog/*-*-*')
