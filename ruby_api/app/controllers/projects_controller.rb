@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
 				posts.push info
 			end
 		end
+		posts = posts.sort { |a,b| a['rank'] <=> b['rank'] }
 		render json: posts
 	end
 	

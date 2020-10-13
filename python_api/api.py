@@ -26,6 +26,7 @@ def _get_rank(project):
 def projects():
 	projects = [json.loads(open(project).read()) for project in project_files]
 	projects.sort(key=_get_rank)
+	for project in projects: project['url'] = '/projects' + project['url']
 	return jsonify(projects)
 
 @app.route('/projects/<project>')
@@ -184,4 +185,4 @@ def feed(feed_type):
 
 
 if __name__ == "__main__":
-	app.run(host='0.0.0.0', port=3000)
+	app.run(host='0.0.0.0', port=5000)
