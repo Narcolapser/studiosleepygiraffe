@@ -33,25 +33,28 @@ class PostsController < ApplicationController
 		directories = Dir['/home/toben/Code/blog/*-*-*']
 		posts = directories.map {|dir| dir[22..32]}
 		if posts.include? params[:id]
-			if params[:resource] == 'post.md'
+			resource = params[:resource] + '.' + params[:ext] 
+			if resource == 'post.md'
 				# return the mark down
-				return File.open '/home/toben/Code/blog/' + params[:id] + '/post.md'
-			end
-
-			if params[:resource] == 'cover.jpg'
+				postmd = File.open '/home/toben/Code/blog/' + params[:id] + '/post.md'
+				render plain: postmd.read
+			elsif resource  == 'cover.jpg'
 				# return the cover image
-			end
-			
-			info = JSON.load File.open '/home/toben/Code/blog/' + params[:id] + '/info.json'
-			files = info['files']
-			
-			if files.include? params[:resource]
-				# return the resource
+				render file: '/home/toben/Code/blog/' + params[:id] + '/cover.jpg', layout: false
 			else
-				return File.open '/home/toben/Code/blog/' + params[:id] + '/post.md'
-#				return render(:file => File.join(Rails.root, 'public/404.html'), :status => 404, :layout => false)
+				info = JSON.load File.open '/home/toben/Code/blog/' + params[:id] + '/info.json'
+				files = info['files']
+				
+				if files.include? resource
+					# return the resource
+					render file: '/home/toben/Code/blog/' + params[:id] + '/' + resource, layout: false
+				else
+					render(:file => File.join(Rails.root, 'public/404.html'), :status => 404, :layout => false)
+#					render json: {'Status':'Failure'}
+#					return File.open '/home/toben/Code/blog/' + params[:id] + '/post.md'
+#					return render(:file => File.join(Rails.root, 'public/404.html'), :status => 404, :layout => false)
+				end
 			end
 		end
-#		render(:file => File.join(Rails.root, 'public/404.html'), :status => 404, :layout => false)
 	end
 end

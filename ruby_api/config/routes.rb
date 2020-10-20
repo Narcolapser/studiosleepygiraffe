@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 	
 	get 'posts', to: 'posts#index'
 	
-	get 'posts/:id/:resource', to: 'posts#resources'
+	get 'posts/:id/:resource.:ext', to: 'posts#resources'
 	
 	#get 'blog/posts/:id', to 'blog/posts#show'
 #	get 'blog/post/index'
