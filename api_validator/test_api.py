@@ -64,18 +64,18 @@ class Test_API():
 			assert requests.get(base_url + '{}/nonsense'.format(post['url'] )).status_code == 404
 			
 
-#		
-#	def test_logs(self):
-#		# Test getting projects:
-#		local_projects = [json.loads(open(project).read()) for project in project_files]
-#		local_projects.sort(key= lambda project: project['rank'])
-#		for project in local_projects: project['url'] = '/logs' + project['url']
-#		assert requests.get(base_url + '/logs').json() == local_projects
-#		
-#		# Test getting each log
-#		for project in project_names:
-#			log = json.load(open('/home/toben/Code/ssg/'+project+'/logs.json'))
-#			assert log == requests.get(base_url + '/logs/' + project).json()
+
+	def test_logs(self):
+		# Test getting projects:
+		local_projects = [json.loads(open(project).read()) for project in project_files]
+		local_projects.sort(key= lambda project: project['rank'])
+		for project in local_projects: project['url'] = '/logs' + project['url']
+		assert requests.get(base_url + '/logs').json() == local_projects
+		
+		# Test getting each log
+		for project in project_names:
+			log = json.load(open('/home/toben/Code/ssg/'+project+'/logs.json'))
+			assert log == requests.get(base_url + '/logs/' + project).json()
 #	
 #	def test_tags(self):
 #		# check that each tag has blog posts
