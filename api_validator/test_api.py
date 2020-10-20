@@ -76,77 +76,77 @@ class Test_API():
 		for project in project_names:
 			log = json.load(open('/home/toben/Code/ssg/'+project+'/logs.json'))
 			assert log == requests.get(base_url + '/logs/' + project).json()
-#	
-#	def test_tags(self):
-#		# check that each tag has blog posts
-#		directories = glob.glob('/home/toben/Code/blog/*-*-*')
-#		posts = []
-#		tags = []
-#		for directory in directories:
-#			info = json.load(open('{}/info.json'.format(directory)))
-#			posts.append(info)
-#			tags += info['tags']
 
-#		tags = set(tags)
+	def test_tags(self):
+		# check that each tag has blog posts
+		directories = glob.glob('/home/toben/Code/blog/*-*-*')
+		posts = []
+		tags = []
+		for directory in directories:
+			info = json.load(open('{}/info.json'.format(directory)))
+			posts.append(info)
+			tags += info['tags']
 
-#		assert requests.get(base_url + '/posts/tags').json().sort() == list(tags).sort()
-#		
-#		for tag in tags:
-#			posts = []
-#			for directory in directories:
-#				info = json.load(open('{}/info.json'.format(directory)))
-#				if tag.lower() in [tag.lower() for tag in info['tags']]:
-#					info['date'] = directory.split('/')[-1]
-#					posts.append(info)
-#			assert requests.get(base_url + '/posts/tags/' + tag).json() == posts
+		tags = set(tags)
 
-#	def test_feeds(self):
-#		# Check RSS feed
-#		directories = glob.glob('/home/toben/Code/blog/*-*-*')
-#		blog_posts = []
-#		for post in [directory[22:] for directory in directories]:
-#			info = json.load(open('/home/toben/Code/blog/{}/info.json'.format(post)))
-#			info['date'] = post
-#			info['text'] = '\n'.join(open('/home/toben/Code/blog/{}/post.md'.format(post)).read().split('\n')[0:3])
-#			blog_posts.append(info)
+		assert requests.get(base_url + '/posts/tags').json().sort() == list(tags).sort()
+		
+		for tag in tags:
+			posts = []
+			for directory in directories:
+				info = json.load(open('{}/info.json'.format(directory)))
+				if tag.lower() in [tag.lower() for tag in info['tags']]:
+					info['date'] = directory.split('/')[-1]
+					posts.append(info)
+			assert requests.get(base_url + '/posts/tags/' + tag).json() == posts
 
-#		posts = []
-#		for post in blog_posts:
-#			val = {}
-#			val[u'title'] = post['title']
-#			val[u'link'] = u'http://www.studiosleepygiraffe.com/blog/posts/{}'.format(post['date'])
-#			val[u'date'] = datetime.strptime(post['date'], '%Y-%m-%d')
-#			val[u'text'] = post['text']
-#			val[u'author'] = post['author']
-#			posts.append(val)
-#			
-#		for project in project_names:
-#			logs = json.load(open('/home/toben/Code/ssg/{}/logs.json'.format(project)))
-#			for log in logs['posts']:
-#				val = {}
-#				val[u'title'] = u'{}: {}'.format(project.capitalize(), log['title'])
-#				val[u'link'] = u'http://www.studiosleepygiraffe.com/logs/{}'.format(project)
-#				val[u'date'] = datetime.strptime(log['date'], '%Y-%m-%d')
-#				val[u'text'] = log['message']
-#				val[u'author'] = log['author']
-#				posts.append(val)
+	def test_feeds(self):
+		# Check RSS feed
+		directories = glob.glob('/home/toben/Code/blog/*-*-*')
+		blog_posts = []
+		for post in [directory[22:] for directory in directories]:
+			info = json.load(open('/home/toben/Code/blog/{}/info.json'.format(post)))
+			info['date'] = post
+			info['text'] = '\n'.join(open('/home/toben/Code/blog/{}/post.md'.format(post)).read().split('\n')[0:3])
+			blog_posts.append(info)
 
-#		posts.sort(key=lambda post: post['date'], reverse=True)
-#		
-#		posts = posts[0:20]
-#		for post in posts:
-#			post[u'date'] = post[u'date'].strftime('%a, %d %b %Y 00:00:00 GMT')
-#		
-#		posts = json.loads(json.dumps(posts))
-#			
-#		assert posts == requests.get(base_url + '/feed.json').json()
-#		rss = xmltodict.parse(requests.get(base_url + '/feed.rss').text)
-#		rss = json.loads(json.dumps(rss))
-#		assert rss['rss']['channel']['title'] == 'Studio Sleepy Giraffe'
-#		assert rss['rss']['channel']['link'] == 'http://www.studiosleepygiraffe.com/'
-#		assert rss['rss']['channel']['description'] == 'What has been happening at SSG.'
-#		
-#		# Ensure the correct posts are coming through. 
-#		for i,item in enumerate(rss['rss']['channel']['item']):
-#			assert item['title'] == posts[i]['title']
+		posts = []
+		for post in blog_posts:
+			val = {}
+			val[u'title'] = post['title']
+			val[u'link'] = u'http://www.studiosleepygiraffe.com/blog/posts/{}'.format(post['date'])
+			val[u'date'] = datetime.strptime(post['date'], '%Y-%m-%d')
+			val[u'text'] = post['text']
+			val[u'author'] = post['author']
+			posts.append(val)
+			
+		for project in project_names:
+			logs = json.load(open('/home/toben/Code/ssg/{}/logs.json'.format(project)))
+			for log in logs['posts']:
+				val = {}
+				val[u'title'] = u'{}: {}'.format(project.capitalize(), log['title'])
+				val[u'link'] = u'http://www.studiosleepygiraffe.com/logs/{}'.format(project)
+				val[u'date'] = datetime.strptime(log['date'], '%Y-%m-%d')
+				val[u'text'] = log['message']
+				val[u'author'] = log['author']
+				posts.append(val)
+
+		posts.sort(key=lambda post: post['date'], reverse=True)
+		
+		posts = posts[0:20]
+		for post in posts:
+			post[u'date'] = post[u'date'].strftime('%a, %d %b %Y 00:00:00 GMT')
+		
+		posts = json.loads(json.dumps(posts))
+			
+		assert posts == requests.get(base_url + '/feed.json').json()
+		rss = xmltodict.parse(requests.get(base_url + '/feed.rss').text)
+		rss = json.loads(json.dumps(rss))
+		assert rss['rss']['channel']['title'] == 'Studio Sleepy Giraffe'
+		assert rss['rss']['channel']['link'] == 'http://www.studiosleepygiraffe.com/'
+		assert rss['rss']['channel']['description'] == 'What has been happening at SSG.'
+		
+		# Ensure the correct posts are coming through. 
+		for i,item in enumerate(rss['rss']['channel']['item']):
+			assert item['title'] == posts[i]['title']
 

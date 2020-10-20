@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 	
 	get 'posts', to: 'posts#index'
 	
+	get 'posts/tags', to: 'tags#index'
+	get 'posts/tags/:tag', to: 'tags#tag'
 	get 'posts/:id/:resource.:ext', to: 'posts#resources'
 	
 	#get 'blog/posts/:id', to 'blog/posts#show'

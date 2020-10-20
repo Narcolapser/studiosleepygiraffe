@@ -108,11 +108,9 @@ def post_resource(post,resource):
 @app.route('/posts/tags/')
 def tags():
 	directories = glob.glob('/home/toben/Code/blog/*-*-*')
-	posts = []
 	tags = []
 	for directory in directories:
 		info = json.load(open('{}/info.json'.format(directory)))
-		posts.append(info)
 		tags += info['tags']
 
 	tags = set(tags)
