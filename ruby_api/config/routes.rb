@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 	get 'posts/tags/:tag', to: 'tags#tag'
 	get 'posts/:id/:resource.:ext', to: 'posts#resources'
 	
+	get 'projects/:id/:resource.:ext', to: 'projects#resources'
+	
 	#get 'blog/posts/:id', to 'blog/posts#show'
 #	get 'blog/post/index'
 

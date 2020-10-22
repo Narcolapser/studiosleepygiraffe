@@ -87,6 +87,9 @@ export class BlogPost extends React.Component {
 		if (this.state.info.date !== undefined){
 			cover = <img style={{'max-width': '100%'}} src={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/cover.jpg'} alt={this.state.info.cover_text} />
 		}
+		console.log("Markdown:");
+		console.log(this.state.markdown);
+		console.log(this.state);
 		return (
 		<Verbage>
 			<Title>{this.state.info.title}</Title>

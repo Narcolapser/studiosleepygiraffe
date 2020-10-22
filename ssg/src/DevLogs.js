@@ -22,7 +22,7 @@ These development logs are the comments I have made as I work on my projects. Th
 				</Verbage>
 				{this.state.projects
 				.map(project => <ProjectLink name={project.name} url={project.url}
-					link={"/logs"+project.url} description={project.description}/>)}
+					link={project.url} description={project.description}/>)}
 			</div>
 		);
 	}
