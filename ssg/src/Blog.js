@@ -87,9 +87,6 @@ export class BlogPost extends React.Component {
 		if (this.state.info.date !== undefined){
 			cover = <img style={{'max-width': '100%'}} src={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/cover.jpg'} alt={this.state.info.cover_text} />
 		}
-		console.log("Markdown:");
-		console.log(this.state.markdown);
-		console.log(this.state);
 		return (
 		<Verbage>
 			<Title>{this.state.info.title}</Title>
@@ -133,19 +130,27 @@ export class BlogTag extends React.Component {
 	}
 
 	render() {
+		console.log(this.state);
 		return (
 			<div>
-				<h1>{this.props.tag}</h1>
-				<ul>
-					{this.state.posts.map(post =>
-						<li key={post.id}><Link to={"/blog/posts/"+post.id}>{post.title}</Link></li>
-					)}
-				</ul>
-			</div>);
+				<Title>Weblog: {this.props.tag}</Title>
+					{this.state.posts
+					.map(post => <BlogDiv key={post.date}>
+							<BoldFlatLink to={"/blog/posts/"+post.date}>
+								<CenterFloat>
+									<center>{post.title}</center>
+								</CenterFloat>
+								<CropHeight>
+									<BlogLinkImg src={'http://api.studiosleepygiraffe.com/posts/' + post.date + '/cover.jpg'} alt={post.cover_text} />
+								</CropHeight>
+							</BoldFlatLink>
+						</BlogDiv>)}
+			</div>
+		);
 	}
 
 	componentDidMount() {
-		axios.get('/blog/tags/' + this.props.tag + '.json')
+		axios.get('http://api.studiosleepygiraffe.com/posts/tags/' + this.props.tag)
 			.then(response => this.setState({'posts': response.data}));
 	}
 }
