@@ -39,8 +39,8 @@ export default class ProjectLink extends React.Component {
             <h2>{this.props.name}</h2>
             <p>{this.props.description}</p>
           </FloatText>
-          <ProjectImg src={'http://api.studiosleepygiraffe.com/projects' + this.props.url + '/banner1.png'} />
-          <ProjectImg src={'http://api.studiosleepygiraffe.com/projects' + this.props.url + '/banner2.png'} />
+          <ProjectImg src={'http://api.studiosleepygiraffe.com' + this.props.url.replace('log','project') + '/banner1.png'} />
+          <ProjectImg src={'http://api.studiosleepygiraffe.com' + this.props.url.replace('log','project') + '/banner2.png'} />
         </BoldFlatLink>
 			</BlockDiv>
 		);

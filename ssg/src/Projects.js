@@ -19,7 +19,7 @@ export class Projects extends React.Component {
 				<Title>Projects</Title>
 				{this.state.projects
 				.map(project => <ProjectLink name={project.name} url={project.url}
-					link={"/projects"+project.url} description={project.description}/>)}
+					link={project.url} description={project.description}/>)}
 			</div>
 		);
 	}
