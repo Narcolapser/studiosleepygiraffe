@@ -12,6 +12,8 @@ Rails.application.routes.draw do
 	
 	get 'projects/:id/:resource.:ext', to: 'projects#resources'
 	
+	get 'feed.:ext', to: 'feed#index'
+	
 	#get 'blog/posts/:id', to 'blog/posts#show'
 #	get 'blog/post/index'
 

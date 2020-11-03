@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Studio Sleepy Giraffe</title>
+		<link>http://www.studiosleepygiraffe.com/</link>
+		<description>What has been happening at SSG.</description>
+			<% @posts.each do |post|%>
+			<item>
+				<title><%= post['title'] %></title>
+				<link><%= post['link'] %></link>
+				<pubDate><%= post['date'] %></pubDate>
+				<description><![CDATA[<%= post['text']|safe %>]]></description>
+			</item>
+			<% end %>
+	</channel>
+</rss>
