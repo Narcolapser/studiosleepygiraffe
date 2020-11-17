@@ -7,14 +7,14 @@ class FeedController < ApplicationController
 			info = JSON.load(File.open("#{directory}/info.json"))
 			post['title'] = info['title']
 			post['link'] = "http://www.studiosleepygiraffe.com/blog/posts/#{directory[22..32]}"
-			post['date'] = directory[22..32]
+			post['date'] = Date.strptime(directory[22..32], '%Y-%m-%d')
 			post['author'] = info['author']
 			
 			markdown = File.open("#{directory}/post.md")
 			content = markdown.read
-			lines = content.split('\n')
+			lines = content.split("\n")
 			
-			post['text'] = lines.slice(0,3).join('\n')
+			post['text'] = lines.slice(0,3).join("\n")
 
 			posts.push post
 		end
@@ -25,18 +25,20 @@ class FeedController < ApplicationController
 				logs = JSON.load File.open directory+'/logs.json'
 				for log in logs['posts']
 					post = {}
-					post['title'] = "#{directory.capitalize()}: #{log['title']}"
-					post['link'] = "http://www.studiosleepygiraffe.com/logs/#{directory}"
-					post['date'] = log['date']
+					post['title'] = "#{directory[21..-1].capitalize()}: #{log['title']}"
+					post['link'] = "http://www.studiosleepygiraffe.com/logs/#{directory[21..-1]}"
+					post['date'] = Date.strptime(log['date'], '%Y-%m-%d')
 					post['text'] = log['message']
 					post['author'] = log['author']
-					post['log'] = log
 					posts.push post
 				end
 			end
 		end
 		
 		posts = posts.sort { |a,b| b['date'] <=> a['date'] }
+		for post in posts
+			post['date'] = post['date'].strftime('%a, %d %b %Y 00:00:00 GMT')
+		end
 		if params[:ext] == 'rss'
 			render template: "feed" # , content_type: "application/rss"
 		else
