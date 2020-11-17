@@ -40,7 +40,7 @@ class FeedController < ApplicationController
 			post['date'] = post['date'].strftime('%a, %d %b %Y 00:00:00 GMT')
 		end
 		if params[:ext] == 'rss'
-			render template: "feed" # , content_type: "application/rss"
+			render template: "feed/feed.html.erb", :locals => { :posts => posts.slice(0,20) }, :layout => false
 		else
 			render json: posts.slice(0,20)
 		end
