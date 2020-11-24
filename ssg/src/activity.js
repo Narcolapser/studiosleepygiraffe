@@ -18,7 +18,7 @@ export class Activity extends React.Component {
 			<div>
 				<Title>Activity</Title>
 				{this.state.items.map(item => <Item>
-            <a href={item.link}>
+            <a href={item.link} key={item.title}>
               <h3>{item.title.includes('Merge branch') ? item.title.slice(0, item.title.indexOf('Merge branch') + 12) : item.title}</h3>
               <div>{item.date.slice(0,16)}</div>
             </a>

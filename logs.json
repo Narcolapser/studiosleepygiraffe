@@ -1,8 +1,241 @@
 {
     "description": "The code used to make my personal website.",
+    "files": [],
     "name": "Studio Sleepy Giraffe",
     "path": "/home/toben/Code/ssg/studiosleepygiraffe",
     "posts": [
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-11-23",
+            "message": "I've got a basic activity feed on the bottom of the page now. It's not pretty but it utalizes the feed feature. Good enough for the time being. I'm planning on doing a redesign to make my website more flash and to get more attention. ",
+            "project": "studiosleepygiraffe",
+            "title": "Activity feed"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-11-16",
+            "message": "Both the Ruby API and the Python API fully pass the unit tests. The two are identical as far as I can tell. Now then, time to do some more updates to the front end. Specifically I want to have a feed display what I've been up to on the home page. ",
+            "project": "studiosleepygiraffe",
+            "title": "Got it!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-11-16",
+            "message": "The ruby Json feed is now compliant. Now I need to get the rss feed working. ",
+            "project": "studiosleepygiraffe",
+            "title": "Fixed Ruby json feed."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-11-02",
+            "message": "I can't seem to get the RSS feed to work. I'm mostly having trouble just getting the template to be found. I'm not sure how the logic around finding the template works. ",
+            "project": "studiosleepygiraffe",
+            "title": "Json feed working, but not rss."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-10-22",
+            "message": "I forgot to update tags. I think I've got everything now. ",
+            "project": "studiosleepygiraffe",
+            "title": "Missed tags!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-10-22",
+            "message": "I believe I've got the UI all on to the API now. Which is great! The content will finally flow! My blog posts from June and July will finally be visible! ",
+            "project": "studiosleepygiraffe",
+            "title": "Few more updates to UI."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-10-22",
+            "message": "removing ruby version specification since this api is compliant with both version of ruby I'm using and I have different versions of Ruby on my desktop and on my server. So specifying a ruby version causes one to not run. ",
+            "project": "studiosleepygiraffe",
+            "title": "Updating Gemfile."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-10-22",
+            "message": "There were a number of things that the Ruby API was not providing. I still have an number of things to do on the Ruby API but I want to get it mostly functional so I can actually use it. ",
+            "project": "studiosleepygiraffe",
+            "title": "Ruby quick fixes."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-10-19",
+            "message": "I gotten ruby logs to now be compliant with the API. Found some un-used code in they python api while I was at it. This just leaves the rss and json feeds left to implement and then the Ruby API is fully in compliance with the Python API. I'll be happy when I have finished this and can actually get it out to my website at long last. ",
+            "project": "studiosleepygiraffe",
+            "title": "Ruby Logs now compliant."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-10-19",
+            "message": "This didn't take much effort, I already had it mostly done, just needed a little bit of tweaking. ",
+            "project": "studiosleepygiraffe",
+            "title": "Ruby compliant on logs."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-10-19",
+            "message": "Ruby API now compliant with the posts battery of tests. 3 batteries left to code. ",
+            "project": "studiosleepygiraffe",
+            "title": "One more down."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-10-12",
+            "message": "Man, I didn't think it would require such a different mind sets. And while it is true that the logic stays the same Ruby is a much more \"magical\" language, which admittedly I do not like. I don't like it when Java tries to be \"magical\" I don't like it when Python tries to be \"magical\" as being \"magical\" usually means hiding details so it is impossible to follow the flow of information.\n\nIn this case the problem I'm trying to wrap my head around is implicity returns. The last statement of a ruby method is automatically returned. Interesting approach but they also seem to treat normal returns differently from python and other C descendants. I'm going to have to study this a little further to understand what is really going on here and how I get my method to return when I want it to. ",
+            "project": "studiosleepygiraffe",
+            "title": "I said I wanted to learn to think in ruby right?"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-09-23",
+            "message": "The two naturally developed side by side, and as such they are now complete. Next step is to turn this on the ruby API. It will be nice to know that both APIs will be spitting out pretty darn near identical information. I can always add tests later on as I find discrepencies. Huzzah! Two more steps done. Once the Ruby API is done then I can turn my attention back to the front end and figure out how to switch between the two APIs on demand. ",
+            "project": "studiosleepygiraffe",
+            "title": "Validator and Python API done."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-29",
+            "message": "I still need to work on the tags aspect of this, but I haven't really fleshed out how I want that to work. So I'm going to call it a day here. I'm going to go play Stardew valley until my daughter wakes up. ",
+            "project": "studiosleepygiraffe",
+            "title": "More of Validator done."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-28",
+            "message": "I'm not consistent in the way I form the URLs in the API. I have made the test consistent for logs, I need to do it for projects yet, and then I need to fix the API so it provides consistent URLs as well.\n\nBut the good news is I'm about half way through the API validator. Should be done tomorrow morning depending on how long it takes me to make the muffins. ",
+            "project": "studiosleepygiraffe",
+            "title": "I've found a problem while making the unit tests."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-23",
+            "message": "I have added an RSS2.0 compliant feed and a feed json object to the api to allow for feed readers and so I can put a feed up on the home page to display a quick look at what I am doing.\n\nThis has made me also realize that I should have in page anchors on my dev logs, so that one can link to a specific commit. The items in the feed right now just link to the project's page with all of the commits. ",
+            "project": "studiosleepygiraffe",
+            "title": "Python API now has Feeds!"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-23",
+            "message": "I have gotten the React side entirely back to functional with the new API as a backend. However I'm still far from ready to push this out to production. I rewrote the README.md for my website talking about features I have not yet implemented, like the Flask front end and the validators for both front and back ends. So I will need to finish up all of those before I push this out to the world. ",
+            "project": "studiosleepygiraffe",
+            "title": "Many updates to React.js"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-22",
+            "message": "Well, it looks like my day must get started much ealier than planned. My little girl wants to go outside and play so I'll have to fiddle with this later.\n\nBut, that being said I did manage to get the post's files to show up in the post. So my simple systems posts are one step close to being able to be posted public. ",
+            "project": "studiosleepygiraffe",
+            "title": "Little girl wants to go play."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-21",
+            "message": "Now that I have the python API fleshed out I'm rewiring the app to use the API to get its information. Mostly just changing urls, but here and there a few more indepth tweaks. Though Doing this has also pointed out to me one of the things I missed: Tags. Blog tags. I also will need to extend some of the React components to take advantage of new features. Most notably the files attached to blog posts. This is a feature I had to add to be able to share the work I've been doing on Simple Systems. Its been over a month I think since I finished that series and none of it is on my website yet. But The reason for that is I didn't have a good mechanism for sharing the code files. This primarily because I wanted it to be automatically wired in and not something I would have to manually enter for each post.\n\nAnyway. It is bed time, but a lot of the website has been updated. Tomorrow I'll try to finish it and then bring the Ruby API up to snuff and push both out to midgard. ",
+            "project": "studiosleepygiraffe",
+            "title": "Rewriting to use API"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-19",
+            "message": "I've pasted what I originally implemented in Ruby and now have more functionality in the form of hosting files for projects and posts. The last thing I want to do is create a feed of some sort. Probably both rss and a json object feed that aggrigates across logs and posts to show what activity is happening on my website, and therefore what I am doing. ",
+            "project": "studiosleepygiraffe",
+            "title": "Python API almost up to new standard."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-18",
+            "message": "I was going to work on projects to but it's a nice evening so we are going to take Lucy to the park instead. ",
+            "project": "studiosleepygiraffe",
+            "title": "Got file hosting working for posts."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-18",
+            "message": "Took me about 1.5 hours to get here with python. Took about 5.5 hours with ruby. So I'm about 4 times better with python than I am Ruby. Not bad. ",
+            "project": "studiosleepygiraffe",
+            "title": "Python API up to snuff with Ruby."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-08-11",
+            "message": "I'm working now on a python version of the API. I was going to make an API validator first but I'm going to write the validator primarily in python so I figured I should get the API done first since I'll probably caniblize that for code for testing. I'm tracking my time in producing both of these APIs to see how far I need to go to improve my Ruby expertise. ",
+            "project": "studiosleepygiraffe",
+            "title": "Started Python API"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-07-23",
+            "message": "I hadn't noticed that rails creates a new git repo when you create a new project. I'm going to just paste my previous commit messages below. I just want the record of my though process more than anything.\n\ncommit 346b221e4801fe9c544dfc7b1713984790550f5f (HEAD -> master) Author: Toben Archer <sandslash@gmail.com> Date:   Thu Jul 23 14:23:52 2020 -0500\n\n    Minor tweak.\n\n    Turns out string interpolation only works if you use double quotes.\n\ncommit 0fd4de3dea965ab9f178cfeaf574d0dca258ef89 Author: Toben Archer <sandslash@gmail.com> Date:   Sun Jul 12 13:16:58 2020 -0500\n\n    That was quick.\n\n    Most of the changes in this commit are just making all the '\"' into \"'\".     The real work was changing 'info.json' to 'logs.json' and bam everything     works. Logs are being sent up now instead of the info file from the logs     controller. Fantastic! Now all that is left is the tags controller.\n\ncommit c4089058737d1a0596bc3965076dd30e218b745c Author: Toben Archer <sandslash@gmail.com> Date:   Sun Jul 12 12:56:52 2020 -0500\n\n    Polished everything but the gitposts.\n\n    I'll come back for the gitposts in a moment. Right now I need to go work     on the utility script that compiles git logs into json for use in this     way.\n\ncommit 5737dfa8256e88fa2adfe677d0c925061adad3a0 Author: Toben Archer <sandslash@gmail.com> Date:   Sat Jul 11 08:49:28 2020 -0500\n\n    With some help I'm off to the races!\n\n    I got a little bit of guidance from Reddit on how exactlty I was     supposed to get the things I needed. Once I got that nudge everything     else started falling into place. In the future all my projects, at least     those that I intend to share on my website, will have to have info.json     as well as README.md in their directory. I will probably also have their     cover pictures in their directory as well.\n\n    I got stumped a little here on gitposts. I want to encourage the system     to be as automatic as possible. But I am running this on an original     raspberry pi. I don't have the resources to process the entire git     history for each project on demand. So I am going to prebatch those and     set it up with some hooks. The posts will be loaded from a file that is     compiled when ever I push a new commit.\n\ncommit 3b83b52228cec83effed53e20541aa98499c3225 Author: Toben Archer <sandslash@gmail.com> Date:   Sat Jun 27 11:01:30 2020 -0500\n\n    Started work on my API in earnest.\n\n    I re-worked my blog to be useful to my objective of creating an API for     my website. So far I'm struggling with name spaces. I want to seperate     the api in to heirarchical pieces so that I can avoid name collisions     accross the various aspects I plan on making. I may just forget that     future proofing for the moment though and just make a simpler system     that gets the job done. ",
+            "project": "studiosleepygiraffe",
+            "title": "All the ruby at once."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-07-12",
+            "message": "New era! I'm moving to use ruby to make an API for hosting my information. This has required me to update how my git posts are handled. ",
+            "project": "studiosleepygiraffe",
+            "title": "Updated generate-posts utility script."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-06-26",
+            "message": "Now on to making this useful for me. ",
+            "project": "studiosleepygiraffe",
+            "title": "Finished the guide."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-06-19",
+            "message": "Had a big supper, and its a little hot. I'm a little hazy as I work through this tutorial. But I got to step six tonight. Step 5 was certainly the largest part. I'm not about 3/4 of the way through so one more session should do it. ",
+            "project": "studiosleepygiraffe",
+            "title": "A little hazy."
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-06-02",
+            "message": "I'm working my way through this: https://guides.rubyonrails.org/getting_started.html\n\nI'm taking it slow because I want to understand this \"Rails\" way of doing things. So far it reminds me a lot of maven. I'm sure the two inspire each other. Certainly get the idea of convention over configuration, so I'm interested in seeing how this plays out. ",
+            "project": "studiosleepygiraffe",
+            "title": "Got to step 5.3"
+        },
+        {
+            "author": "Toben Archer",
+            "branch": "master",
+            "date": "2020-06-02",
+            "message": "I have started work on an API to dynamically host the content for my website. I'm sure there are other more appropriate ways to do this but seperating the React front end entirely from the Ruby on Rails backend sounds like a nice clean way of doing it. ",
+            "project": "studiosleepygiraffe",
+            "title": "Initial commit of ruby API"
+        },
         {
             "author": "Toben Archer",
             "branch": "master",
@@ -708,5 +941,6 @@
             "title": "Initial commit of website."
         }
     ],
-    "url": "/ssg"
+    "rank": 1,
+    "url": "/studiosleepygiraffe"
 }

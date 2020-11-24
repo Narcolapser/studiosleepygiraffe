@@ -5,18 +5,14 @@ import {
 	Route,
 	Link
 } from "react-router-dom";
-import { Projects, GetProject} from './Projects.js'
+import { Projects, GetProject } from './Projects.js'
 import { DevLogs, GetDevLog } from './DevLogs.js'
-import { Blog, GetBlogTag, GetBlogPost} from './Blog.js'
-import {Title, Verbage} from './Styles'
+import { Blog, GetBlogTag, GetBlogPost } from './Blog.js'
+import { Title, Verbage } from './Styles'
 import { Activity } from './activity.js'
+import { SwitchPanel } from './Switch.js'
 import styled from 'styled-components';
 
-// Params are placeholders in the URL that begin
-// with a colon, like the `:id` param defined in
-// the route in this example. A similar convention
-// is used for matching dynamic segments in other
-// popular web frameworks like Rails and Express.
 const NavBar = styled.div`
 	overflow: hidden;
 	background-color:#222;
@@ -51,7 +47,6 @@ const FacePanel = styled.img`
 `
 
 export default function ParamsExample() {
-
 	return (
 		<div>
 			<div>
@@ -61,6 +56,7 @@ export default function ParamsExample() {
 				alt="Studio Sleepy Giraffe logo"
 				style={{'display':'block','marginLeft':'auto','marginRight': 'auto','width': '466px'}}/>
 			</div>
+			<SwitchPanel/>
 			<Router>
 				<div>
 					<NavBar >
