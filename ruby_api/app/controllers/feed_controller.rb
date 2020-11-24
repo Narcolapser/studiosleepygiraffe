@@ -6,7 +6,7 @@ class FeedController < ApplicationController
 			post = {}
 			info = JSON.load(File.open("#{directory}/info.json"))
 			post['title'] = info['title']
-			post['link'] = "http://www.studiosleepygiraffe.com/blog/posts/#{directory[22..32]}"
+			post['link'] = "http://studiosleepygiraffe.com/blog/posts/#{directory[22..32]}"
 			post['date'] = Date.strptime(directory[22..32], '%Y-%m-%d')
 			post['author'] = info['author']
 			
@@ -26,7 +26,7 @@ class FeedController < ApplicationController
 				for log in logs['posts']
 					post = {}
 					post['title'] = "#{directory[21..-1].capitalize()}: #{log['title']}"
-					post['link'] = "http://www.studiosleepygiraffe.com/logs/#{directory[21..-1]}"
+					post['link'] = "http://studiosleepygiraffe.com/logs/#{directory[21..-1]}"
 					post['date'] = Date.strptime(log['date'], '%Y-%m-%d')
 					post['text'] = log['message']
 					post['author'] = log['author']

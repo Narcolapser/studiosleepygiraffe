@@ -1,0 +1,12 @@
+Cookie Selector:
+	Ruby API
+	Python API
+
+Website redesign:
+	I've got a really good base here, but now it is time for a redesign. I've changed the way things work quite significantly from what the vision was when I first made my website. I now have an activity feed. That was not something I had originally envisioned at all. I think I might also make space for smaller projects, gimics we could call them, not sure on that one yet. But mostly I want a nicer feeling website. The truth is I've got some impressive tech going on behind the scenes, but that impressive tech is completely missed by the poor presentation. I'm thinking I'll go out and look at other people's personal websites to get an idea on how to improve mine.
+
+Redo Resume:
+	Resume generation is no longer working. I need to restore this facility. 
+
+Restore public repository:
+	In order to allow visibility into my code I need to get this code into the public, which means I need to go through it and find if I left any passwords or anything personally idnetifying in any of the commits or branches.

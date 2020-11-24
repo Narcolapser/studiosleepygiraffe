@@ -158,7 +158,7 @@ def feed(feed_type):
 	for post in blog_posts:
 		val = {}
 		val['title'] = post['title']
-		val['link'] = 'http://www.studiosleepygiraffe.com/blog/posts/{}'.format(post['date'])
+		val['link'] = 'http://studiosleepygiraffe.com/blog/posts/{}'.format(post['date'])
 		val['date'] = datetime.strptime(post['date'], '%Y-%m-%d')
 		val['text'] = post['text']
 		val['author'] = post['author']
@@ -169,7 +169,7 @@ def feed(feed_type):
 		for log in logs['posts']:
 			val = {}
 			val['title'] = '{}: {}'.format(project.capitalize(), log['title'])
-			val['link'] = 'http://www.studiosleepygiraffe.com/logs/{}'.format(project)
+			val['link'] = 'http://studiosleepygiraffe.com/logs/{}'.format(project)
 			val['date'] = datetime.strptime(log['date'], '%Y-%m-%d')
 			val['text'] = log['message']
 			val['author'] = log['author']

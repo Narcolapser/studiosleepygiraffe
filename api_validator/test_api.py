@@ -14,10 +14,10 @@ project_info.sort(key= lambda project: project['rank'])
 for project in project_info: project['url'] = '/projects' + project['url']
 
 # Python
-# base_url = 'http://localhost:5000'
+base_url = 'http://localhost:5000'
 
 # Ruby
-base_url = 'http://localhost:3000'
+#base_url = 'http://localhost:3000'
 
 class Test_API():
 	
@@ -114,7 +114,7 @@ class Test_API():
 		for post in blog_posts:
 			val = {}
 			val[u'title'] = post['title']
-			val[u'link'] = u'http://www.studiosleepygiraffe.com/blog/posts/{}'.format(post['date'])
+			val[u'link'] = u'http://studiosleepygiraffe.com/blog/posts/{}'.format(post['date'])
 			val[u'date'] = datetime.strptime(post['date'], '%Y-%m-%d')
 			val[u'text'] = post['text']
 			val[u'author'] = post['author']
@@ -125,7 +125,7 @@ class Test_API():
 			for log in logs['posts']:
 				val = {}
 				val[u'title'] = u'{}: {}'.format(project.capitalize(), log['title'])
-				val[u'link'] = u'http://www.studiosleepygiraffe.com/logs/{}'.format(project)
+				val[u'link'] = u'http://studiosleepygiraffe.com/logs/{}'.format(project)
 				val[u'date'] = datetime.strptime(log['date'], '%Y-%m-%d')
 				val[u'text'] = log['message']
 				val[u'author'] = log['author']
