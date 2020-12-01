@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 from flask import Flask, render_template, jsonify, send_file, abort
 from datetime import datetime
 import sys

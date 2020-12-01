@@ -1,0 +1,12 @@
+[Unit]
+Description = Python version of my websites API.
+After=network.target
+
+[Service]
+Type=simple
+User=python
+ExecStart=/var/www/studiosleepygiraffe/python_api/api.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

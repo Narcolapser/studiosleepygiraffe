@@ -2,7 +2,8 @@ import React from "react";
 import {
 	useParams
 } from "react-router-dom";
-import axios from 'axios'
+// import axios from 'axios'
+import { ssget } from './ssg_request.js'
 import {Title, Verbage} from './Styles'
 import ProjectLink from './ProjectLink'
 const ReactMarkdown = require('react-markdown')
@@ -25,7 +26,7 @@ export class Projects extends React.Component {
 	}
 	componentDidMount()
 	{
-		axios.get('http://api.studiosleepygiraffe.com/projects')
+		ssget('http://api.studiosleepygiraffe.com/projects')
 		.then(response => this.setState({'projects': response.data}));
 	}
 }
@@ -42,7 +43,7 @@ export class Project extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://api.studiosleepygiraffe.com/projects/' + this.state.project + '/README.md')
+		ssget('http://api.studiosleepygiraffe.com/projects/' + this.state.project + '/README.md')
 			.then(response => this.setState({'markdown': response.data}));
 	}
 }

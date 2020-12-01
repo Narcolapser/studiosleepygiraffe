@@ -3,9 +3,10 @@ import {
 	Link,
 	useParams
 } from "react-router-dom";
-import axios from 'axios'
+// import axios from 'axios'
 import styled from 'styled-components';
 import {Title, Verbage, BoldFlatLink} from './Styles'
+import { ssget } from './ssg_request.js'
 const ReactMarkdown = require('react-markdown')
 
 const BlogDiv = styled.div`
@@ -68,7 +69,7 @@ export class Blog extends React.Component {
 	}
 	componentDidMount()
 	{
-		axios.get('http://api.studiosleepygiraffe.com/posts')
+		ssget('http://api.studiosleepygiraffe.com/posts')
 			.then(response => this.setState({'posts': response.data}));
 	}
 }
@@ -103,9 +104,9 @@ export class BlogPost extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://api.studiosleepygiraffe.com/posts/' + this.props.post + '/post.md')
+		ssget('http://api.studiosleepygiraffe.com/posts/' + this.props.post + '/post.md')
 			.then(response => this.setState({'markdown': response.data}));
-		axios.get('http://api.studiosleepygiraffe.com/posts/' + this.props.post)
+		ssget('http://api.studiosleepygiraffe.com/posts/' + this.props.post)
 			.then(response => this.setState({'info': response.data}));
 
 	}
@@ -150,7 +151,7 @@ export class BlogTag extends React.Component {
 	}
 
 	componentDidMount() {
-		axios.get('http://api.studiosleepygiraffe.com/posts/tags/' + this.props.tag)
+		ssget('http://api.studiosleepygiraffe.com/posts/tags/' + this.props.tag)
 			.then(response => this.setState({'posts': response.data}));
 	}
 }

@@ -3,7 +3,8 @@ import styled from 'styled-components';
 import {
 	useParams
 } from "react-router-dom";
-import axios from 'axios'
+//import axios from 'axios'
+import { ssget } from './ssg_request.js'
 import {Title, Verbage} from './Styles'
 const ReactMarkdown = require('react-markdown')
 
@@ -28,9 +29,9 @@ export class Activity extends React.Component {
 	}
 	componentDidMount()
 	{
-		axios.get('http://api.studiosleepygiraffe.com/feed.json')
-    //.then(response => console.log(response.data))
+		ssget('http://api.studiosleepygiraffe.com/feed.json')
 		.then(response => this.setState({'items': response.data.slice(0,4)}));
+		//.then(response => console.log(response.data))
 	}
 }
 

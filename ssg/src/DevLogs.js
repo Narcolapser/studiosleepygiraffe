@@ -2,7 +2,8 @@ import React from "react";
 import {
 	useParams
 } from "react-router-dom";
-import axios from 'axios'
+// import axios from 'axios'
+import { ssget } from './ssg_request.js'
 import {Title, SubTitle, Verbage} from './Styles'
 import ProjectLink from './ProjectLink'
 
@@ -28,7 +29,7 @@ These development logs are the comments I have made as I work on my projects. Th
 	}
 	componentDidMount()
 	{
-		axios.get('http://api.studiosleepygiraffe.com/logs')
+		ssget('http://api.studiosleepygiraffe.com/logs')
 		.then(response => this.setState({'projects': response.data}));
 	}
 }
@@ -57,7 +58,7 @@ export class DevLog extends React.Component {
 	componentDidMount() {
 		console.log(JSON.stringify(this.state));
 		console.log('http://api.studiosleepygiraffe.com/logs/' + this.state.project);
-		axios.get('http://api.studiosleepygiraffe.com/logs/' + this.state.project)
+		ssget('http://api.studiosleepygiraffe.com/logs/' + this.state.project)
 			.then(response => this.setState({'logs': response.data}));
 	}
 }
