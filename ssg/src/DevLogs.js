@@ -29,7 +29,7 @@ These development logs are the comments I have made as I work on my projects. Th
 	}
 	componentDidMount()
 	{
-		ssget('http://api.studiosleepygiraffe.com/logs')
+		ssget('http://api.studiosleepygiraffe.com/logs/')
 		.then(response => this.setState({'projects': response.data}));
 	}
 }

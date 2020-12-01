@@ -26,7 +26,7 @@ export class Projects extends React.Component {
 	}
 	componentDidMount()
 	{
-		ssget('http://api.studiosleepygiraffe.com/projects')
+		ssget('http://api.studiosleepygiraffe.com/projects/')
 		.then(response => this.setState({'projects': response.data}));
 	}
 }

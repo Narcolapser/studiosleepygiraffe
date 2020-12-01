@@ -69,7 +69,7 @@ export class Blog extends React.Component {
 	}
 	componentDidMount()
 	{
-		ssget('http://api.studiosleepygiraffe.com/posts')
+		ssget('http://api.studiosleepygiraffe.com/posts/')
 			.then(response => this.setState({'posts': response.data}));
 	}
 }
