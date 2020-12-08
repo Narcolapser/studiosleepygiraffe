@@ -36,7 +36,7 @@ Unlike the backends these are fairly different in implementation. I currently ha
 
 A modern javascript frame work. Rendering done on the client side. This is a single page web app whcih, throught he magic of the React Router, has all the good of a multi-page web app but the responsiveness and lower over head o fa single page web app. After the inital static load from the web server, additional content is provided by api.studiosleepygiraffe.com, the backends listed above. 
 
-### Flask
+### Flask (In progress)
 
 A more traditional method of creating a web app. Rendering done on the server side with the client receiving flat HTML. This makes it a traditional multi-page web app. Every page gets loaded from the web server which also servers as its own backend generating the content the same way the python API does. 
 
