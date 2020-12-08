@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import {BoldFlatLink} from './Styles'
+import { api_url } from './api_url.js'
 
 const FloatText = styled.div`
   position: absolute;
@@ -39,8 +40,8 @@ export default class ProjectLink extends React.Component {
             <h2>{this.props.name}</h2>
             <p>{this.props.description}</p>
           </FloatText>
-          <ProjectImg src={'http://api.studiosleepygiraffe.com' + this.props.url.replace('log','project') + '/banner1.png'} />
-          <ProjectImg src={'http://api.studiosleepygiraffe.com' + this.props.url.replace('log','project') + '/banner2.png'} />
+          <ProjectImg src={api_url() + this.props.url.replace('log','project') + '/banner1.png'} />
+          <ProjectImg src={api_url() + this.props.url.replace('log','project') + '/banner2.png'} />
         </BoldFlatLink>
 			</BlockDiv>
 		);

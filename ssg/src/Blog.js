@@ -3,10 +3,11 @@ import {
 	Link,
 	useParams
 } from "react-router-dom";
-// import axios from 'axios'
+import axios from 'axios'
 import styled from 'styled-components';
 import {Title, Verbage, BoldFlatLink} from './Styles'
 import { ssget } from './ssg_request.js'
+import { api_url } from './api_url.js'
 const ReactMarkdown = require('react-markdown')
 
 const BlogDiv = styled.div`
@@ -60,7 +61,7 @@ export class Blog extends React.Component {
 									<center>{post.title}</center>
 								</CenterFloat>
 								<CropHeight>
-									<BlogLinkImg src={'http://api.studiosleepygiraffe.com' + post.url + '/cover.jpg'} alt={post.cover_text} />
+									<BlogLinkImg src={api_url() + post.url + '/cover.jpg'} alt={post.cover_text} />
 								</CropHeight>
 							</BoldFlatLink>
 						</BlogDiv>)}
@@ -69,7 +70,7 @@ export class Blog extends React.Component {
 	}
 	componentDidMount()
 	{
-		ssget('http://api.studiosleepygiraffe.com/posts/')
+		axios.get(api_url() + '/posts')
 			.then(response => this.setState({'posts': response.data}));
 	}
 }
@@ -86,7 +87,7 @@ export class BlogPost extends React.Component {
 	render() {
 		let cover = <img alt="loading..."/>
 		if (this.state.info.date !== undefined){
-			cover = <img style={{'max-width': '100%'}} src={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/cover.jpg'} alt={this.state.info.cover_text} />
+			cover = <img style={{'max-width': '100%'}} src={api_url() + '/posts/' + this.state.info.date + '/cover.jpg'} alt={this.state.info.cover_text} />
 		}
 		return (
 		<Verbage>
@@ -94,7 +95,7 @@ export class BlogPost extends React.Component {
 			{ cover }
 			<ReactMarkdown source={this.state.markdown}/>
 			{this.state.info.files
-			.map(file => <div key={file}><a href={'http://api.studiosleepygiraffe.com/posts/' + this.state.info.date + '/' + file}>{file}</a><br/></div>)}
+			.map(file => <div key={file}><a href={api_url() + '/posts/' + this.state.info.date + '/' + file}>{file}</a><br/></div>)}
 			<p>Posted on: {this.state.info.date}</p>
 			<ul>
 				{this.state.info.tags
@@ -104,9 +105,9 @@ export class BlogPost extends React.Component {
 	}
 
 	componentDidMount() {
-		ssget('http://api.studiosleepygiraffe.com/posts/' + this.props.post + '/post.md')
+		axios.get(api_url() + '/posts/' + this.props.post + '/post.md')
 			.then(response => this.setState({'markdown': response.data}));
-		ssget('http://api.studiosleepygiraffe.com/posts/' + this.props.post)
+		axios.get(api_url() + '/posts/' + this.props.post)
 			.then(response => this.setState({'info': response.data}));
 
 	}
@@ -142,7 +143,7 @@ export class BlogTag extends React.Component {
 									<center>{post.title}</center>
 								</CenterFloat>
 								<CropHeight>
-									<BlogLinkImg src={'http://api.studiosleepygiraffe.com/posts/' + post.date + '/cover.jpg'} alt={post.cover_text} />
+									<BlogLinkImg src={api_url() + '/posts/' + post.date + '/cover.jpg'} alt={post.cover_text} />
 								</CropHeight>
 							</BoldFlatLink>
 						</BlogDiv>)}
@@ -151,7 +152,7 @@ export class BlogTag extends React.Component {
 	}
 
 	componentDidMount() {
-		ssget('http://api.studiosleepygiraffe.com/posts/tags/' + this.props.tag)
+		axios.get(api_url() + '/posts/tags/' + this.props.tag)
 			.then(response => this.setState({'posts': response.data}));
 	}
 }
