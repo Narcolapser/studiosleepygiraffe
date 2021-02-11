@@ -56,7 +56,6 @@ export default function ParamsExample() {
 				alt="Studio Sleepy Giraffe logo"
 				style={{'display':'block','marginLeft':'auto','marginRight': 'auto','width': '466px'}}/>
 			</div>
-			<SwitchPanel/>
 			<Router>
 				<div>
 					<NavBar >
